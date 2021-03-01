@@ -1,43 +1,66 @@
 module.exports = {
   siteMetadata: {
-    title: `Travel. Thoughts. Tech.`,
-    description: `Basic Gatsby test`,
-    author: `@matejnavara`,
+    title: `Novela by Narative`,
+    name: `Narative`,
+    siteUrl: `https://novela.narative.co`,
+    description: `This is my description that will be used in the meta tags and important for search results`,
+    hero: {
+      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+      maxWidth: 652,
+    },
+    social: [
+      {
+        name: `twitter`,
+        url: `https://twitter.com/narative`,
+      },
+      {
+        name: `github`,
+        url: `https://github.com/narative`,
+      },
+      {
+        name: `instagram`,
+        url: `https://instagram.com/narative.co`,
+      },
+      {
+        name: `linkedin`,
+        url: `https://www.linkedin.com/company/narative/`,
+      },
+      {
+        name: `dribbble`,
+        url: `https://dribbble.com/narativestudio`,
+      },
+    ],
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "@narative/gatsby-theme-novela",
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        contentPosts: "content/posts",
+        contentAuthors: "content/authors",
+        basePath: "/",
+        authorsPage: true,
+        sources: {
+          local: true,
+          // contentful: true,
+        },
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdowns`,
-        path: `${__dirname}/src/markdown-pages`,
-      },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Novela by Narative`,
+        short_name: `Novela`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: `src/assets/favicon.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+      },
+    },
   ],
-}
+};
