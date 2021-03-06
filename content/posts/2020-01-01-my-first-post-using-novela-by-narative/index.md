@@ -1,6 +1,6 @@
 ---
 title: My first post using Novela by Narative
-author: Dennis Brotzky
+author: Matej Navara
 date: 2019-04-30
 hero: ./images/hero.jpg
 excerpt: With the growing community interest in Gatsby, we hope to create more resources that make it easier for anyone to grasp the power of this incredible tool.
@@ -85,8 +85,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ## Code and Syntax Highlighting
 
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+var s = "JavaScript syntax highlighting"
+alert(s)
 ```
 
 ```
@@ -97,13 +97,13 @@ But let's throw in a <b>tag</b>.
 ### JSX
 
 ```jsx
-import React from "react";
-import { ThemeProvider } from "theme-ui";
-import theme from "./theme";
+import React from "react"
+import { ThemeProvider } from "theme-ui"
+import theme from "./theme"
 
 export default props => (
   <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
-);
+)
 ```
 
 ## Blockquotes
