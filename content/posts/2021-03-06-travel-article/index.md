@@ -1,6 +1,6 @@
 ---
 title: Travel Article
-author: Matej Navara
+author: Travel
 category: Travel
 date: 2019-04-30
 excerpt: With the growing community interest in Gatsby, we hope to create more
