@@ -189,6 +189,7 @@ const GridButton = styled.button<{ active: boolean }>`
   height: 36px;
   width: 36px;
   border-radius: 50%;
+  color: ${p => p.theme.colors.primary};
   background: ${p => (p.active ? p.theme.colors.hover : 'transparent')};
   transition: background 0.25s;
   opacity: ${p => (p.active ? 1 : 0.5)};
