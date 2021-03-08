@@ -28,7 +28,7 @@ const authorQuery = graphql`
 `;
 
 const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
-  const { filter = 'latest', gridLayout = 'tiles', hasSetGridLayout, setFilter, setGridLayout } = useContext(
+  const { filter, gridLayout = 'tiles', hasSetGridLayout, setFilter, setGridLayout } = useContext(
     GridLayoutContext,
   );
 
@@ -62,8 +62,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Latest
           </GridButton>
           <GridButton
-            onClick={() => setFilter('travel')}
-            active={filter === 'travel'}
+            onClick={() => setFilter('Travel')}
+            active={filter === 'Travel'}
             data-a11y="false"
             title="Show articles in Tile grid"
             aria-label="Show articles in Tile grid"
@@ -71,8 +71,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Travel
           </GridButton>
           <GridButton
-            onClick={() => setFilter('tech')}
-            active={filter === 'tech'}
+            onClick={() => setFilter('Tech')}
+            active={filter === 'Tech'}
             data-a11y="false"
             title="Show articles in Tile grid"
             aria-label="Show articles in Tile grid"
@@ -80,8 +80,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Tech
           </GridButton>
           <GridButton
-            onClick={() => setFilter('think')}
-            active={filter === 'think'}
+            onClick={() => setFilter('Think')}
+            active={filter === 'Think'}
             data-a11y="false"
             title="Show articles in Tile grid"
             aria-label="Show articles in Tile grid"

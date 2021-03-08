@@ -42,7 +42,7 @@ const ArticlesList: React.FC<ArticlesListProps> = ({
   if (!articles) return null;
 
   const hasOnlyOneArticle = articles.length === 1;
-  const { gridLayout = 'tiles', hasSetGridLayout, getGridLayout } = useContext(
+  const { filter, gridLayout = 'tiles', hasSetGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
   );
 
@@ -51,7 +51,7 @@ const ArticlesList: React.FC<ArticlesListProps> = ({
    * and turning it into an array of pairs of articles [[{}, {}], [{}, {}], [{}, {}]...]
    * This makes it simpler to create the grid we want
    */
-  const articlePairs = articles.reduce((result, value, index, array) => {
+  const articlePairs = articles.filter(article => !filter || article.author == filter).reduce((result, value, index, array) => {
     if (index % 2 === 0) {
       result.push(array.slice(index, index + 2));
     }
