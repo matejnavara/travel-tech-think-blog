@@ -28,7 +28,7 @@ const authorQuery = graphql`
 `;
 
 const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
-  const { filter, gridLayout = 'tiles', hasSetGridLayout, setFilter, setGridLayout } = useContext(
+  const { filter = 'latest', gridLayout = 'tiles', hasSetGridLayout, setFilter, setGridLayout } = useContext(
     GridLayoutContext,
   );
 
@@ -52,6 +52,15 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
       <SubheadingContainer>
         <Bio author={featuredAuthor} />
         <CategoryControlsContainer>
+        <GridButton
+            onClick={() => setFilter(null)}
+            active={!filter}
+            data-a11y="false"
+            title="Show articles in Tile grid"
+            aria-label="Show articles in Tile grid"
+          >
+            Latest
+          </GridButton>
           <GridButton
             onClick={() => setFilter('travel')}
             active={filter === 'travel'}
