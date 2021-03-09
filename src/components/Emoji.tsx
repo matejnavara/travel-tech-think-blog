@@ -1,6 +1,11 @@
 import React from "react";
 
-const Emoji = ({ label, symbol }) => (
+interface EmojiProps {
+  symbol: string;
+  label?: string;
+}
+
+const Emoji: React.FC<EmojiProps> = ({ symbol, label }) => (
   <span
     className="emoji"
     role="img"
