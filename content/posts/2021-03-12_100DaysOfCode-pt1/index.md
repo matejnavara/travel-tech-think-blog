@@ -1,13 +1,12 @@
 ---
-title: `#100DaysOfCode Part 1 (Day 1-25)`
+title: 100DaysOfCode Pt.1
 author: Tech
-category: Tech
 date: 2021-03-12
-excerpt: The start of the 100 Days Of Code challenge. Blog creation & Mobile app development.
-hero: ./images/hero.jpg
+excerpt: The start of the 100 Days Of Code challenge. Blog creation, Mobile app development & STONKS.
+hero: ./images/day11-stonks-viewer.jpeg
 ---
 
-# **#100DaysOfCode Part 1**</br>_(Day 1-25)_
+# **#100DaysOfCode Part 1**_(Day 1-20)_
 
 ## Day 1 - 01/03/2021
 
@@ -320,7 +319,6 @@ From having a look I came to few solutions to this:
 | Use slug as basis of categories                                                         | Medium |
 | Consider categories as “Authors” and use theme as is                                    | Low    |
 
-</br>
 Although it would be great to have full customization, the blog is supposed to be a quick start to the 100 Days of Code and I want to get up and running as soon as possible. Thus the latter option is the one I will go with, bit of a cop-out but it will do for the time being!
 
 And Tada 🎉:
@@ -371,7 +369,7 @@ The Netlify platform is packed with features for CI/CD and definitely warrants s
 
 ## Day 10 - 10/03/2021
 
-But now its NEW (Quick) PROJECT TIME 🎉
+> But now its NEW (Quick) PROJECT TIME 🎉
 
 I have a task to develop a React Native application that can fetch the latest Amazon (AMZN) stock price from an API endpoint and display the last 7 price updates on a graph as well as the current price. If the price has risen for the day, show the price and day change in green, if the price has decreased, display the price in red. If no change, the price will be shown in black. The graph must have a refresh feature.
 
@@ -477,18 +475,21 @@ So let’s go!
 
 And all migrated! ✨
 
-From 21 pages of Google Doc to 475 lines of Markdown.
+From 21 pages of Google Doc to 475 lines of Markdown. That took longer than expected going:
 
-That took longer than expected going:
-| From **THIS** | To _This_ |
-| --- | --- |
+| From **THIS**                                       | To _This_                                   |
+| --------------------------------------------------- | ------------------------------------------- |
 | ![From Google Docs](./images/day12-google-docs.png) | ![To Markdown](./images/day12-markdown.png) |
 
 Even managed to break Google Docs in the process...
 ![From Google Docs](./images/day12-google-docs-bug.png)
 
-Haters will say that's a bad trade but for the code lovers it's a no brainer. This content is now easily transferable anywhere, used on multiple sites/publications without any extra effort. And version controlled through Git. (Though I know Google Docs also has versioning)
+Very fitting for the 100DaysOfCode challenge and staying true to that code life with _**Content as Code**_.
 
-> But ANYWAY: All content from now on is written and structured directly in Markdown. Onwards! 🚀
+Haters will say that's a bad trade but for the code lovers it's a no brainer:
 
----
+- This content is now easily transferable anywhere, used on multiple sites/apps/publications without any extra effort.
+- It's consistently formatted and structured
+- It's version controlled through Git. (Though I know Google Docs also has versioning)
+
+> But ANYWAY: All content from now on is written and structured directly in Markdown. Onwards and upwards! 🚀
