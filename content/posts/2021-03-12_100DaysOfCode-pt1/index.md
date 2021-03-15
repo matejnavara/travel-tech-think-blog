@@ -493,3 +493,86 @@ Haters will say that's a bad trade but for the code lovers it's a no brainer:
 - It's version controlled through Git. (Though I know Google Docs also has versioning)
 
 > But ANYWAY: All content from now on is written and structured directly in Markdown. Onwards and upwards! 🚀
+
+## Day 13 - 13/03/2021
+
+Happy 13th. Feels nice to be writing this up in an IDE but maybe that's just me.
+
+So as for today I will update and build off of the Motivication React Native app. I made a start some time ago but not real progress, depending on the state of it I may just start again. Then soon I will begin the start of the Node backend.
+
+Both can be seen in the hasitily drawn whiteboard diagram below:
+![Whiteboard sketch]()
+
+I swear there is much more ideation already but currently it just lives in my head! As part of this end-to-end development process I will document the write-ups and design of this project.
+
+Diving into the project let's see where I left off:
+
+```bash
+commit 73559d4d96bab05fd803c7e54c263b8432a8cd17 (HEAD -> master, origin/master)
+Author: Matej
+Date:   Sat Aug 22 17:46:00 2020 +0100
+
+    Create alarm screen
+
+commit 3805bda62dd264a1d8e0b1a16bb7f61666243720
+Author: Matej
+Date:   Tue Aug 11 16:56:17 2020 +0100
+
+    Fix lint issues
+```
+
+![Motivication start](./images/day13-motivication-start.png)
+
+... it's been a while. It also seems I went the Expo route which may not suit the project but we will see.
+
+Let's just start!
+
+## Day 14 - 14/03/2021
+
+Today is Balinese New Year known as Nyepi, the day of silence. No lights, no noise, no travel, no electricity/internet (although it seems okay so far).
+
+Regardless we still out here coding! :tech:
+
+![Nyepi Coding]()
+
+Yesterday was mostly catching up on what was done and fixing the edit screen.
+
+I actually realise the internet is not strong enough to load the packages to fire up the app so today will be untested code on a seperate branch called... `nyepi-coding`.
+
+Not a lot of coding today but I will combine the alarm edit modal and the create alarm screen into one. They are basically the same screen after all.
+
+## Day 15 - 15/03/2021
+
+The night sky was incredible. The electricity/internet was still available but not advised. What a sky without that light pollution.
+
+Now back in the land of light.
+
+Prior to some code I did a bit of research around the Push Notification service for the Motivication app. Looking at free tiers initially whilst it's still an MVP. Scaling will be a good problem to face further down the line.
+
+### Push Notification Services (Free Tiers)
+
+| Service                                  | Monthly Limit | Max Connections | Additional Notes                                               | Review     |
+| ---------------------------------------- | ------------- | --------------- | -------------------------------------------------------------- | ---------- |
+| [Expo](https://expo.io/)                 | Unlimited     | Unlimited?      | Already integrated, uses FCM and has other mobile dev features | 🌕🌕🌕🌕🌗 |
+| [Ably](https://ably.com/)                | 3 mill        | 100             | ...                                                            | 🌕🌕🌕🌑🌑 |
+| [OneSignal](https://onesignal.com/)      | Unlimited     | Unlimited       | No Scheduled send?                                             | 🌕🌕🌕🌕🌑 |
+| [Pusher Beams](https://pusher.com/beams) | Unlimited     | 1000            | Relies on FCM                                                  | 🌕🌕🌕🌗🌑 |
+| [PubNub](https://www.pubnub.com/)        | Unlimited     | 200 MAUs        | Falls back on FCM, looks simple                                | 🌕🌕🌕🌗🌑 |
+| [Courier](https://www.courier.com/)      | 10k           | Unlimited       | Many integrations, notification designer                       | 🌕🌕🌕🌗🌑 |
+| [Backendless](https://backendless.com/)  | Unlimited     | Unlimited       | Has a lot of fieatures but have to do training for free tier?  | ?          |
+
+Still inconclusive but will initially implement with Expo and FCM since it's mostly already integrated.
+
+But first some continuation on the front-end to create/edit/remove local alarms.
+
+![Some moments later](./images/day15-moments-later.jpeg)
+
+After some quick/questionable coding (which will be refactored later anyway) we have some alarms creating, editing and removing locally.
+
+| HomePage                                                | Create Alarm                                                | Edit/Remove Alarm                                                |
+| ------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------- |
+| ![HomePage](./images/day15-motivication-progress-1.png) | ![Create Modal](./images/day15-motivication-progress-2.png) | ![Edit/Remove Modal](./images/day15-motivication-progress-3.png) |
+
+Pretty basic but it's progress nontheless.
+
+Tomorrow I will add the type selector.
