@@ -494,6 +494,8 @@ Haters will say that's a bad trade but for the code lovers it's a no brainer:
 
 > But ANYWAY: All content from now on is written and structured directly in Markdown. Onwards and upwards! 🚀
 
+---
+
 ## Day 13 - 13/03/2021
 
 Happy 13th. Feels nice to be writing this up in an IDE but maybe that's just me.
@@ -527,6 +529,8 @@ Date:   Tue Aug 11 16:56:17 2020 +0100
 
 Let's just start!
 
+---
+
 ## Day 14 - 14/03/2021
 
 Today is Balinese New Year known as Nyepi, the day of silence. No lights, no noise, no travel, no electricity/internet (although it seems okay so far).
@@ -540,6 +544,8 @@ Yesterday was mostly catching up on what was done and fixing the edit screen.
 I actually realise the internet is not strong enough to load the packages to fire up the app so today will be untested code on a seperate branch called... `nyepi-coding`.
 
 Not a lot of coding today but I will combine the alarm edit modal and the create alarm screen into one. They are basically the same screen after all.
+
+---
 
 ## Day 15 - 15/03/2021
 
@@ -576,3 +582,27 @@ After some quick/questionable coding (which will be refactored later anyway) we 
 Pretty basic but it's progress nontheless.
 
 Tomorrow I will add the type selector.
+
+---
+
+## Day 16 - 16/03/2021
+
+As mentioned today was to add the type selector. I will be using the mind expansion meme images for the various levels/types of motivation.
+
+Currently it's as follows:
+
+  * Level 1 - Gym motivation
+  * Level 2 - Modern motivication
+  * Level 3 - Classic motivication
+  * Level 4 - Pop culture motivication
+  * Level 5 - Dad motivication
+
+I used the package [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel) for the type select carousel as seen below:
+
+![Type select carousel](./images/day16-motivication-progress.png)
+
+No real styling on the cards yet but it's coming together well!
+
+Next step will be to align the Types with a Constants object to be consistent across components as well as improve the styling.
+
+Soon I will also start on the NodeJS Backend: Motivication API 
