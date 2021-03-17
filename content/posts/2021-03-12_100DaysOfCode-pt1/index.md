@@ -605,4 +605,74 @@ No real styling on the cards yet but it's coming together well!
 
 Next step will be to align the Types with a Constants object to be consistent across components as well as improve the styling.
 
-Soon I will also start on the NodeJS Backend: Motivication API 
+Soon I will also start on the NodeJS Backend: Motivication API ✨
+
+---
+
+## Day 17 - 17/03/2021
+
+Today we have started our journey towards Raja Ampat. Currently I find myself in an airport hotel for an overnight stopover in Sulawesi. Pretty tired but gotta smash out that day of code!
+
+So today I want to tackle the issue of Type consistency across the application. The props of the object as well as the naming conventions differ in a few places so I want to align them in one consistent. The name Types is also a bit confusing especially since I hope to refactor towards Typescript soon which would also have many object Types.
+
+For this refactor I will renname the motivication `types` as `categories` with defined structure and naming conventions in a `Constants/Categories.js` file.
+
+```js
+const categoryImage1 = require('../Assets/mind-1.jpg');
+const categoryImage2 = require('../Assets/mind-2.jpg');
+const categoryImage3 = require('../Assets/mind-3.jpg');
+const categoryImage4 = require('../Assets/mind-4.jpg');
+const categoryImage5 = require('../Assets/mind-5.jpg');
+
+export const LEVEL_1 = {
+  index: 0,
+  label: 'Basic Motivation',
+  value: 'basic',
+  description: 'blah blah blah',
+  image: categoryImage1,
+};
+
+export const LEVEL_2 = {
+  index: 1,
+  label: 'Modern Motivation',
+  value: 'modern',
+  description: 'Post-1900: Modern(ish)',
+  image: categoryImage2,
+};
+
+export const LEVEL_3 = {
+  index: 2,
+  label: 'Classic Motivation',
+  value: 'classic',
+  description: 'Pre-1900: Ages like fine wine',
+  image: categoryImage3,
+};
+
+export const LEVEL_4 = {
+  index: 3,
+  label: 'Pop Culture Motivation',
+  value: 'popculture',
+  description: 'So edgy, so now',
+  image: categoryImage4,
+};
+
+export const LEVEL_5 = {
+  index: 4,
+  label: 'Dad Motivation',
+  value: 'dad',
+  description: 'Fathers know best',
+  image: categoryImage5,
+};
+
+const CATEGORIES = [LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4, LEVEL_5];
+
+export default CATEGORIES;
+```
+
+The above is the current content for the Category info which is now used across the application. The reusable CONSTANTS approach is an easy way to manage these in one place.
+
+Time for a quick 4 hour sleep before the next flight to West Papua. Internet will become ever scarcer as we venture into Raja Ampat.
+
+Tomorrow I will prepare a roadmap of offline tasks for the time on the boat as well as some little improvements. Goodnight!
+
+---
