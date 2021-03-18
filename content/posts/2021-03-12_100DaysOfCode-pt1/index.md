@@ -676,3 +676,34 @@ Time for a quick 4 hour sleep before the next flight to West Papua. Internet wil
 Tomorrow I will prepare a roadmap of offline tasks for the time on the boat as well as some little improvements. Goodnight!
 
 ---
+
+## Day 18 - 18/03/2021
+
+Sitting on a ferry from Sorong to Wasai for 3 hours so figured now would be a good time to get today's 100DaysOfCode done.
+
+Firstly in terms of roadmap it will depend a bit on the internet connectivity to download the necessary packages for new features.
+
+Regardless below is a list of ToDos in a rough order of completion however this might change depending on the above.
+
+> Offline Raja Ampat Boat Coding ToDos
+  - Create saved motivications screen
+  - Create motivication modal display
+  - Refactor into Typescript
+  - Add Redux (maybe Sagas)
+  - Start Motivication API
+
+Let's start today with the first one and create that second screen.
+
+Design-wise it will be very similar to the `AlarmList` component displaying saved items which upon clicking will open the motivication modal.
+
+Additional features of this screen would be filtering by category or sorting by "Date Added". These would be scope extension features.
+
+Let's start simple:
+
+![Saved quotes screen](./images/day18-motivication-progress.png)
+
+New `QuoteList` and `QuoteCard` components based on the existing alarm components.
+
+Next will be some styling and helpers to make it look better before creating the quote modal.
+
+---
