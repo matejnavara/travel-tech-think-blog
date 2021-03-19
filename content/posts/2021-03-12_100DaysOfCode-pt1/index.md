@@ -707,3 +707,41 @@ New `QuoteList` and `QuoteCard` components based on the existing alarm component
 Next will be some styling and helpers to make it look better before creating the quote modal.
 
 ---
+
+Good morning from the last day on land for a bit. Will quickly continue on from yesterday:
+
+### Offline Raja Ampat Boat Coding ToDos
+  [x] Create saved motivications screen
+  [] Create motivication modal display
+  [] Refactor into Typescript
+  [] Add Redux (maybe Sagas)
+  [] Start Motivication API
+
+Also moved PropTypes to their own `Constants/PropTypes.js` file until Typescript comes into play, either way this will help with the conversion whilst having everything aligned in the meantime:
+
+```js
+import PropTypes from 'prop-types';
+
+export const CategoryProps = PropTypes.shape({
+  id: PropTypes.number,
+  label: PropTypes.string,
+  value: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+});
+
+export const AlarmProps = PropTypes.shape({
+  id: PropTypes.number,
+  category: CategoryProps,
+  time: PropTypes.string,
+});
+
+export const QuoteProps = PropTypes.shape({
+  id: PropTypes.number,
+  quote: PropTypes.string,
+  by: PropTypes.string,
+  who: PropTypes.string,
+  when: PropTypes.string,
+  category: CategoryProps,
+});
+```
