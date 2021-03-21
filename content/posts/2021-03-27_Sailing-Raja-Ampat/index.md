@@ -1,36 +1,29 @@
 ---
-title: Travel Article
+title: Sailing Raja Ampat
 author: Travel
 category: Travel
-date: 2019-04-30
-excerpt: With the growing community interest in Gatsby, we hope to create more
-  resources that make it easier for anyone to grasp the power of this incredible
-  tool.
+date: 2021-03-30
+excerpt: Sailing the empty seas of Raja Ampat for 8 days.
 hero: ./images/hero.jpg
 ---
 
-## Headers
+## Intro
 
-# H1
+## Getting there
 
-Travel
+## Day 1
+## Day 2
 
-## H2
+## Day 3
 
-### H3
+## Day 4
 
-#### H4
+## Day 5
 
-##### H5
+## Day 6
 
-###### H6
+## Day 7
 
-## Emphasis
+## Day 8
 
-Emphasis, aka italics, with _asterisks_ or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
+## Getting back
