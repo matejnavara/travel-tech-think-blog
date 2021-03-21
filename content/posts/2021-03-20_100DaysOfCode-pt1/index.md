@@ -6,7 +6,7 @@ excerpt: The start of the 100 Days Of Code challenge. Blog creation, Mobile app 
 hero: ./images/day11-stonks-viewer.jpeg
 ---
 
-# **#100DaysOfCode Part 1**_(Day 1-20)_
+# **#100DaysOfCode Part 1** _(Day 1-20)_
 
 ## Day 1 - 01/03/2021
 
@@ -708,14 +708,16 @@ Next will be some styling and helpers to make it look better before creating the
 
 ---
 
+## Day 19 - 19/03/2021
+
 Good morning from the last day on land for a bit. Will quickly continue on from yesterday:
 
 ### Offline Raja Ampat Boat Coding ToDos
-  [x] Create saved motivications screen
-  [] Create motivication modal display
-  [] Refactor into Typescript
-  [] Add Redux (maybe Sagas)
-  [] Start Motivication API
+  * ~~Create saved motivications screen~~
+  * Create motivication modal display
+  * Refactor into Typescript
+  * Add Redux (maybe Sagas)
+  * Start Motivication API
 
 Also moved PropTypes to their own `Constants/PropTypes.js` file until Typescript comes into play, either way this will help with the conversion whilst having everything aligned in the meantime:
 
@@ -745,3 +747,79 @@ export const QuoteProps = PropTypes.shape({
   category: CategoryProps,
 });
 ```
+
+Broke things by migrating the modal into the component, it seems that as it opens it already resolves some variables as the default before the prop can get passed in. So currently the Modals live on the Screen pages but it works. Here's the current basic Quote modal.
+
+![Quote Modal](./images/day19-motivication-progress.png)
+
+TODO: Better styling with responsive font sizing to fit screen appropriately.
+
+---
+
+## Day 20 - 20/03/2021
+
+A proper day sailing today, wonder how long the scarce internet will hold up. The next few ToDo items are quite chunky items that need the appropriate packages. As such I've added a few new styling tasks which can be done totally offline.
+### Offline Raja Ampat Boat Coding ToDos
+  * ~~Create saved motivications screen~~
+  * ~~Create motivication modal display~~
+  * Refactor into Typescript
+  * Add Redux (maybe Sagas)
+  * Start Motivication API
+  * Better Quote modal styling (responsive font size)
+  * Better Alarm cards
+  * Better Quote cards
+
+But whilst there's some connection I will dive into the Typescript conversion, better sooner than later! Should have already been doing this from the start but at least it will document the conversion process of adding Typescript to an existing project.
+
+The advantage of Typescript is that it can be introduced gradually, usually new components will get created in Typescript whilst the legacy code gets gradually migrated. So let's begin!
+
+For best/latest documentation always good to use the [official docs](https://reactnative.dev/docs/typescript#adding-typescript-to-an-existing-project).
+
+1. Firstly we need the new dependencies:
+  `npm install -D typescript @types/jest @types/react @types/react-native @types/react-test-renderer`
+
+  2. Next we need to create a `tsconfig.json` in the root of the project.
+
+  3. We also want to enable Jest for TS files with an updated `jest.config.js` file: 
+  ```js
+  module.exports = {
+    preset: 'react-native',
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+  };
+  ```
+Now let the conversions begin.
+
+Converting `Constants/PropType.js` to `Interfaces.ts` felt like an appropriate starting point to assist with typing the various components.
+
+```ts
+export interface CategoryProps {
+  id: number;
+  label: string;
+  value: string;
+  description: string;
+  image: number;
+}
+
+export interface AlarmProps {
+  id: number;
+  category: CategoryProps;
+  time: string;
+}
+
+export interface QuoteProps {
+  id: number;
+  quote: string;
+  by: string;
+  who: string;
+  when: string;
+  category: CategoryProps;
+}
+```
+
+Next up all the Components.
+
+---
+
+This has been the first 20 days of the 100DaysOfCode challenge. Tested out 2 blog stacks, built one of them, built a little stock market viewer React Native app and *finally* continued on the Motivication app.
+
+More of that over the next 80 days!
