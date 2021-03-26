@@ -112,3 +112,41 @@ Sleep time. 15%.
 
 ---
 
+## Day 26 - 26/04/2021
+
+Back on dry land after 8 days aboard the A'Boya. All was a success but now a rather stressed evening trying to figure out logistics and finances without much internet or any verification via 2FA (no signal in Raja Ampat).
+
+Regardless the 100DaysOfCode carries on!
+
+I will implement an initial and crude font scaling helper.
+
+```ts
+export const GetMaxFontSize = (quote: QuoteProps) => {
+  const quoteLength = quote.quote.length;
+  let fontSize = 20;
+  if (quoteLength < 10) {
+    fontSize = 45;
+  } else if (quoteLength < 20) {
+    fontSize = 40;
+  } else if (quoteLength < 30) {
+    fontSize = 35;
+  } else if (quoteLength < 40) {
+    fontSize = 30;
+  } else if (quoteLength < 50) {
+    fontSize = 25;
+  }
+  return fontSize * PixelRatio.get();
+};
+```
+
+Don't judge me...
+
+At least it utilises the PixelRatio of the device. Will refine this into a more elegant solution further down the line but for now it does the trick:
+
+| Small Quote | Medium Quote | Large Quote |
+| --- | --- | --- | 
+| ![Small Quote](./images/day26-small-quote.png) | ![Medium Quote](./images/day26-medium-quote.png) | ![Large Quote](./images/day26-large-quote.png) |
+
+Up in 6 hours to head into the jungle for some birds of paradise (hopefully).
+
+---
