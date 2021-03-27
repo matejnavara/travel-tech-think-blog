@@ -47,14 +47,15 @@ Today is a friend's birthday on the boat and we finally returned to some recepti
 Let's look at the latest ToDos:
 
 ### Offline Raja Ampat Boat Coding ToDos
-  * ~~Create saved motivications screen~~
-  * ~~Create motivication modal display~~
-  * ~~Refactor into Typescript~~
-  * Add Redux (maybe Sagas)
-  * Start Motivication API
-  * Better Quote modal styling (responsive font size)
-  * Better Alarm cards
-  * Better Quote cards
+
+- ~~Create saved motivications screen~~
+- ~~Create motivication modal display~~
+- ~~Refactor into Typescript~~
+- Add Redux (maybe Sagas)
+- Start Motivication API
+- Better Quote modal styling (responsive font size)
+- Better Alarm cards
+- Better Quote cards
 
 Catching up, cleaning up and pushing up all the recent changes.
 
@@ -72,23 +73,24 @@ Played around with the Alarm card styling.
 
 A little better for now.
 
-  * ~~Better Alarm cards~~
+- ~~Better Alarm cards~~
 
 ---
 
-## Day 25 - 25/04/2021
+## Day 25 - 25/03/2021
 
 Penultimate day on the boat.
 
 ### Offline Raja Ampat Boat Coding ToDos
-  * ~~Create saved motivications screen~~
-  * ~~Create motivication modal display~~
-  * ~~Refactor into Typescript~~
-  * Add Redux (maybe Sagas)
-  * Start Motivication API
-  * Better Quote modal styling (responsive font size)
-  * ~~Better Alarm cards~~
-  * Better Quote cards
+
+- ~~Create saved motivications screen~~
+- ~~Create motivication modal display~~
+- ~~Refactor into Typescript~~
+- Add Redux (maybe Sagas)
+- Start Motivication API
+- Better Quote modal styling (responsive font size)
+- ~~Better Alarm cards~~
+- Better Quote cards
 
 Gonna hit the quote card and modal improvements.
 
@@ -106,13 +108,13 @@ So now the quote cards look like:
 
 ![Quote card progress](./images/day25-quote-card-progress.png)
 
-  * ~~Better Quote cards~~
+- ~~Better Quote cards~~
 
 Sleep time. 15%.
 
 ---
 
-## Day 26 - 26/04/2021
+## Day 26 - 26/03/2021
 
 Back on dry land after 8 days aboard the A'Boya. All was a success but now a rather stressed evening trying to figure out logistics and finances without much internet or any verification via 2FA (no signal in Raja Ampat).
 
@@ -143,10 +145,56 @@ Don't judge me...
 
 At least it utilises the PixelRatio of the device. Will refine this into a more elegant solution further down the line but for now it does the trick:
 
-| Small Quote | Medium Quote | Large Quote |
-| --- | --- | --- | 
+| Small Quote                                    | Medium Quote                                     | Large Quote                                    |
+| ---------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
 | ![Small Quote](./images/day26-small-quote.png) | ![Medium Quote](./images/day26-medium-quote.png) | ![Large Quote](./images/day26-large-quote.png) |
 
 Up in 6 hours to head into the jungle for some birds of paradise (hopefully).
+
+---
+
+## Day 27 - 27/03/2021
+
+Long moving day and the last before we get back to base.
+
+Given the decent internet at this Sorong hotel I will do the initial set up for Redux on the project.
+
+### Offline Raja Ampat Boat Coding ToDos
+
+- ~~Create saved motivications screen~~
+- ~~Create motivication modal display~~
+- ~~Refactor into Typescript~~
+- **Add Redux (maybe Sagas)**
+- Start Motivication API
+- ~~Better Quote modal styling (responsive font size)~~
+- ~~Better Alarm cards~~
+- ~~Better Quote cards~~
+
+Started by adding the necessary packages
+
+```
+yarn add redux react-redux
+```
+
+Decided against any additional middleware for now.
+
+Then comes the Actions/Reducers for Alarms.
+
+```ts
+export const addAlarm = (alarm: AlarmProps) => ({
+  type: "ADD_ALARM",
+  payload: alarm
+});
+
+export const editAlarm = (alarm: AlarmProps) => ({
+  type: "EDIT_ALARM",
+  payload: alarm
+});
+
+export const removeAlarm = (alarmId: number) => ({
+  type: "REMOVE_ALARM",
+  payload: alarmId
+});
+```
 
 ---
