@@ -198,3 +198,40 @@ export const removeAlarm = (alarmId: number) => ({
 ```
 
 ---
+
+## Day 28 - 28/03/2021
+
+Long travel day, will be a short one. Just including Redux in the app:
+
+```jsx
+import React from "react";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+import AlarmsReducer from "./src/Redux/Reducers/Alarms";
+import AlarmScreen from "./src/Screens/AlarmScreen";
+import QuoteScreen from "./src/Screens/QuoteScreen";
+
+const Tab = createBottomTabNavigator();
+
+const store = createStore(AlarmsReducer);
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Motivications" component={AlarmScreen} />
+          <Tab.Screen name="Saved Quotes" component={QuoteScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </Provider>
+  );
+}
+```
+
+Here we created the store with the initial `AlarmReducer` which is then passed to the app via the Provider.
+
+---
