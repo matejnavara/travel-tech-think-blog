@@ -279,3 +279,13 @@ Basic Redux now implemented and working.
 - ~~Add Redux (maybe Sagas)~~
 
 ---
+
+## Day 31 - 31/03/2021
+
+Last day of March and almost a third of the way through the 100DaysOfCode.
+
+Today I'll actually change tack to work onn the Blog since tomorrow I want to go live with it. For this I will implement a coming soon feature based on the article date.
+
+If the article is in the future it won't be accessible and will have some "Coming Soon" messaging.
+
+This will be useful since most of my articles are still in progress but it shows what's coming up.
