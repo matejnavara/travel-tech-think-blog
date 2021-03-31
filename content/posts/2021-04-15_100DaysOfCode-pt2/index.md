@@ -282,10 +282,33 @@ Basic Redux now implemented and working.
 
 ## Day 31 - 31/03/2021
 
-Last day of March and almost a third of the way through the 100DaysOfCode.
+Last day of March!
 
-Today I'll actually change tack to work onn the Blog since tomorrow I want to go live with it. For this I will implement a coming soon feature based on the article date.
+Today I'll actually change tack to work on the Blog since tomorrow I want to go live with it. For this I will implement a coming soon feature based on the article date.
 
 If the article is in the future it won't be accessible and will have some "Coming Soon" messaging.
 
-This will be useful since most of my articles are still in progress but it shows what's coming up.
+This will be useful since most of my articles are still in progress but it can still show what's coming up.
+
+Simple little snippet:
+
+```ts
+const articleInFuture = date => {
+  const articleDate = moment(date, "MMMM Do, YYYY");
+  return moment().isBefore(articleDate);
+};
+```
+
+Based on the Boolean return of this helper we can apply styling changes as needed. Currently I just made a few small changes:
+
+- removed the cursor pointer on hover.
+- replaced the post details with 'Coming Soon...'
+- grayscale the post image.
+
+Basic but works.
+
+![Coming soon post feature](./images/day31-coming-soon-feature.png)
+
+Tomorrow will be content and go live day! ✨
+
+---
