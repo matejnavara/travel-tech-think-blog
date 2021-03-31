@@ -235,3 +235,47 @@ export default function App() {
 Here we created the store with the initial `AlarmReducer` which is then passed to the app via the Provider.
 
 ---
+
+## Day 29 - 29/03/2021
+
+First day back at base but lots of other bits to do. For the code of the day I will just utilise the Alarm redux actions in the code and connect the necessary components. However this time I will use the hooks implementation of Redux using the `useStore` hook rather than the verbose `mapStateToProps` connect HOC implementation.
+
+I also added a `Redux/ActionTypes.ts` constants file to store these global actions:
+
+```ts
+export const AlarmActionTypes = {
+  ADD_ALARM: "ADD_ALARM",
+  EDIT_ALARM: "EDIT_ALARM",
+  REMOVE_ALARM: "REMOVE_ALARM"
+};
+```
+
+---
+
+## Day 30 - 30/03/2021
+
+Slowly getting back into the swing of things. Today wrapping up the Redux implementation.
+
+With the addition of the new `quotes.reducer.ts` I now combine the reducers in a seperate `root.reducer.ts`.
+
+```ts
+import { combineReducers } from "redux";
+
+import alarmsReducer from "./alarms.reducer";
+import quotesReducer from "./quotes.reducer";
+
+export default combineReducers({
+  alarms: alarmsReducer,
+  quotes: quotesReducer
+});
+```
+
+Bit torn on naming convention but currently gone with `<domain>.<type>.ts`. File seperation is by type and the naming gives clear context when searching by the domain.
+
+![Redux structure](./images/day30-redux.png)
+
+Basic Redux now implemented and working.
+
+- ~~Add Redux (maybe Sagas)~~
+
+---
