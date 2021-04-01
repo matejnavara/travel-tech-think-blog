@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import moment from "moment";
 
 import Image, { ImagePlaceholder } from "@components/Image";
 import { IArticle } from "@types";
@@ -7,22 +6,17 @@ import { IArticle } from "@types";
 import { GridLayoutContext } from "./Articles.List.Context";
 import {
   ArticleLink,
-  Item,
   ImageContainer,
-  Title,
   Excerpt,
   MetaData
-} from "./Articles.List.Styles";
+} from "../Sections.Styles";
+import { articleInFuture } from "../Sections.Helpers";
+import { Item, Title } from "./Articles.Styles";
 
 interface ArticlesListItemProps {
   article: IArticle;
   narrow?: boolean;
 }
-
-const articleInFuture = date => {
-  const articleDate = moment(date, "MMMM Do, YYYY");
-  return moment().isBefore(articleDate);
-};
 
 const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
   if (!article) return null;
@@ -68,13 +62,15 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
               </MetaData>
             </div>
           ) : (
-            <Excerpt
-              narrow={narrow}
-              hasOverflow={hasOverflow}
-              gridLayout={gridLayout}
-            >
-              Coming Soon...
-            </Excerpt>
+            <div>
+              <MetaData
+                narrow={narrow}
+                hasOverflow={hasOverflow}
+                gridLayout={gridLayout}
+              >
+                Coming Soon...
+              </MetaData>
+            </div>
           )}
         </div>
       </Item>

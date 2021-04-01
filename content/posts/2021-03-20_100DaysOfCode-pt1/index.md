@@ -3,7 +3,7 @@ title: 100DaysOfCode Pt.1
 author: Tech
 date: 2021-03-12
 excerpt: The start of the 100 Days Of Code challenge. Blog creation, Mobile app development & STONKS.
-hero: ./images/day11-stonks-viewer.jpeg
+hero: ./images/cover.jpg
 ---
 
 # **#100DaysOfCode Part 1** _(Day 1-20)_
@@ -591,11 +591,11 @@ As mentioned today was to add the type selector. I will be using the mind expans
 
 Currently it's as follows:
 
-  * Level 1 - Gym motivation
-  * Level 2 - Modern motivication
-  * Level 3 - Classic motivication
-  * Level 4 - Pop culture motivication
-  * Level 5 - Dad motivication
+- Level 1 - Gym motivation
+- Level 2 - Modern motivication
+- Level 3 - Classic motivication
+- Level 4 - Pop culture motivication
+- Level 5 - Dad motivication
 
 I used the package [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel) for the type select carousel as seen below:
 
@@ -618,50 +618,50 @@ So today I want to tackle the issue of Type consistency across the application. 
 For this refactor I will renname the motivication `types` as `categories` with defined structure and naming conventions in a `Constants/Categories.js` file.
 
 ```js
-const categoryImage1 = require('../Assets/mind-1.jpg');
-const categoryImage2 = require('../Assets/mind-2.jpg');
-const categoryImage3 = require('../Assets/mind-3.jpg');
-const categoryImage4 = require('../Assets/mind-4.jpg');
-const categoryImage5 = require('../Assets/mind-5.jpg');
+const categoryImage1 = require("../Assets/mind-1.jpg");
+const categoryImage2 = require("../Assets/mind-2.jpg");
+const categoryImage3 = require("../Assets/mind-3.jpg");
+const categoryImage4 = require("../Assets/mind-4.jpg");
+const categoryImage5 = require("../Assets/mind-5.jpg");
 
 export const LEVEL_1 = {
   index: 0,
-  label: 'Basic Motivation',
-  value: 'basic',
-  description: 'blah blah blah',
-  image: categoryImage1,
+  label: "Basic Motivation",
+  value: "basic",
+  description: "blah blah blah",
+  image: categoryImage1
 };
 
 export const LEVEL_2 = {
   index: 1,
-  label: 'Modern Motivation',
-  value: 'modern',
-  description: 'Post-1900: Modern(ish)',
-  image: categoryImage2,
+  label: "Modern Motivation",
+  value: "modern",
+  description: "Post-1900: Modern(ish)",
+  image: categoryImage2
 };
 
 export const LEVEL_3 = {
   index: 2,
-  label: 'Classic Motivation',
-  value: 'classic',
-  description: 'Pre-1900: Ages like fine wine',
-  image: categoryImage3,
+  label: "Classic Motivation",
+  value: "classic",
+  description: "Pre-1900: Ages like fine wine",
+  image: categoryImage3
 };
 
 export const LEVEL_4 = {
   index: 3,
-  label: 'Pop Culture Motivation',
-  value: 'popculture',
-  description: 'So edgy, so now',
-  image: categoryImage4,
+  label: "Pop Culture Motivation",
+  value: "popculture",
+  description: "So edgy, so now",
+  image: categoryImage4
 };
 
 export const LEVEL_5 = {
   index: 4,
-  label: 'Dad Motivation',
-  value: 'dad',
-  description: 'Fathers know best',
-  image: categoryImage5,
+  label: "Dad Motivation",
+  value: "dad",
+  description: "Fathers know best",
+  image: categoryImage5
 };
 
 const CATEGORIES = [LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4, LEVEL_5];
@@ -686,11 +686,12 @@ Firstly in terms of roadmap it will depend a bit on the internet connectivity to
 Regardless below is a list of ToDos in a rough order of completion however this might change depending on the above.
 
 > Offline Raja Ampat Boat Coding ToDos
-  - Create saved motivications screen
-  - Create motivication modal display
-  - Refactor into Typescript
-  - Add Redux (maybe Sagas)
-  - Start Motivication API
+
+- Create saved motivications screen
+- Create motivication modal display
+- Refactor into Typescript
+- Add Redux (maybe Sagas)
+- Start Motivication API
 
 Let's start today with the first one and create that second screen.
 
@@ -713,29 +714,30 @@ Next will be some styling and helpers to make it look better before creating the
 Good morning from the last day on land for a bit. Will quickly continue on from yesterday:
 
 ### Offline Raja Ampat Boat Coding ToDos
-  * ~~Create saved motivications screen~~
-  * Create motivication modal display
-  * Refactor into Typescript
-  * Add Redux (maybe Sagas)
-  * Start Motivication API
+
+- ~~Create saved motivications screen~~
+- Create motivication modal display
+- Refactor into Typescript
+- Add Redux (maybe Sagas)
+- Start Motivication API
 
 Also moved PropTypes to their own `Constants/PropTypes.js` file until Typescript comes into play, either way this will help with the conversion whilst having everything aligned in the meantime:
 
 ```js
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export const CategoryProps = PropTypes.shape({
   id: PropTypes.number,
   label: PropTypes.string,
   value: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.string
 });
 
 export const AlarmProps = PropTypes.shape({
   id: PropTypes.number,
   category: CategoryProps,
-  time: PropTypes.string,
+  time: PropTypes.string
 });
 
 export const QuoteProps = PropTypes.shape({
@@ -744,7 +746,7 @@ export const QuoteProps = PropTypes.shape({
   by: PropTypes.string,
   who: PropTypes.string,
   when: PropTypes.string,
-  category: CategoryProps,
+  category: CategoryProps
 });
 ```
 
@@ -759,15 +761,17 @@ TODO: Better styling with responsive font sizing to fit screen appropriately.
 ## Day 20 - 20/03/2021
 
 A proper day sailing today, wonder how long the scarce internet will hold up. The next few ToDo items are quite chunky items that need the appropriate packages. As such I've added a few new styling tasks which can be done totally offline.
+
 ### Offline Raja Ampat Boat Coding ToDos
-  * ~~Create saved motivications screen~~
-  * ~~Create motivication modal display~~
-  * Refactor into Typescript
-  * Add Redux (maybe Sagas)
-  * Start Motivication API
-  * Better Quote modal styling (responsive font size)
-  * Better Alarm cards
-  * Better Quote cards
+
+- ~~Create saved motivications screen~~
+- ~~Create motivication modal display~~
+- Refactor into Typescript
+- Add Redux (maybe Sagas)
+- Start Motivication API
+- Better Quote modal styling (responsive font size)
+- Better Alarm cards
+- Better Quote cards
 
 But whilst there's some connection I will dive into the Typescript conversion, better sooner than later! Should have already been doing this from the start but at least it will document the conversion process of adding Typescript to an existing project.
 
@@ -776,17 +780,19 @@ The advantage of Typescript is that it can be introduced gradually, usually new 
 For best/latest documentation always good to use the [official docs](https://reactnative.dev/docs/typescript#adding-typescript-to-an-existing-project).
 
 1. Firstly we need the new dependencies:
-  `npm install -D typescript @types/jest @types/react @types/react-native @types/react-test-renderer`
+   `npm install -D typescript @types/jest @types/react @types/react-native @types/react-test-renderer`
 
-  2. Next we need to create a `tsconfig.json` in the root of the project.
+2. Next we need to create a `tsconfig.json` in the root of the project.
 
-  3. We also want to enable Jest for TS files with an updated `jest.config.js` file: 
-  ```js
-  module.exports = {
-    preset: 'react-native',
-    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
-  };
-  ```
+3. We also want to enable Jest for TS files with an updated `jest.config.js` file:
+
+```js
+module.exports = {
+  preset: "react-native",
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
+};
+```
+
 Now let the conversions begin.
 
 Converting `Constants/PropType.js` to `Interfaces.ts` felt like an appropriate starting point to assist with typing the various components.
@@ -820,6 +826,6 @@ Next up all the Components.
 
 ---
 
-This has been the first 20 days of the 100DaysOfCode challenge. Tested out 2 blog stacks, built one of them, built a little stock market viewer React Native app and *finally* continued on the Motivication app.
+This has been the first 20 days of the 100DaysOfCode challenge. Tested out 2 blog stacks, built one of them, built a little stock market viewer React Native app and _finally_ continued on the Motivication app.
 
 More of that over the next 80 days!

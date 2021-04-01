@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { IArticle } from "@types";
 
 import { GridLayoutContext } from "./Articles.List.Context";
-import { ArticlesListContainer, List } from "./Articles.List.Styles";
+import { ArticlesListContainer, List } from "./Articles.Styles";
 import ListItem from "./Articles.ListItem";
 
 /**
@@ -22,11 +22,6 @@ import ListItem from "./Articles.ListItem";
 interface ArticlesListProps {
   articles: IArticle[];
   alwaysShowAllDetails?: boolean;
-}
-
-interface ArticlesListItemProps {
-  article: IArticle;
-  narrow?: boolean;
 }
 
 const ArticlesList: React.FC<ArticlesListProps> = ({
