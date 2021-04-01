@@ -3,19 +3,21 @@ title: Why Write?
 author: Think
 category: Think
 date: 2021-03-31
-excerpt: Because X, Y & Z.
+excerpt: 4 reasons why we write anything.
 hero: ./images/cover.jpg
 ---
 
 > “Apparently a picture says a thousand words, but a thousand words paints a pretty good picture.” - Me?
 
-Was proud of that one but let me know if it’s already been said (after all [everything is a remix](https://www.everythingisaremix.info/)). Came to my mind yesterday whilst thinking of what to write for this opening article. An otherwise miscellaneous thought that would have been destined to the recesses of my mind until it faded away and became forgotten.
+Was pretty proud of that one but let me know if it’s already been said (after all everything is a remix). Happened to come to my mind yesterday whilst thinking of what to write for this opening article. An otherwise miscellaneous thought that would have been destined to the recesses of my mind until it faded away and became forgotten.
 
 But now it had a purpose. It could be used. Written and **stored**.
 
-Herein lies one reason to write
+Here lies the first reason to write:
 
-- _**To store thoughts/ideas onto some external medium.**_
+### _**1. To store thoughts/ideas.**_
+
+![Store](https://media.giphy.com/media/1BdrmMkllI1e2gdPaS/giphy.gif)
 
 The joy of this can be periodically/randomly stumbling across these at a later date only to be reminded of the people, space and circumstances in which they were formed.
 
@@ -25,7 +27,7 @@ Some might be silly and useless, but others can be so much more.
 
 But I’m getting ahead of myself, let me first introduce who I am and what I hope to achieve with yet another blog in a blogging network blogged to the blog with blogging blogs.
 
-My name is Matej Navara and I am not a writer.
+**My name is Matej Navara and I am not a writer.**
 
 I come from a software engineering background; developing games/apps/sites/etc. Geeky tech stuff that now the whole world uses on a daily basis. This side is my brain and the engine driving forward.
 
@@ -55,7 +57,7 @@ We’ve come a long way from _“watch out for bears”_.
 
 So here comes another reason, and it’s a big one:
 
-- _**To share knowledge.**_
+### _**2. To share knowledge.**_
 
 ![Knowledge](https://media.giphy.com/media/TI32JwHmWQEi4/giphy.gif)
 
@@ -65,7 +67,7 @@ A force so powerful that it has spawned things into existence that would otherwi
 
 So for the next reason we have:
 
-- _**To express imagination.**_
+### _**3. To express imagination.**_
 
 ![Imagination](https://media.giphy.com/media/BQUITFiYVtNte/giphy.gif)
 
@@ -107,7 +109,7 @@ Without noticing it gave me such comfort during what was a difficult time and lo
 
 The simple act of writing it down, takes the load off your mind and puts it onto paper (be it physical or digital). That is a very powerful and good reason to write.
 
-- _**To reflect and process experiences.**_
+### _**4. To reflect and process experiences.**_
 
 ![Reflect](https://media.giphy.com/media/l2SpXaJA67JaSqSxq/giphy.gif)
 
