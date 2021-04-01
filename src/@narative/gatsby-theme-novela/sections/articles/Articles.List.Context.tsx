@@ -6,7 +6,7 @@ export const GridLayoutContext = createContext({
   hasSetGridLayout: false,
   setFilter: (filter: string) => {},
   setGridLayout: (tile: string) => {},
-  getGridLayout: () => {},
+  getGridLayout: () => {}
 });
 
 const GridLayoutProvider: React.FC<{}> = ({ children }) => {
@@ -34,7 +34,7 @@ const GridLayoutProvider: React.FC<{}> = ({ children }) => {
         hasSetGridLayout,
         setFilter,
         setGridLayout: setGridLayoutAndSave,
-        getGridLayout: getGridLayoutAndSave,
+        getGridLayout: getGridLayoutAndSave
       }}
     >
       {children}

@@ -1,35 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Travel ~ Tech ~ Thoughts`,
+    title: `Tech A Break`,
     name: `Matej Navara`,
-    siteUrl: `https://novela.narative.co`,
+    siteUrl: `https://techabreak.blog`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Travel ~ Tech ~ Thoughts`,
-      maxWidth: 652,
+      heading: `Travel ~ Tech ~ Think`,
+      maxWidth: 652
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/matejnavara`
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/matejnavara`
       },
       {
         name: `instagram`,
-        url: `https://instagram.com/narative.co`,
+        url: `https://instagram.com/matejnavara`
       },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
-      },
-    ],
+        url: `https://www.linkedin.com/matejnavara/`
+      }
+    ]
   },
   plugins: [
     {
@@ -40,10 +36,10 @@ module.exports = {
         basePath: "/",
         authorsPage: false,
         sources: {
-          local: true,
+          local: true
           // contentful: true,
-        },
-      },
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -54,12 +50,12 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
-        icon: `src/assets/favicon.png`,
-      },
+        icon: `src/assets/favicon.png`
+      }
     },
     {
       resolve: `gatsby-plugin-netlify-cms`,
-      options: {},
-    },
-  ],
+      options: {}
+    }
+  ]
 };
