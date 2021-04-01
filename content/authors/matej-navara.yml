@@ -1,11 +1,4 @@
 name: Matej Navara
-bio: |
-  Stuff about me: I travel & code & stuff.
+bio: I travel & code & stuff.
 avatar: ./avatars/profile-pic.jpg
-social:
-  - url: https://unsplash.com
-  - url: https://stackoverflow.com
-  - url: https://github.com
-  - url: https://github.com
-  - url: https://github.com
 featured: true

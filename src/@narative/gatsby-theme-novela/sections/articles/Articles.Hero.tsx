@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import styled from '@emotion/styled';
+import React, { useContext } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import styled from "@emotion/styled";
 
-import Section from '@components/Section';
-import Bio from '@components/Bio';
-import Icons from '@icons';
-import mediaqueries from '@styles/media';
-import { IAuthor } from '@types';
+import Section from "@components/Section";
+import Bio from "@components/Bio";
+import Icons from "@icons";
+import mediaqueries from "@styles/media";
+import { IAuthor } from "@types";
 
-import { GridLayoutContext } from './Articles.List.Context';
+import { GridLayoutContext } from "./Articles.List.Context";
 
 const authorQuery = graphql`
   {
@@ -28,13 +28,17 @@ const authorQuery = graphql`
 `;
 
 const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
-  const { filter, gridLayout = 'tiles', hasSetGridLayout, setFilter, setGridLayout } = useContext(
-    GridLayoutContext,
-  );
+  const {
+    filter,
+    gridLayout = "tiles",
+    hasSetGridLayout,
+    setFilter,
+    setGridLayout
+  } = useContext(GridLayoutContext);
 
   const results = useStaticQuery(authorQuery);
   const hero = results.site.edges[0].node.siteMetadata.hero;
-  const tilesIsActive = hasSetGridLayout && gridLayout === 'tiles';
+  const tilesIsActive = hasSetGridLayout && gridLayout === "tiles";
   const featuredAuthor = authors.find(author => author.featured);
 
   if (!featuredAuthor) {
@@ -52,7 +56,7 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
       <SubheadingContainer>
         <Bio author={featuredAuthor} />
         <CategoryControlsContainer>
-        <GridButton
+          <GridButton
             onClick={() => setFilter(null)}
             active={!filter}
             data-a11y="false"
@@ -62,8 +66,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Latest
           </GridButton>
           <GridButton
-            onClick={() => setFilter('Travel')}
-            active={filter === 'Travel'}
+            onClick={() => setFilter("Travel")}
+            active={filter === "Travel"}
             data-a11y="false"
             title="Show articles in Tile grid"
             aria-label="Show articles in Tile grid"
@@ -71,8 +75,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Travel
           </GridButton>
           <GridButton
-            onClick={() => setFilter('Tech')}
-            active={filter === 'Tech'}
+            onClick={() => setFilter("Tech")}
+            active={filter === "Tech"}
             data-a11y="false"
             title="Show articles in Tile grid"
             aria-label="Show articles in Tile grid"
@@ -80,8 +84,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Tech
           </GridButton>
           <GridButton
-            onClick={() => setFilter('Think')}
-            active={filter === 'Think'}
+            onClick={() => setFilter("Think")}
+            active={filter === "Think"}
             data-a11y="false"
             title="Show articles in Tile grid"
             aria-label="Show articles in Tile grid"
@@ -91,7 +95,7 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
         </CategoryControlsContainer>
         <GridControlsContainer>
           <GridButton
-            onClick={() => setGridLayout('tiles')}
+            onClick={() => setGridLayout("tiles")}
             active={tilesIsActive}
             data-a11y="false"
             title="Show articles in Tile grid"
@@ -100,7 +104,7 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             <Icons.Tiles />
           </GridButton>
           <GridButton
-            onClick={() => setGridLayout('rows')}
+            onClick={() => setGridLayout("rows")}
             active={!tilesIsActive}
             data-a11y="false"
             title="Show articles in Row grid"
@@ -128,10 +132,6 @@ const SubheadingContainer = styled.div`
 
   ${mediaqueries.tablet`
     margin-bottom: 60px;
-  `};
-
-  ${mediaqueries.phablet`
-    display: none;
   `};
 `;
 
@@ -190,7 +190,7 @@ const GridButton = styled.button<{ active: boolean }>`
   width: 36px;
   border-radius: 50%;
   color: ${p => p.theme.colors.primary};
-  background: ${p => (p.active ? p.theme.colors.hover : 'transparent')};
+  background: ${p => (p.active ? p.theme.colors.hover : "transparent")};
   transition: background 0.25s;
   opacity: ${p => (p.active ? 1 : 0.5)};
   transition: opacity 0.2s;
@@ -204,8 +204,8 @@ const GridButton = styled.button<{ active: boolean }>`
     background: ${p => p.theme.colors.hover};
   }
 
-  &[data-a11y='true']:focus::after {
-    content: '';
+  &[data-a11y="true"]:focus::after {
+    content: "";
     position: absolute;
     left: -15%;
     top: -15%;
