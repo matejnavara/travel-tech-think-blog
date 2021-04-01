@@ -1,10 +1,10 @@
 ---
-title: Sailing Raja Ampat
+title: RAJA AMPAT. The Last Paradise.
 author: Travel
 category: Travel
 date: 2021-04-08
 excerpt: Sailing the empty seas of Raja Ampat for 8 days.
-hero: ./images/hero.jpg
+hero: ./images/cover.jpg
 ---
 
 ## Intro
