@@ -4,6 +4,7 @@ import { IArticle } from "@types";
 import { GridLayoutContext } from "./Articles.List.Context";
 import { ArticlesListContainer, List } from "./Articles.Styles";
 import ListItem from "./Articles.ListItem";
+import { articleInFuture } from "../Sections.Helpers";
 
 /**
  * Tiles
@@ -38,19 +39,34 @@ const ArticlesList: React.FC<ArticlesListProps> = ({
     getGridLayout
   } = useContext(GridLayoutContext);
 
+  const { validArticles, futureArticles } = articles
+    .filter(article => !filter || article.author == filter)
+    .reduce(
+      (result, value) => {
+        if (articleInFuture(value.date)) {
+          result.futureArticles.push(value);
+        } else {
+          result.validArticles.push(value);
+        }
+        return result;
+      },
+      { validArticles: [], futureArticles: [] }
+    );
+
   /**
    * We're taking the flat array of articles [{}, {}, {}...]
    * and turning it into an array of pairs of articles [[{}, {}], [{}, {}], [{}, {}]...]
    * This makes it simpler to create the grid we want
    */
-  const articlePairs = articles
-    .filter(article => !filter || article.author == filter)
-    .reduce((result, value, index, array) => {
+  const articlePairs = [...validArticles, ...futureArticles].reduce(
+    (result, value, index, array) => {
       if (index % 2 === 0) {
         result.push(array.slice(index, index + 2));
       }
       return result;
-    }, []);
+    },
+    []
+  );
 
   useEffect(() => getGridLayout(), []);
 
