@@ -8,6 +8,20 @@ hero: ./images/cover.jpg
 
 ---
 
+![Working in Progress](https://media.giphy.com/media/dWa2rUaiahx1FB3jor/giphy.gif)
+
+You shouldn't be here...
+
+But since you're here anyway, have a gander.
+
+I can't stop you anwyay. But remember, Jesus is watching.
+
+`To-Do: Restrict URL of future articles`
+
+---
+
+---
+
 ## 🄳🄸🅂🄲🄻🄰🄸🄼🄴🅁
 
 This is not a structured blog post but a raw ongoing log of progress during the 100DaysOfCode challenge.
