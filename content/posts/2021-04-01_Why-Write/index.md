@@ -7,13 +7,13 @@ excerpt: 4 reasons why we write anything.
 hero: ./images/cover.jpg
 ---
 
-> “Apparently a picture says a thousand words, but a thousand words paints a pretty good picture.” - Me?
+> “Apparently a picture says a thousand words, but a thousand words paints a pretty good picture.” - _Me?_
 
 Was pretty proud of that one but let me know if it’s already been said (after all everything is a remix). Happened to come to my mind yesterday whilst thinking of what to write for this opening article. An otherwise miscellaneous thought that would have been destined to the recesses of my mind until it faded away and became forgotten.
 
 But now it had a purpose. It could be used. Written and **stored**.
 
-Here lies the first reason to write:
+So here lies the first reason to write:
 
 ### _**1. To store thoughts/ideas.**_
 
@@ -25,11 +25,11 @@ Some might be silly and useless, but others can be so much more.
 
 # Introduction
 
-But I’m getting ahead of myself, let me first introduce who I am and what I hope to achieve with yet another blog in a blogging network blogged to the blog with blogging blogs.
+Anyway I’m getting ahead of myself, first let me introduce who I am and what I hope to achieve with yet another blog in a blogging network blogged to the blog with blogging blogs.
 
 **My name is Matej Navara and I am not a writer.**
 
-I come from a software engineering background; developing games/apps/sites/etc. Geeky tech stuff that now the whole world uses on a daily basis. This side is my brain and the engine driving forward.
+I come from a software engineering background; developing games/apps/sites/APIs/etc. Geeky tech stuff that now the whole world uses on a daily basis. This side is my brain and the engine driving forward.
 
 ![Code life](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif)
 
@@ -37,9 +37,9 @@ Another side of me is the hopeless adventurer forever yearning to discover what 
 
 ![Adventure life](https://media.giphy.com/media/MS0fQBmGGMaRy/giphy.gif)
 
-These two parts of me are what I guess could be broad definitions of “who I am” now. Travelling developer? Code vagabond? ~~Digital nomad?~~
+These two parts of me are what I guess could be broad definitions of _“who I am”_ now. Travelling developer? Code vagabond? ~~Digital nomad?~~
 
-But we are all more than our basic labels. No one’s job/hobby/passion defined them in their entirety but it does give a rough overview of who they may be.
+But we are all more than our basic labels. No one’s job/hobby/passion defined them in their entirety although it does give a rough overview of who they may be.
 
 Now enough about all that. The subject at hand is clear:
 
@@ -101,11 +101,11 @@ Here is my first entry:
 
 ![First entry](./images/journal-1.jpeg)
 
-Since then I have been making an entry pretty much every day, the format grew to include Location, Date, Time, Mood and even the occassional drawing (though I'm definitely no artist).
+Since then I have been making an entry pretty much every day, the format grew to include Location, Date, Time, Mood and even the occassional drawing (I'm also definitely no artist).
 
 ![Entry format](./images/journal-2.jpeg)
 
-Without noticing it gave me such comfort during what was a difficult time and looking back through the pages you can see snapshots of these moments. But most importantly you can see how the Mood became ever more positive. Although that’s not necessarily the only reason, as there are lots of factors in daily life, but it definitely had an impact.
+Without noticing, it gave me such comfort during what was a difficult time and looking back through the pages you can see snapshots of these moments. Most importantly you can see how the Mood became ever more positive. Although that’s not necessarily the only reason, as there are lots of factors in daily life, but it definitely had a positive impact.
 
 The simple act of writing it down, takes the load off your mind and puts it onto paper (be it physical or digital). That is a very powerful and good reason to write.
 
@@ -115,6 +115,20 @@ The simple act of writing it down, takes the load off your mind and puts it onto
 
 And upon reflection that’s a pretty good place to leave it. Of course there are numerous reasons for why we write but I believe these are some of the big league reasons that we can all agree on.
 
+## TL;DR
+
+###### (To Long; Didn't Read)
+
+### _**1. To store thoughts/ideas.**_
+
+### _**2. To share knowledge.**_
+
+### _**3. To express imagination.**_
+
+### _**4. To reflect and process experiences.**_
+
+---
+
 I would love to hear any input of what is your _“why”_ or any feedback on something you may disagree with. This was written in one sitting on a warm Indonesian evening and honestly, it feels nice. A little brain dump of thoughts harking back to reason 1.
 
 Thank you for taking the time today to ingest my words.
@@ -122,7 +136,7 @@ Thank you for taking the time today to ingest my words.
 This blog will become a home of 3 types of content:
 
 - **Travel**: Experiences, tips, guides and recommendations from different destinations I stumble through.
-- **Tech**: Walkthroughs, tutorials, tips and discussions as I bumble through the ever changing tech landscape.
+- **Tech**: Walkthroughs, tutorials, hacks and discussions as I bumble through the ever changing tech landscape.
 - **Thoughts**: Ideas, questions, debates and theories on things that may wander though my mind.
 
 Stay tuned ✨
