@@ -13,14 +13,13 @@ Was pretty proud of that one but let me know if it’s already been said (after 
 
 But now it had a purpose. It could be used. Written and **stored**.
 
+The joy of this can be periodically/randomly stumbling across these at a later date only to be reminded of the people, space and circumstances in which they were formed.
+
 So here lies the first reason to write:
 
 ### _**1. To store thoughts/ideas.**_
 
 ![Store](https://media.giphy.com/media/1BdrmMkllI1e2gdPaS/giphy.gif)
-
-
-The joy of this can be periodically/randomly stumbling across these at a later date only to be reminded of the people, space and circumstances in which they were formed.
 
 Some might be silly and useless, but others can be so much more.
 
@@ -34,17 +33,13 @@ I come from a software engineering background; developing games/apps/sites/APIs/
 
 ![Code life](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif)
 
-
-Another side of me is the hopeless adventurer forever yearning to discover what is over _“there”_. Growing up on Indiana Jones/Tomb Raider I longed for adventures in faraway tropical lands with unique food, serene vistas and strange creatures bigger than they should be. This side is my heart and the steering wheel that defines the path.
-
+Another side of me is the hopeless adventurer forever yearning to discover what is over _“there”_. Growing up on Indiana Jones and Tomb Raider I longed for adventures in faraway tropical lands with unique food, serene vistas and strange creatures bigger than they should be. This side is my heart and the steering wheel that defines the path.
 
 ![Adventure life](https://media.giphy.com/media/MS0fQBmGGMaRy/giphy.gif)
 
 These two parts of me are what I guess could be broad definitions of _“who I am”_ now. Travelling developer? Code vagabond? ~~Digital nomad?~~
 
-
 But we are all more than our basic labels. No one’s job/hobby/passion defined them in their entirety although it does give a rough overview of who they may be.
-
 
 Now enough about all that. The subject at hand is clear:
 
@@ -72,7 +67,6 @@ A force so powerful that it has spawned things into existence that would otherwi
 
 So for the next reason we have:
 
-
 ### _**3. To express imagination.**_
 
 ![Imagination](https://media.giphy.com/media/BQUITFiYVtNte/giphy.gif)
@@ -83,9 +77,7 @@ So how do we top the last 2? Well I guess we don’t or maybe we do.
 
 There’s a reason that has provided comfort and healing to countless individuals, though rather contradictory to the previous points as it often stays hidden/private. Yet this does not diminish the power that it has had throughout the ages.
 
-
 It's the act of personal **reflection**; be it in a diary, journal, memoir, sketchbook, note taking app or the back of a reciept it all accomplishes the same goal. To reflect and process thoughts. The simple act of writing has an almost meditative quality and these thoughts have been expressed many times over by individuals far more eloquent in writing than myself.
-
 
 So here are a few:
 
