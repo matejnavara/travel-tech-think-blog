@@ -46,7 +46,7 @@ const GridItem: React.FC<GridItemProps> = ({ article, narrow }) => {
             </MetaData>{" "}
           </div>
         ) : (
-          <Excerpt hasOverflow={hasOverflow}>Coming Soon...</Excerpt>
+          <MetaData>Coming Soon...</MetaData>
         )}
       </Item>
     </ArticleLink>

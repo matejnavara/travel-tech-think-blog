@@ -6,6 +6,20 @@ excerpt: The start of the 100 Days Of Code challenge. Blog creation, Mobile app 
 hero: ./images/cover.jpg
 ---
 
+---
+
+## 🄳🄸🅂🄲🄻🄰🄸🄼🄴🅁
+
+This is not a structured blog post but a raw ongoing log of progress during the 100DaysOfCode challenge.
+
+It is long. It isn't proof read or spellchecked. There will be bugs and typos.
+
+Don't judge. You have been warned. Now go forth;
+
+![Uncut/Unedited](https://media.giphy.com/media/xTiTnu831s1um2X9ug/giphy.gif)
+
+---
+
 # **#100DaysOfCode Part 1** _(Day 1-20)_
 
 ## Day 1 - 01/03/2021
@@ -500,10 +514,12 @@ Haters will say that's a bad trade but for the code lovers it's a no brainer:
 
 Happy 13th. Feels nice to be writing this up in an IDE but maybe that's just me.
 
+> Now it's continue on (almost) forgotten PASSION PROJECT TIME!
+
 So as for today I will update and build off of the Motivication React Native app. I made a start some time ago but not real progress, depending on the state of it I may just start again. Then soon I will begin the start of the Node backend.
 
 Both can be seen in the hasitily drawn whiteboard diagram below:
-![Whiteboard sketch]()
+![Whiteboard sketch](./images/day13-motivication-whiteboard.jpeg)
 
 I swear there is much more ideation already but currently it just lives in my head! As part of this end-to-end development process I will document the write-ups and design of this project.
 
@@ -535,9 +551,9 @@ Let's just start!
 
 Today is Balinese New Year known as Nyepi, the day of silence. No lights, no noise, no travel, no electricity/internet (although it seems okay so far).
 
-Regardless we still out here coding! :tech:
+Regardless we still out here coding! 👨‍💻
 
-![Nyepi Coding]()
+![Nyepi Coding](./images/day14-nyepi-coding.jpeg)
 
 Yesterday was mostly catching up on what was done and fixing the edit screen.
 
@@ -680,6 +696,8 @@ Tomorrow I will prepare a roadmap of offline tasks for the time on the boat as w
 ## Day 18 - 18/03/2021
 
 Sitting on a ferry from Sorong to Wasai for 3 hours so figured now would be a good time to get today's 100DaysOfCode done.
+
+![Ferry coding](./images/day18-ferry-coding.jpeg)
 
 Firstly in terms of roadmap it will depend a bit on the internet connectivity to download the necessary packages for new features.
 

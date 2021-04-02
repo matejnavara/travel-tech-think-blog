@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/matejnavara/`
+        url: `https://www.linkedin.com/in/matejnavara/`
       }
     ]
   },

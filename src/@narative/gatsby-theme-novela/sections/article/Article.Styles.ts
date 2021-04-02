@@ -40,12 +40,13 @@ export const Grid = styled.div<{ numberOfArticles: number }>`
 export const Item = styled.div`
   position: relative;
 
-  @media (max-width: 540px) {
+  ${mediaqueries.tablet`
+    margin-bottom: 20px;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     background: ${p => p.theme.colors.card};
-  }
+  `}
 `;
 
 export const Title = styled(Headings.h3)`
