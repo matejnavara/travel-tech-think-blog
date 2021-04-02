@@ -697,6 +697,8 @@ Tomorrow I will prepare a roadmap of offline tasks for the time on the boat as w
 
 Sitting on a ferry from Sorong to Wasai for 3 hours so figured now would be a good time to get today's 100DaysOfCode done.
 
+![Ferry coding](./images/day18-ferry-coding.jpeg)
+
 Firstly in terms of roadmap it will depend a bit on the internet connectivity to download the necessary packages for new features.
 
 Regardless below is a list of ToDos in a rough order of completion however this might change depending on the above.

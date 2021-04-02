@@ -6,6 +6,20 @@ excerpt: Continuing the 100 Days Of Code challenge. Apps, apps, apps.
 hero: ./images/cover.jpg
 ---
 
+---
+
+## 🄳🄸🅂🄲🄻🄰🄸🄼🄴🅁
+
+This is not a structured blog post but a raw ongoing log of progress during the 100DaysOfCode challenge.
+
+It is long. It isn't proof read or spellchecked. There will be bugs and typos.
+
+Don't judge. You have been warned. Now go forth;
+
+![Uncut/Unedited](https://media.giphy.com/media/xTiTnu831s1um2X9ug/giphy.gif)
+
+---
+
 # **#100DaysOfCode Part 2** _(Day 21-40)_
 
 ## Day 21 - 21/03/2021
@@ -310,5 +324,46 @@ Basic but works.
 ![Coming soon post feature](./images/day31-coming-soon-feature.png)
 
 Tomorrow will be content and go live day! ✨
+
+---
+
+## Dat 32 - 01/04/2012
+
+A lot of progress today getting the content ready and fixing little issues across the site. You can see all on the [Git repo](https://github.com/matejnavara/travel-tech-think-blog/commits/master).
+
+![Git log](./images/day32-git-history.png)
+
+Now the articles look like the real deal!
+
+![Posts with content](./images/day32-content-update.png)
+
+Not too shabby!
+
+And finally it's now deployed on a proper domain with SSL and all (thanks Netlify 😘)
+
+> www.TechABreak.blog ✨
+
+Legit. Onwards!
+
+---
+
+## Day 33 - 02/04/2021
+
+Today is some last minute cleanup and tweaks based off the initial feedback of the blog. Minor things mostly mobile optimisations on small phones.
+
+So let's hit it.
+
+| Before                                               | After                                              |
+| ---------------------------------------------------- | -------------------------------------------------- |
+| ![Header before](./images/day33-header-before.png)   | ![Header before](./images/day33-header-after.png)  |
+| ![Article before](./images/day33-article-before.png) | ![Article after](./images/day33-article-after.png) |
+
+Simple padding changes that make a big difference and bring valuable content above the fold. On small devices screen space is a valuable commodity.
+
+Now it's time to push and post.
+
+Don't let perfection be the enemy of good. It's time to put it out there.
+
+![Ship It Ralph](https://media.giphy.com/media/ta83CqOoRwfwQ/giphy.gif)
 
 ---
