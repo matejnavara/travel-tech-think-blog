@@ -29,11 +29,19 @@ Anyway I’m getting ahead of myself, first let me introduce who I am and what I
 
 **My name is Matej Navara and I am not a writer.**
 
-I come from a software engineering background; developing games/apps/sites/APIs/etc. Geeky tech stuff that now the whole world uses on a daily basis. This side is my brain and the engine driving forward.
+I come from a software engineering background; developing games/apps/sites/APIs/etc.
+
+Geeky tech stuff that now the whole world uses on a daily basis.
+
+This side is my brain and the engine driving forward.
 
 ![Code life](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif)
 
-Another side of me is the hopeless adventurer forever yearning to discover what is over _“there”_. Growing up on Indiana Jones and Tomb Raider I longed for adventures in faraway tropical lands with unique food, serene vistas and strange creatures bigger than they should be. This side is my heart and the steering wheel that defines the path.
+Another side of me is the hopeless adventurer forever yearning to discover what is over _“there”_.
+
+Growing up on Indiana Jones and Tomb Raider I longed for adventures in faraway tropical lands with unique food, serene vistas and strange creatures bigger than they should be.
+
+This side is my heart and the steering wheel that defines the path.
 
 ![Adventure life](https://media.giphy.com/media/MS0fQBmGGMaRy/giphy.gif)
 
