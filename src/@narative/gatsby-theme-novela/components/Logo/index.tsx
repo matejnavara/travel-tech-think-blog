@@ -16,7 +16,7 @@ export default Logo;
 const LogoContainer = styled.div`
   font-size: 50px;
 
-  span {
+  span:nth-child(2) {
     padding: 0 10px;
   }
 `;

@@ -158,6 +158,7 @@ const HeadingContainer = styled.div`
 
   ${mediaqueries.tablet`
     width: 100%;
+    margin: 30px 0;
   `}
 `;
 
@@ -176,8 +177,12 @@ const HeroHeading = styled.h1`
     font-size: 38px
   `}
 
-  ${mediaqueries.phablet`
+  ${mediaqueries.tablet`
     font-size: 32px;
+  `}
+
+  ${mediaqueries.phone`
+    font-size: 28px;
   `}
 `;
 
