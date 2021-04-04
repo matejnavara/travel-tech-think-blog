@@ -381,3 +381,73 @@ Don't let perfection be the enemy of good. It's time to put it out there.
 ![Ship It Ralph](https://media.giphy.com/media/ta83CqOoRwfwQ/giphy.gif)
 
 ---
+
+## Day 34 - 03/04/2021
+
+Blog changes all done (for now) so I will jump back on the Motivication project. And perhaps I finally start the API itself!
+
+For this today I will just set up a basic ExpressJS backend before adding the endpoints tomorrow.
+
+SO, brand you fresh directory let's initialise a Node.js project and create a new `package.json`:
+
+```
+npm init
+```
+
+...then install Express as a dependency:
+
+```
+npm install express --save
+```
+
+...and create a quick basic Express server:
+
+```js
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Start of Motivication API.");
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
+```
+
+...finally just push to the new Git repository.
+
+Bit of a quick cop-out day but tomorrow we will define all the existing endpoints to start using it on the app.
+
+---
+
+## Day 35 - 04/04/2021
+
+Good morning, back to that API. All the quote data will be moved here. Alarm data will continue to be stored locally for now.
+
+Let's define what we need for now:
+
+| Route          | Request                                             | Response              | Description                                       |
+| -------------- | --------------------------------------------------- | --------------------- | ------------------------------------------------- |
+| GET /quote     | category: string                                    | quote: QuoteObject    | Returns a random quote of requested category type |
+| GET /quotes    | userId: number                                      | quotes: QuoteObject[] | Returns all saved quotes for user                 |
+| POST /rating   | { userId: number, quoteId: number, rating: number } | OK                    | Sends review for quote                            |
+| PUT /rating    | { userId: number, quoteId: number, rating: number } | OK                    | Updates review for quote                          |
+| DELETE /rating | { userId: number, quoteId: number, rating: number } | OK                    | Removes review for quote                          |
+
+This also needed a bit more elaboration in terms of DB schema surrounding this area. So we have yet another crude whiteboard diagram:
+
+![Quote and rating schema](./images/day35-whiteboard-schema.jpeg)
+
+(I swear I will document this properly eventually...)
+
+With the above in mind I continued to build out the API with the below structure:
+
+![API structure](./images/day35-api-progress.png)
+
+Currently just one route/service returning our bunch of dummy quotes data on `GET /quotes`.
+
+It's a start. Happy Easter.
+
+---
