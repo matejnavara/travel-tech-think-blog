@@ -451,3 +451,63 @@ Currently just one route/service returning our bunch of dummy quotes data on `GE
 It's a start. Happy Easter.
 
 ---
+
+## Day 36 - 05/04/2021
+
+Little bit of coders block in terms of which direction to go next, quite a few things to do and all rather different.
+
+Regardless I opted to hook the mobile app up to the local API to pull quote data.
+
+So on the backend API we have the endpoint `/quotes` prepared and serving the (currently dummy) data:
+
+```ts
+const quotes = require("../data/quotes.data");
+
+module.exports = {
+  getQuotes: (req, res) => {
+    return res.status(200).json({ quotes });
+  }
+};
+```
+
+and on the mobile app client we will be calling the `/quotes` endpoint via Axios:
+
+```ts
+import axios, { AxiosResponse } from "axios";
+
+interface Error {
+  message: string;
+  response?: AxiosResponse;
+}
+
+const api = axios.create({
+  baseURL: process.env.REACT_NATIVE_API_URL,
+  timeout: 3000
+});
+
+const handleError = (error: Error) => {
+  return Promise.reject({
+    message: error.message,
+    data: error.response?.data,
+    status: error.response?.status,
+    error
+  });
+};
+
+api.interceptors.response.use(
+  response => response,
+  error => {
+    return handleError(error);
+  }
+);
+
+export const getQuotes = async () => api.get("/quotes");
+```
+
+and tadaa we see it come through in the logged response:
+
+![Successfult API response](./images/day36-api-response.png);
+
+Tomorrow I will populate these through the app and display them properly since the schama changed a bit as per the white board session.
+
+---
