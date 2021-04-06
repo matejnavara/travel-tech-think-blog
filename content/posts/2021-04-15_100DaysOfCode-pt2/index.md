@@ -511,3 +511,53 @@ and tadaa we see it come through in the logged response:
 Tomorrow I will populate these through the app and display them properly since the schama changed a bit as per the white board session.
 
 ---
+
+## Day 37 - 06/04/2021
+
+Thunk time today I think. Given the need for some async Redux actions in our app the Redux supported Thunk middleware is perfectly suited for the task.
+
+Initially we will move the defined store out of our `App.tsx` and into it's own `Redux/store.ts` file shown below:
+
+```ts
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+
+import rootReducer from "./reducers/root.reducer";
+
+const middlewares = [thunk];
+
+export const store = createStore(rootReducer, applyMiddleware(...middlewares));
+
+// Infer the `RootState` and `AppDispatch` types from the store itself for TS typing
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export default store;
+```
+
+The additional `RootState` and `AppDispatch` exports are used for the new `useAppDispatch` typed hook for use in the app. More info on this can be found in the [official Redux docs](https://redux.js.org/recipes/usage-with-typescript#define-typed-hooks).
+
+Now we can do nice Async actions to fetch data, await response and dispatch success/failure appropriately:
+
+```ts
+export const getQuotesAsync = () => {
+  return async (dispatch: AppDispatch) => {
+    dispatch(fetchQuotes());
+    try {
+      const { data } = await getAPIQuotes();
+      dispatch(fetchQuotesSuccess(data.quotes));
+    } catch (error) {
+      console.log("🚀 ~ file: quotes.actions.ts ~ getQuotesAsync error", error);
+      dispatch(fetchQuotesFailure());
+    }
+  };
+};
+```
+
+And once all hooked up (and Quote schema changed to include Author object), we can see the Quotes successfully pulling through:
+
+![Quotes from API](./images/day37-api-quotes.png)
+
+Happy days 🌞
+
+---
