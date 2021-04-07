@@ -561,3 +561,59 @@ And once all hooked up (and Quote schema changed to include Author object), we c
 Happy days 🌞
 
 ---
+
+## Day 38 - 07/04/2021
+
+Some good news today; if all goes right, from Monday I will be applying these React Native skills to a leading UK Neuroscience company helping address mental health in young people! Happy days indeed!
+
+Anyway without getting distracted we should add some additional API actions to our app. Busy/long day so nothing _WIIIIILD_ but let's (finally) hook up a PostgreSQL database.
+
+The changes for this will be on the API side.
+Currently for this project I've opted to use simple node-postgres for interfacing with PostgreSQL rather than a query/ORM.
+
+First we want to add some new dependencies:
+
+- `dotenv`
+- `nodemon`
+- `pg`
+- `pg-hstore`
+- `express-promise-router`
+
+From here we will create our new DB connector in `db/index.js`:
+
+```js
+const { Pool } = require("pg");
+
+const pool = new Pool({
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT
+});
+
+module.exports = {
+  query: (text, params) => pool.query(text, params)
+};
+```
+
+then we replace our existing route/service and use it like this:
+
+```js
+const Router = require("express-promise-router");
+const db = require("../db");
+
+const router = new Router();
+
+/* Quotes Routes. */
+router.get("/", async (req, res) => {
+  const { rows } = await db.query("SELECT * FROM quotes");
+  res.status(200).json({ rows });
+});
+
+module.exports = router;
+```
+
+Very basic but it's a start. Tomorrow I will actually set up the local DB with some seed data to start passing data from **DB -> API -> App**. Exciting times.
+
+---
