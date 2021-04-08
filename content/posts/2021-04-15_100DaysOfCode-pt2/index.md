@@ -566,7 +566,7 @@ Happy days 🌞
 
 Some good news today; if all goes right, from Monday I will be applying these React Native skills to a leading UK Neuroscience company helping address mental health in young people! Happy days indeed!
 
-Anyway without getting distracted we should add some additional API actions to our app. Busy/long day so nothing _WIIIIILD_ but let's (finally) hook up a PostgreSQL database.
+Anyway without getting distracted we should add some additional API actions to our app. Busy/long day so nothing _WIIIIILD_ but let's (finally) start hooking up a PostgreSQL database.
 
 The changes for this will be on the API side.
 Currently for this project I've opted to use simple node-postgres for interfacing with PostgreSQL rather than a query/ORM.
@@ -615,5 +615,19 @@ module.exports = router;
 ```
 
 Very basic but it's a start. Tomorrow I will actually set up the local DB with some seed data to start passing data from **DB -> API -> App**. Exciting times.
+
+---
+
+## Day 39 - 08/04/2021
+
+So today it's setting up the database locally with the desired schema. One advantage of an ORM such as sequelize is that you store your model schema as code but for now we are just building this simple model on Postgres itself using [Postico](https://eggerapps.at/postico/).
+
+Here you can see the simple quotes model with the relation to the authors table.
+
+![Postico schema creation](./images/day39-postico-schema.png)
+
+Then I entered the seed data into the tables manually, we will automate these imports from my quotes spreadsheet soon. For now lets roll with this and get these pulling through the API.
+
+![Initial DB data](./images/day39-initial-db-data.png)
 
 ---
