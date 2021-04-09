@@ -8,20 +8,6 @@ hero: ./images/cover.jpg
 
 ---
 
-![Working in Progress](https://media.giphy.com/media/dWa2rUaiahx1FB3jor/giphy.gif)
-
-You shouldn't be here...
-
-But since you're here anyway, have a gander.
-
-I can't stop you anwyay. But remember, Jesus is watching.
-
-`To-Do: Restrict URL of future articles`
-
----
-
----
-
 ## 🄳🄸🅂🄲🄻🄰🄸🄼🄴🅁
 
 This is not a structured blog post but a raw ongoing log of progress during the 100DaysOfCode challenge.
@@ -629,5 +615,31 @@ Here you can see the simple quotes model with the relation to the authors table.
 Then I entered the seed data into the tables manually, we will automate these imports from my quotes spreadsheet soon. For now lets roll with this and get these pulling through the API.
 
 ![Initial DB data](./images/day39-initial-db-data.png)
+
+---
+
+## Day 40 - 09/04/2021
+
+Now we have our DB hooked up to the API it's time to make queries and return this to our app upon request.
+
+Currently using a pure PostgreSQL query the `GET /quotes` endpoint query looks like this:
+
+```js
+/* Quotes Routes. */
+router.get("/", async (req, res) => {
+  const { rows } = await db.query(
+    "SELECT q.id, q.quote, a.name as by, a.description AS who, a.when FROM quotes AS q, authors as a WHERE q.author = a.id"
+  );
+  res.status(200).json(rows);
+});
+```
+
+this change was reflected on the frontend and tada:
+
+![Data from database](./images/day40-db-to-app.png)
+
+Nothing groundbreaking today, long week and it's Friday but it's good to have this end to end data flow. Progress is progress.
+
+Next is to build out the additional tables and start interacting with the data properly.
 
 ---
