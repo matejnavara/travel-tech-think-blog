@@ -24,7 +24,7 @@ k
 
 ## Day 41 - 10/04/2021
 
-New day and chapter 3 of the 5 part blog documentation. I realise it's quite an unstructured mess so each one come with a disclaimer...
+New day and start of chapter 3 of the 5 part blog documentation. I realise it's quite an unstructured mess so each one come with a disclaimer...
 
 Anyway now after getting the whole `DB -> API -> App` flow working I will build out a few more endpoints. One big one is the core motivication endpoint which gets a random quote of the chosen category. This will be the basis of the motivication notification:
 
@@ -46,7 +46,7 @@ router.get("/:categoryId", async (req, res) => {
 
 Next will be `/admin` endpoints in preperation for the Admin app that I want to start shortly, this will make interacting with the data and adding/updating information so much easier.
 
-This we will need CRUD endpooints for most of the models which won't be used by the app but will be needed for admin interaction.
+For this we will need CRUD endpoints for most of the models which won't be used by the app but will be needed for the admin app.
 
 Below are basic CRUD routes for Authors.
 
