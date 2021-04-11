@@ -106,3 +106,61 @@ SELECT q.id, q.quote, json_agg(c) AS categories, row_to_json(a) AS author
 Still all very messy but progress is progress.
 
 ---
+
+## Day 42 - 11/04/2021
+
+Sunday Sunday Sunday and it's day 42.
+
+Little late in the day but will hit that Admin project setup. For this I will try out the popular admin framework [React Admin](https://marmelab.com/react-admin).
+
+```
+npx create-react-app motivication-admin
+cd motivication-admin
+yarn add react-admin ra-data-simple-rest prop-types
+```
+
+With a small start we already leverage much of the React Native framework:
+
+```js
+import * as React from "react";
+import { Admin, Resource, ListGuesser, fetchUtils } from "react-admin";
+import simpleRestProvider from "ra-data-simple-rest";
+
+const apiUrl = "http://localhost:3001/admin";
+const fetchJson = (url, options = {}) => {
+  if (!options.headers) {
+    options.headers = new Headers({ Accept: "application/json" });
+  }
+  return fetchUtils.fetchJson(url, options);
+};
+const dataProvider = simpleRestProvider(apiUrl, fetchJson);
+
+const App = () => (
+  <Admin dataProvider={dataProvider}>
+    <Resource name="quotes" list={ListGuesser} />
+  </Admin>
+);
+
+export default App;
+```
+
+The simpleRestProvider package from React Admin provides a simple data interface for CRUD interactions with pagination. This does require the following headers on the response for resource lists:
+
+```js
+res.set({
+  "Access-Control-Expose-Headers": "Content-Range",
+  "Content-Range": rows.length
+});
+```
+
+But without too much difficulty we have the base of the admin system up and running within very little time!
+
+![Motivication Admin](./images/day42-motivication-admin.png)
+
+Even though it just lists the quotes and authors for now it's crazy how quickly React Admin made this initial setup.
+
+This is just the very beginning as we expand out the Admin/API to facilitate more interaction.
+
+Onwards!
+
+---
