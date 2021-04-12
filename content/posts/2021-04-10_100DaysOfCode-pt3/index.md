@@ -164,3 +164,68 @@ This is just the very beginning as we expand out the Admin/API to facilitate mor
 Onwards!
 
 ---
+
+## Day 43 - 12/04/2021
+
+Another day and continuing to build out the admin portal. It's been a good way to discover the needs of the API and interact with our models.
+
+Today I created Quotes List, Create and Edit components based on the React Admin library which made it very simple to do so.
+
+You can see these below:
+
+### QuotesList
+
+![Quote list](./images/day43-quote-list.png)
+
+```js
+export const QuotesList = props => (
+  <List {...props}>
+    <Datagrid rowClick="edit">
+      <TextField source="id" />
+      <TextField source="quote" />
+      <ReferenceField label="Author" reference="authors" source="author">
+        <TextField source="name" />
+      </ReferenceField>
+    </Datagrid>
+  </List>
+);
+```
+
+### QuotesCreate
+
+![Quote Create](./images/day43-quote-create.png)
+
+```js
+export const QuotesCreate = props => (
+  <Create title="Add Quote" {...props}>
+    <SimpleForm>
+      <TextInput source="quote" />
+      <ReferenceInput label="Author" reference="authors" source="author">
+        <SelectInput optionText="name" />
+      </ReferenceInput>
+    </SimpleForm>
+  </Create>
+);
+```
+
+### QuotesEdit
+
+![Quote Edit](./images/day43-quote-edit.png)
+
+```js
+export const QuotesEdit = props => (
+  <Edit title="Edit Quote" {...props}>
+    <SimpleForm>
+      <TextInput disabled label="Id" source="id" />
+      <TextInput source="quote" />
+      <ReferenceInput label="Author" reference="authors" source="author">
+        <SelectInput optionText="name" />
+      </ReferenceInput>
+    </SimpleForm>
+  </Edit>
+);
+```
+
+Simple starts but working. Will progress to Authors and Categories next.
+
+---
