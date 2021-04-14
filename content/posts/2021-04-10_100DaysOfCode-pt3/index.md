@@ -229,3 +229,17 @@ export const QuotesEdit = props => (
 Simple starts but working. Will progress to Authors and Categories next.
 
 ---
+
+## Day 44 - 13/04/2021
+
+Late sesh, changing data naming conventions. Following common Postgres best practices I've moved from camel case to snake case identifiers.
+
+~~quoteID~~ -> **quote_id**
+
+I also changed the ambigious author string field `when` to the rather more somber but data appropriate smallint fields `birth_year` and `death_year`. This will allow for better sorting/filtering of authors further down the line. I did consider using datetime fields and picking out the year on response but smalint seemed just fine.
+
+These changes were reflected on DB, API and admin app.
+
+---
+
+## Day 45 - 14/04/2021
