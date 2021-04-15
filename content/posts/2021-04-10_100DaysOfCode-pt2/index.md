@@ -8,20 +8,6 @@ hero: ./images/cover.jpg
 
 ---
 
-![Working in Progress](https://media.giphy.com/media/dWa2rUaiahx1FB3jor/giphy.gif)
-
-You shouldn't be here...
-
-But since you're here anyway, have a gander.
-
-I can't stop you anwyay. But remember, Jesus is watching.
-
-`To-Do: Restrict URL of future articles`
-
----
-
----
-
 ## 🄳🄸🅂🄲🄻🄰🄸🄼🄴🅁
 
 This is not a structured blog post but a raw ongoing log of progress during the 100DaysOfCode challenge.
@@ -449,5 +435,211 @@ With the above in mind I continued to build out the API with the below structure
 Currently just one route/service returning our bunch of dummy quotes data on `GET /quotes`.
 
 It's a start. Happy Easter.
+
+---
+
+## Day 36 - 05/04/2021
+
+Little bit of coders block in terms of which direction to go next, quite a few things to do and all rather different.
+
+Regardless I opted to hook the mobile app up to the local API to pull quote data.
+
+So on the backend API we have the endpoint `/quotes` prepared and serving the (currently dummy) data:
+
+```ts
+const quotes = require("../data/quotes.data");
+
+module.exports = {
+  getQuotes: (req, res) => {
+    return res.status(200).json({ quotes });
+  }
+};
+```
+
+and on the mobile app client we will be calling the `/quotes` endpoint via Axios:
+
+```ts
+import axios, { AxiosResponse } from "axios";
+
+interface Error {
+  message: string;
+  response?: AxiosResponse;
+}
+
+const api = axios.create({
+  baseURL: process.env.REACT_NATIVE_API_URL,
+  timeout: 3000
+});
+
+const handleError = (error: Error) => {
+  return Promise.reject({
+    message: error.message,
+    data: error.response?.data,
+    status: error.response?.status,
+    error
+  });
+};
+
+api.interceptors.response.use(
+  response => response,
+  error => {
+    return handleError(error);
+  }
+);
+
+export const getQuotes = async () => api.get("/quotes");
+```
+
+and tadaa we see it come through in the logged response:
+
+![Successfult API response](./images/day36-api-response.png);
+
+Tomorrow I will populate these through the app and display them properly since the schama changed a bit as per the white board session.
+
+---
+
+## Day 37 - 06/04/2021
+
+Thunk time today I think. Given the need for some async Redux actions in our app the Redux supported Thunk middleware is perfectly suited for the task.
+
+Initially we will move the defined store out of our `App.tsx` and into it's own `Redux/store.ts` file shown below:
+
+```ts
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+
+import rootReducer from "./reducers/root.reducer";
+
+const middlewares = [thunk];
+
+export const store = createStore(rootReducer, applyMiddleware(...middlewares));
+
+// Infer the `RootState` and `AppDispatch` types from the store itself for TS typing
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export default store;
+```
+
+The additional `RootState` and `AppDispatch` exports are used for the new `useAppDispatch` typed hook for use in the app. More info on this can be found in the [official Redux docs](https://redux.js.org/recipes/usage-with-typescript#define-typed-hooks).
+
+Now we can do nice Async actions to fetch data, await response and dispatch success/failure appropriately:
+
+```ts
+export const getQuotesAsync = () => {
+  return async (dispatch: AppDispatch) => {
+    dispatch(fetchQuotes());
+    try {
+      const { data } = await getAPIQuotes();
+      dispatch(fetchQuotesSuccess(data.quotes));
+    } catch (error) {
+      console.log("🚀 ~ file: quotes.actions.ts ~ getQuotesAsync error", error);
+      dispatch(fetchQuotesFailure());
+    }
+  };
+};
+```
+
+And once all hooked up (and Quote schema changed to include Author object), we can see the Quotes successfully pulling through:
+
+![Quotes from API](./images/day37-api-quotes.png)
+
+Happy days 🌞
+
+---
+
+## Day 38 - 07/04/2021
+
+Some good news today; if all goes right, from Monday I will be applying these React Native skills to a leading UK Neuroscience company helping address mental health in young people! Happy days indeed!
+
+Anyway without getting distracted we should add some additional API actions to our app. Busy/long day so nothing _WIIIIILD_ but let's (finally) start hooking up a PostgreSQL database.
+
+The changes for this will be on the API side.
+Currently for this project I've opted to use simple node-postgres for interfacing with PostgreSQL rather than a query/ORM.
+
+First we want to add some new dependencies:
+
+- `dotenv`
+- `nodemon`
+- `pg`
+- `pg-hstore`
+- `express-promise-router`
+
+From here we will create our new DB connector in `db/index.js`:
+
+```js
+const { Pool } = require("pg");
+
+const pool = new Pool({
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT
+});
+
+module.exports = {
+  query: (text, params) => pool.query(text, params)
+};
+```
+
+then we replace our existing route/service and use it like this:
+
+```js
+const Router = require("express-promise-router");
+const db = require("../db");
+
+const router = new Router();
+
+/* Quotes Routes. */
+router.get("/", async (req, res) => {
+  const { rows } = await db.query("SELECT * FROM quotes");
+  res.status(200).json({ rows });
+});
+
+module.exports = router;
+```
+
+Very basic but it's a start. Tomorrow I will actually set up the local DB with some seed data to start passing data from **DB -> API -> App**. Exciting times.
+
+---
+
+## Day 39 - 08/04/2021
+
+So today it's setting up the database locally with the desired schema. One advantage of an ORM such as sequelize is that you store your model schema as code but for now we are just building this simple model on Postgres itself using [Postico](https://eggerapps.at/postico/).
+
+Here you can see the simple quotes model with the relation to the authors table.
+
+![Postico schema creation](./images/day39-postico-schema.png)
+
+Then I entered the seed data into the tables manually, we will automate these imports from my quotes spreadsheet soon. For now lets roll with this and get these pulling through the API.
+
+![Initial DB data](./images/day39-initial-db-data.png)
+
+---
+
+## Day 40 - 09/04/2021
+
+Now we have our DB hooked up to the API it's time to make queries and return this to our app upon request.
+
+Currently using a pure PostgreSQL query the `GET /quotes` endpoint query looks like this:
+
+```js
+/* Quotes Routes. */
+router.get("/", async (req, res) => {
+  const { rows } = await db.query(
+    "SELECT q.id, q.quote, a.name as by, a.description AS who, a.when FROM quotes AS q, authors as a WHERE q.author = a.id"
+  );
+  res.status(200).json(rows);
+});
+```
+
+this change was reflected on the frontend and tada:
+
+![Data from database](./images/day40-db-to-app.png)
+
+Nothing groundbreaking today, long week and it's Friday but it's good to have this end to end data flow. Progress is progress.
+
+Next is to build out the additional tables and start interacting with the data properly.
 
 ---
