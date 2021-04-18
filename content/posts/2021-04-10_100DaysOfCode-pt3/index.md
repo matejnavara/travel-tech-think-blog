@@ -243,3 +243,150 @@ These changes were reflected on DB, API and admin app.
 ---
 
 ## Day 45 - 14/04/2021
+
+Starting the day by reversing some of what I did yesterday haha. After some consideration I think it does make more sense to have `birth_date` and `death_date` fields as actual date fields (no time). This will allow for more interesting uses down the line like "Born on this day X years ago" etc.
+
+Postgres dates can store between 4,713 BC and 5,874,897 AD so I think we should be fine!
+
+In some cases we won't have the full date but only a year in which case I will store as XXXX-01-01 and have a new boolean field of `has_full_date` set as false.
+
+So let's do that.
+
+New sql helper for the occasion:
+
+```sql
+  SELECT
+  ${[authorAlias]}.name,
+  ${[authorAlias]}.description,
+  ${[authorAlias]}.birth_date,
+  ${[authorAlias]}.death_date,
+  ${[authorAlias]}.has_full_date,
+  EXTRACT(YEAR FROM ${[authorAlias]}.birth_date) AS birth_year,
+  EXTRACT(YEAR FROM ${[authorAlias]}.death_date) AS death_year,
+```
+
+Better I believe. Changes yet again made to API/Admin and now onwards.
+
+---
+
+## Day 46 - 15/04/2021
+
+Today I decided on a little restructure of the API routes going forward, splitting apart the growing `admin.routes.js` file into seperate files within an `/admin` folder whilst doing the same for clientside routes within an `/app` folder.
+
+![API Route structure](./images/day46-api-route-structure.png)
+
+I also extended the admin routes with CRUD endpoints for Categories and added these to the Admin app.
+
+![Admin categories](./images/day46-admin-categories.png)
+
+Noice.
+
+---
+
+## Day 47 - 16/04/2021
+
+Next interaction I wanted to address was the relationship between quotes and categories via `category_quotes`. This won't be a route but a service create and delete functions for the junction relationships.
+
+**_Some struggle later..._**
+
+Bit of a mess, I will continue tomorrow. Long week...
+
+---
+
+## Day 48 - 17/04/2021
+
+Alrighty today I came back to it with a fresh mind and resolved the issues surrounding `category_quotes` interacting with Admin.
+
+### Listing categories on `GET /quotes`
+
+This was with the following SQL select:
+
+```sql
+SELECT q.id, q.quote, q.author_id, COALESCE(json_agg(c) FILTER (WHERE c.id IS NOT NULL), '[]') AS categories
+```
+
+these can then be displayed using the `ArrayField` from React Admin and specifying the basePath towards the `/categories` route to link to editing.
+
+```js
+<ArrayField source="categories" basePath="/categories" fieldKey="id">
+  <SingleFieldList>
+    <ChipField source="value" />
+  </SingleFieldList>
+</ArrayField>
+```
+
+### Creating Quotes with `INSERT /quotes`
+
+Easier to solve since it just shows all categories and each will be a new `category_quotes` row. React Admin lets us reference categories and post the source of `category_ids` to use in our API.
+
+```js
+<ReferenceArrayInput source="category_ids" reference="categories">
+  <SelectArrayInput optionText="label" />
+</ReferenceArrayInput>
+```
+
+Then on API we handle the provided array:
+
+```js
+if (category_ids && category_ids.length > 0) {
+  const promises = category_ids.map(categoryId => {
+    db.query(
+      `INSERT INTO category_quotes (category_id, quote_id) VALUES(${categoryId}, ${newQuoteId})`
+    );
+  });
+  await Promise.all(promises);
+}
+```
+
+### Updating Quotes with `PUT /quotes/:quoteId`
+
+This was a bit more tricky since we display existing categories on the edit page and then have to handle removing, adding and existing elements.
+
+On React Admin this was handled similarly as the Create screen except the `GET /quotes/:quoteId` endpoint returns `category_ids` to populate the `ReferenceArrayInput`.
+
+Similar to the list view except just returning an array of ids.
+
+```sql
+SELECT q.id, q.quote, q.author_id, COALESCE(json_agg(c.id) FILTER (WHERE c.id IS NOT NULL), '[]') AS category_ids
+```
+
+then on the API we need to compare the difference, what needs adding and what needs removing.
+
+```js
+const categoriesToAdd = category_ids.filter(
+  x => !existingCategories.includes(x)
+);
+const categoriesToRemove = existingCategories.filter(
+  x => !category_ids.includes(x)
+);
+```
+
+these arrays then resovle to their appropriate SQL call:
+
+```js
+if (categoriesToAdd.length > 0) {
+  const promises = categoriesToAdd.map(categoryId => {
+    db.query(
+      `INSERT INTO category_quotes (category_id, quote_id) VALUES(${categoryId}, ${quoteId})`
+    );
+  });
+  await Promise.all(promises);
+}
+
+if (categoriesToRemove.length > 0) {
+  const promises = categoriesToRemove.map(categoryId => {
+    db.query(
+      `DELETE FROM category_quotes WHERE category_id = ${categoryId} AND quote_id = ${quoteId}`
+    );
+  });
+  await Promise.all(promises);
+}
+```
+
+And there we have the CRUD functionality in Admin for full Quote creation.
+
+Huzzah!
+
+---
+
+## Day 49 - 18/04/21
