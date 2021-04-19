@@ -390,3 +390,112 @@ Huzzah!
 ---
 
 ## Day 49 - 18/04/21
+
+Today was cleanup of the API before jumping back to the app.
+
+For this I went for the Manager/Worker model of Routes calling Controllers (managers) which use Services (workers). Naming of these may vary but the idea is the same.
+
+Currently all the logic is on the route, which is grim. Not as much of a problem as the app is small but definitely not scalable.
+
+So let's take an interesting example `PUT /admin/quotes/:quoteId`:
+
+```js
+put(async (req, res) => {
+  const { quoteId } = req.params;
+  const { quote, author_id, category_ids } = req.body;
+  await db.query(
+    `UPDATE quotes
+        SET quote = '${quote}', author_id = ${author_id}
+        WHERE id = ${quoteId}`
+  );
+
+  const { rows } = await db.query(
+    `SELECT json_agg(category_id) AS category_ids FROM category_quotes WHERE quote_id = ${quoteId}`
+  );
+  const existingCategories = rows[0].category_ids;
+
+  const categoriesToAdd = category_ids.filter(
+    x => !existingCategories.includes(x)
+  );
+
+  if (categoriesToAdd.length > 0) {
+    const promises = categoriesToAdd.map(categoryId => {
+      db.query(
+        `INSERT INTO category_quotes (category_id, quote_id) VALUES(${categoryId}, ${quoteId})`
+      );
+    });
+    await Promise.all(promises);
+  }
+
+  const categoriesToRemove = existingCategories.filter(
+    x => !category_ids.includes(x)
+  );
+
+  if (categoriesToRemove.length > 0) {
+    const promises = categoriesToRemove.map(categoryId => {
+      db.query(
+        `DELETE FROM category_quotes WHERE category_id = ${categoryId} AND quote_id = ${quoteId}`
+      );
+    });
+    await Promise.all(promises);
+  }
+  res.status(200);
+});
+```
+
+there's way too much going on here so let's move the whole function into a Controller and start splitting out individual Services.
+
+```js
+const adminUpdateQuote = async (req, res) => {
+  const { quoteId } = req.params;
+  const { quote, author_id, category_ids } = req.body;
+  try {
+    await updateQuote(quoteId, { quote, author_id });
+
+    const { rows } = await getQuoteCategories(quoteId);
+    const existingCategories = rows[0].category_ids;
+
+    const categoriesToAdd = category_ids.filter(
+      x => !existingCategories.includes(x)
+    );
+
+    if (categoriesToAdd.length > 0) {
+      const promises = categoriesToAdd.map(categoryId =>
+        createCategoryQuote(categoryId, newQuoteId)
+      );
+      await Promise.all(promises);
+    }
+
+    const categoriesToRemove = existingCategories.filter(
+      x => !category_ids.includes(x)
+    );
+
+    if (categoriesToRemove.length > 0) {
+      const promises = categoriesToRemove.map(categoryId =>
+        deleteCategoryQuote(categoryId, newQuoteId)
+      );
+      await Promise.all(promises);
+    }
+    res.status(200);
+  } catch (error) {
+    console.log(e.message);
+    res.status(500).json(error);
+  }
+};
+```
+
+Definitely a bit neater and we have a bunch of new services we can reuse/test.
+
+This was done for all the Quotes routes. Will do for the others tomorrow.
+
+---
+
+## Day 50 - 19/04/21
+
+Half way through the challenge! As a little round-up so far I have:
+
+- Created a GatsbyJS Blog (after building/comparing 2 platforms)
+- Created a basic stocks watcher app for Android/iOS
+- Started on passion project mobile app
+- Created NodeJS API for the project
+- Created ReactJS Admin portal for the project
