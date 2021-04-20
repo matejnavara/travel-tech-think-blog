@@ -499,3 +499,9 @@ Half way through the challenge! As a little round-up so far I have:
 - Started on passion project mobile app
 - Created NodeJS API for the project
 - Created ReactJS Admin portal for the project
+
+Nice to see how much progress is made with consistency and dedicated practice.
+
+Started new role in React Native today. Exciting times!
+
+---
