@@ -505,3 +505,329 @@ Nice to see how much progress is made with consistency and dedicated practice.
 Started new role in React Native today. Exciting times!
 
 ---
+
+## Day 51 - 20/04/21
+
+Today was a quick one, cleaned up the Author endpoints as with the Quotes.
+
+```js
+const Router = require("express-promise-router");
+
+const {
+  adminGetAuthorList,
+  adminGetAuthor,
+  adminUpdateAuthor,
+  adminDeleteAuthor
+} = require("../../controllers/admin/authors.controller");
+
+const router = new Router();
+
+/* Admin Author Routes. */
+router
+  .route("/")
+  .get(adminGetAuthorList)
+  .post(adminGetAuthorList);
+
+router
+  .route("/:authorId")
+  .get(adminGetAuthor)
+  .put(adminUpdateAuthor)
+  .delete(adminDeleteAuthor);
+
+module.exports = router;
+```
+
+---
+
+## Day 52 - 21/04/21
+
+Another quick one, it's my wife's birthday and time is of the essense. One more API refactor, this time for Categories.
+
+### Fresh Categories Services
+
+```js
+const db = require("../../db");
+
+const getCategories = async () => db.query("SELECT * FROM categories");
+
+const createCategory = async ({ label, value, description }) =>
+  db.query(
+    `INSERT INTO categories (label, value, description) VALUES('${label}', '${value}', '${description}')`
+  );
+
+const getCategory = async categoryId =>
+  db.query(`SELECT * FROM categories WHERE id = ${categoryId}`);
+
+const updateCategory = async (categoryId, { label, value, description }) =>
+  db.query(
+    `UPDATE categories
+      SET label = '${label}',
+      value = '${value}',
+      description = '${description}'
+      WHERE id = ${categoryId}`
+  );
+
+const deleteCategory = async categoryId =>
+  db.query(`DELETE FROM categories WHERE id = ${categoryId}`);
+
+module.exports = {
+  getCategories,
+  createCategory,
+  getCategory,
+  updateCategory,
+  deleteCategory
+};
+```
+
+So fresh. Now these can be used in Controllers across the land. Noice.
+
+---
+
+## Day 53 - 22/04/21
+
+Today I finally jumped back on the RN app side of the project after a lot of time on backend/admin.
+
+Firstly merged in the `api-connect` branch to master. Next will be the actual notifications themselves.
+
+After some consideration I decided to try out the `expo-notifications` API since we are in the expo ecosystem and it allows to schedule notifications fairly easy without integration with APN/FCM.
+
+Mostly documentation research and some code cleanup.
+
+---
+
+## Day 54 - 23/04/21
+
+Prior to diving in to the notifications feature I spent the end of the week testing and going through the API changes from this week to ensure all was working correctly.
+
+During this I realised I was a few versions behind with Expo, currently v37, and the new `expo-notifications` API was introduced in v38. Latest at the time of writing is v41, each major release included really impressive improvements in terms of feature set, security and performance.
+
+So I went ahead and upgraded to the latest with:
+
+```
+expo upgrade
+```
+
+![Expo upgrade](./images/day54-upgrade-expo.png)
+
+Super easy.
+
+Docs on upgrading and the latest versions is nicely presented in the [official docs](https://docs.expo.io/workflow/upgrading-expo-sdk-walkthrough/).
+
+---
+
+## Day 55 - 24/04/21
+
+Now with the app running on latest Expo and a bunch of updated packages I am on some fixing duty. Dependency conflicts, lots of GitHub issues browsing and even a few fixes for API too.
+
+Little things npm/expo updates and updating the clientside interfaces to match the new API response:
+
+```ts
+export interface QuoteProps {
+  id: number;
+  quote: string;
+  author: AuthorProps;
+  category: CategoryProps;
+}
+
+export interface AuthorProps {
+  id: number;
+  name: string;
+  description: string;
+  birth_date: string;
+  death_date: string;
+  has_full_date: boolean;
+}
+```
+
+---
+
+## Day 56 - 25/04/21
+
+Given the new date format being passed to the App it looks a bit naff at the moment.
+
+### Perfect task for quick Sunday hacky helper time ✨
+
+| Before                                                 | After                                                 |
+| ------------------------------------------------------ | ----------------------------------------------------- |
+| ![Before date fix](./images/day56-before-date-fix.png) | ![Before date fix](./images/day56-after-date-fix.png) |
+
+```ts
+import moment from "moment";
+import { AuthorProps } from "../Interfaces";
+
+const formatDate = (date: string, fullDate: boolean) =>
+  fullDate ? moment(date).format("Do MMM YYYY") : moment(date).format("YYYY");
+
+export const getAuthorDate = (
+  author: AuthorProps,
+  fullDate: boolean = true
+) => {
+  const showFullDate = fullDate && author.has_full_date;
+  const birthDate = author.birth_date
+    ? formatDate(author.birth_date, showFullDate)
+    : null;
+  const deathDate = author.death_date
+    ? formatDate(author.death_date, showFullDate)
+    : "Present";
+
+  return birthDate ? `${birthDate} - ${deathDate}` : "Unknown";
+};
+```
+
+Simple but does the job, with flexibility to show full date on the QuoteView modal. Final format TBD but at least it's in one place.
+
+---
+
+## Day 57 - 26/04/21
+
+Okay back to actual Notifications with `expo-notifications`.
+
+Creating a little hook based off the docs to register and retrieve any notification.
+
+```ts
+import { useState, useEffect, useRef } from "react";
+import { Platform } from "react-native";
+import * as Notifications from "expo-notifications";
+import Constants from "expo-constants";
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: false,
+    shouldSetBadge: false
+  })
+});
+
+export const useNotification = () => {
+  const [expoPushToken, setExpoPushToken] = useState("");
+  const [notification, setNotification] = useState(false);
+  const notificationListener = useRef();
+  const responseListener = useRef();
+
+  useEffect(() => {
+    registerForPushNotificationsAsync().then(token => setExpoPushToken(token));
+
+    notificationListener.current = Notifications.addNotificationReceivedListener(
+      notification => {
+        setNotification(notification);
+      }
+    );
+
+    responseListener.current = Notifications.addNotificationResponseReceivedListener(
+      response => {
+        console.log(response);
+      }
+    );
+
+    return () => {
+      Notifications.removeNotificationSubscription(
+        notificationListener.current
+      );
+      Notifications.removeNotificationSubscription(responseListener.current);
+    };
+  }, []);
+
+  async function registerForPushNotificationsAsync() {
+    let token;
+    if (Constants.isDevice) {
+      const {
+        status: existingStatus
+      } = await Notifications.getPermissionsAsync();
+      let finalStatus = existingStatus;
+      if (existingStatus !== "granted") {
+        const { status } = await Notifications.requestPermissionsAsync();
+        finalStatus = status;
+      }
+      if (finalStatus !== "granted") {
+        alert("Failed to get push token for push notification!");
+        return;
+      }
+      token = (await Notifications.getExpoPushTokenAsync()).data;
+      console.log(token);
+    } else {
+      alert("Must use physical device for Push Notifications");
+    }
+
+    if (Platform.OS === "android") {
+      Notifications.setNotificationChannelAsync("default", {
+        name: "default",
+        importance: Notifications.AndroidImportance.MAX,
+        vibrationPattern: [0, 250, 250, 250],
+        lightColor: "#FF231F7C"
+      });
+    }
+
+    return token;
+  }
+
+  return notification;
+};
+```
+
+Will put this to use in the app after I schedule some test notifications tomorrow. Will need to use a physical device for the testing since emulators don't get notifications.
+
+---
+
+## Day 58 - 27/04/21
+
+And today everything is broken... Not quite sure why or how since everything was working. I did update my local dev environment to work on the new project so perhaps this is the root cause. I will start by the ol' classic....
+
+> Turn it off and on again.
+
+...well not quite, I will actually clean reinstall the app from the master branch. Kinda similar.
+
+And Yup. It works.
+
+So comparing the new broken `expo-notifications-implementation` with master revealed the simple (but stupid) mistake...
+
+![wtf import bug](./images/day58-wtf-import-bug.png)
+
+No idea how this happened. I will blame auto-lint maybe but should have clocked it when commiting the code. Sleepy mistakes.
+
+Anyways that's a nice example of debugging which can happen at any point. This is why source control is awesome.
+
+---
+
+## Day 59 - 28/04/21
+
+I know yesterday was a cop-out debug day but that's life. Recent week has been a bit distracted with lot's of things so 100Days got sidelined a bit.
+
+That being said we're in again with more troubleshooting as my alarm screens are:
+
+1. looking messed up on iOS (exhibit A)
+2. broken (exhibit B)
+
+| Exhibit A                                                  | Exhibit B                                             |
+| ---------------------------------------------------------- | ----------------------------------------------------- |
+| ![Exhibit A messed up timer](./images/day59-exhibit-a.png) | ![Exhibit B for broken](./images/day59-exhibit-b.png) |
+
+This happens with updates sometimes, so let's see why and what's wrong so we can get our alarm screens looking healthy again!
+
+Quite easy fixes:
+
+### Exhibit A fix
+
+![exhibit a fix](./images/day59-exhibit-a-fix.png)
+Simply the `default` behaviour as defined by the [datetimepicker docs](https://github.com/react-native-datetimepicker/datetimepicker#display-optional) is:
+
+```
+Show a default date picker (spinner/calendar/clock) based on mode and Android version
+```
+
+We don't want that... we want spinner. So we specify spinner.
+
+### Exhibit B fix
+
+![exhibit b fix](./images/day59-exhibit-b-fix.png)
+
+Another simple one, our `Category` object no longer has `index` so we just switch to `id` for now. Index is probably a good idea though, will add to DB model and API...
+
+```
+TODO: Be less lazy and make the better change toward index on API.. Thank you and goodnight.
+```
+
+---
+
+## Day 60 - 29/04/21
+
+---
