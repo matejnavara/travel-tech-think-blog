@@ -830,4 +830,37 @@ TODO: Be less lazy and make the better change toward index on API.. Thank you an
 
 ## Day 60 - 29/04/21
 
----
+For the final day of this post let's actually get notifications from the Motivication app!
+
+This will need a physical device as our handy alert informs us:
+
+![emulator alert](./images/day60-emulator-alert.png)
+
+So once we plug in a nice Android test device and trigger the scheduled test notifications (every 2 seconds, because why not...) using the following:
+
+```ts
+async function scheduleNotification() {
+  await Notifications.scheduleNotificationAsync({
+    content: {
+      title: "Motivation Notification",
+      body:
+        "Sucking at something is the first step at being kinda good at something - Jake the Dog"
+    },
+    trigger: { seconds: 2 }
+  });
+}
+```
+
+We get:
+
+|                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Notification test](./images/day60-notification-test-a.jpg) | ![Notification test](./images/day60-notification-test-b.jpg) |
+
+Happy days!
+
+Finally some genuine notifications, and what a good way to finish part 3!
+
+In Part 4 I will focus on making this notification schedule correctly and populate with quotes dynamically.
+
+![Onward!](https://media.giphy.com/media/kdQnVNJAB6SQc6I13Y/giphy.gif)
