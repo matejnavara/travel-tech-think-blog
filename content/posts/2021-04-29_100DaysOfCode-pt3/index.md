@@ -1,7 +1,7 @@
 ---
 title: 100DaysOfCode Pt.3
 author: Tech
-date: 2021-05-10
+date: 2021-04-30
 excerpt: More 100 Days Of Code challenge. Data data data!
 hero: ./images/cover.jpg
 ---
