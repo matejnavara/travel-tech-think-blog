@@ -59,11 +59,105 @@ A much neater route.
 
 Calling the Categories from the API. These won't change often so perhaps just an initial call on load to update the store with some basic fallback to begin with for now.
 
+Today adding the necessary Redux store/reducer/actions for Category fetching.
+
+### REDUCER:
+
+```ts
+import { CategoryActionTypes } from "../ActionTypes";
+import { CategoryProps } from "../../Interfaces";
+import CATEGORIES from "../../Constants/Categories";
+
+const INITIAL_STATE = {
+  categories: CATEGORIES,
+  loadingCategories: false
+};
+
+const categoriesReducer = (
+  state = INITIAL_STATE,
+  action: { type: any; payload?: CategoryProps[] }
+) => {
+  switch (action.type) {
+    case CategoryActionTypes.FETCH_CATEGORIES_REQUEST:
+      return { ...state, loadingCategories: true };
+    case CategoryActionTypes.FETCH_CATEGORIES_SUCCESS:
+      return { ...state, categories: action.payload, loadingCategories: false };
+    case CategoryActionTypes.FETCH_CATEGORIES_FAILURE:
+      return { ...state, loadingCategories: false };
+    default:
+      return state;
+  }
+};
+
+export default categoriesReducer;
+```
+
+### ACTIONS:
+
+```ts
+import { AppDispatch } from "../store";
+import { CategoryActionTypes } from "../ActionTypes";
+import { CategoryProps } from "../../Interfaces";
+import { getAPICategories } from "../../api";
+
+const fetchCategories = () => ({
+  type: CategoryActionTypes.FETCH_CATEGORIES_REQUEST
+});
+
+const fetchCategoriesSuccess = (categories: CategoryProps[]) => ({
+  type: CategoryActionTypes.FETCH_CATEGORIES_SUCCESS,
+  payload: categories
+});
+
+const fetchCategoriesFailure = () => ({
+  type: CategoryActionTypes.FETCH_CATEGORIES_FAILURE
+});
+
+export const getCategoriesAsync = () => {
+  return async (dispatch: AppDispatch) => {
+    dispatch(fetchCategories());
+    try {
+      const { data } = await getAPICategories();
+      dispatch(fetchCategoriesSuccess(data));
+    } catch (error) {
+      console.log("🚀 ~ getCategoriesAsync error", error);
+      dispatch(fetchCategoriesFailure());
+    }
+  };
+};
+```
+
+For now just call on app load:
+
+```jsx
+export default function App() {
+  const dispatch = useDispatch();
+  const { notification, scheduleNotification } = useNotification();
+
+  useEffect(() => {
+    dispatch(getCategoriesAsync);
+  }, []);
+
+  return (
+    <Provider store={store}>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Motivications" component={AlarmScreen} />
+          <Tab.Screen name="Saved Quotes" component={QuoteScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </Provider>
+  );
+}
+```
+
 ---
 
 ## Day 64 - 03/05/2021
 
-These won't change often so perhaps just an initial call on load to update the store
+One issue with calling the Categories from the API is that the category images are currently only stored locally.
+
+We could move these to an external location such as an S3 bucket and store the image path on the DB but I wish to keep it locally for now so to assign images to Categories I create the simple helper below.
 
 ---
 
@@ -76,5 +170,17 @@ May the Fourth be with you.
 ## Day 66 - 05/05/2021
 
 Revenge of the fifth
+
+---
+
+## Day 67 - 06/05/2021
+
+---
+
+## Day 68 - 07/05/2021
+
+---
+
+## Day 69 - 08/05/2021
 
 ---
