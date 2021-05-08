@@ -5,7 +5,7 @@ import Emoji from "../../../../components/Emoji";
 
 const Logo: React.FC<{}> = () => (
   <LogoContainer>
-    <Emoji symbol="✈️" label="Travel" />
+    <Emoji symbol="🗺" label="Travel" />
     <Emoji symbol="💻" label="Tech" />
     <Emoji symbol="💭" label="Thoughts" />
   </LogoContainer>
