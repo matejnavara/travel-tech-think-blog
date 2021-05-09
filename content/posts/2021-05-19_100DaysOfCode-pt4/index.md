@@ -127,29 +127,20 @@ export const getCategoriesAsync = () => {
 };
 ```
 
-For now just call on app load:
+For now just call on AlarmScreen load:
 
 ```jsx
-export default function App() {
+const AlarmScreen = () => {
   const dispatch = useDispatch();
-  const { notification, scheduleNotification } = useNotification();
+  const {alarms, selectedAlarm} = useAppSelector((state) => state.alarms);
+  const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
     dispatch(getCategoriesAsync);
   }, []);
-
-  return (
-    <Provider store={store}>
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name="Motivications" component={AlarmScreen} />
-          <Tab.Screen name="Saved Quotes" component={QuoteScreen} />
-        </Tab.Navigator>
-      </NavigationContainer>
-    </Provider>
-  );
-}
 ```
+
+Definitely improvements to be made but it's okay for now.
 
 ---
 
@@ -159,28 +150,144 @@ One issue with calling the Categories from the API is that the category images a
 
 We could move these to an external location such as an S3 bucket and store the image path on the DB but I wish to keep it locally for now so to assign images to Categories I create the simple helper below.
 
+```ts
+const categoryImage1 = require("../Assets/mind-1.jpg");
+const categoryImage2 = require("../Assets/mind-2.jpg");
+const categoryImage3 = require("../Assets/mind-3.jpg");
+const categoryImage4 = require("../Assets/mind-4.jpg");
+const categoryImage5 = require("../Assets/mind-5.jpg");
+
+const categoryImages = [
+  categoryImage1,
+  categoryImage2,
+  categoryImage3,
+  categoryImage4,
+  categoryImage5
+];
+
+export const getCategoryImage = (index: number) => categoryImages[index];
+```
+
+Don't judge me 🤠
+
 ---
 
 ## Day 65 - 04/05/2021
 
 May the Fourth be with you.
 
+Today was actually spent on some more cleanup and fixing. Using the force to find bugs wherever they may be and improve the consistency/quality of the existing codebase.
+
+Moving from:
+
+```js
+import { useStore } from "react-redux";
+
+const store = useStore();
+const state = store.getState();
+const { alarms, selectedAlarm } = state.alarms;
+```
+
+to the more elegant:
+
+```js
+import { useAppSelector } from "../Hooks/redux";
+
+const { alarms, selectedAlarm } = useAppSelector(state => state.alarms);
+```
+
 ---
 
 ## Day 66 - 05/05/2021
 
-Revenge of the fifth
+Revenge of the fifth.
+
+We got more work to do surrounding the API Categories and implementing them thoughout the app.
+
+The category select being an obvious place to start. This now gets Categories passed in from the Selector. Changes were made to the `CategoryProps` interface and all areas using Categories shown below.
+
+![API categories](./images/day66-api-categories.png)
+
+If you really want to see the specifics feel free to check the GIT commit [HERE](https://github.com/matejnavara/motivication-app/commit/d8efa90b572c8749e9876eea7cd5617a8a8ad942)
 
 ---
 
 ## Day 67 - 06/05/2021
 
+Now back to the task at hand: NOTIFICATIONS.
+
+For this I first need to extend the clientside API and Redux actions to hit our random quote endpoint.
+
+`/app/quotes/:categoryId`
+
+After the API endpoint defined on client:
+
+```ts
+export const getAPIMotivication = async (categoryId: number) =>
+  api.get(`quotes/${categoryId}`);
+```
+
+we then connect up our Actions and Reducers:
+
+```ts
+const getMotivicationAsync = (categoryId: number) => {
+  return async (dispatch: AppDispatch) => {
+    dispatch(fetchMotivication());
+    try {
+      const { data } = await getAPIMotivication(categoryId);
+      dispatch(fetchMotivicationSuccess(data));
+    } catch (error) {
+      console.log(
+        "🚀 ~ file: quotes.actions.ts ~ getMotivicationAsync error",
+        error
+      );
+      dispatch(fetchMotivicationFailure());
+    }
+  };
+};
+```
+
+Next is hooking up to a front end test button to fire the endpoint with the appropriate category.
+
 ---
 
 ## Day 68 - 07/05/2021
 
+Now that we get this random quote we have to display it in some way.
+
+Adding a simple "Test Alarm" button on the Alarm View with the following script:
+
+```ts
+const testAlarm = async () => {
+  const motivication = await dispatch(
+    motivicationActions.getMotivicationAsync(newCategory.id)
+  );
+  alert(`${motivication.quote} - ${motivication.author.name}`);
+};
+```
+
+and displays our new random quote:
+
+![Motivication test](./images/day68-motivication-test.png)
+
+Tada 🎉
+
 ---
 
 ## Day 69 - 08/05/2021
+
+Now let's actually schedule it using the Notification API.
+
+---
+
+## Day 71 - 09/05/2021
+
+And some way to show it.
+
+---
+
+## Day 70 - 10/05/2021
+
+And let's give the user an option to "Save" it.
 
 ---
