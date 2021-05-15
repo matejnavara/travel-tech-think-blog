@@ -276,18 +276,48 @@ Tada 🎉
 
 ## Day 69 - 08/05/2021
 
-Now let's actually schedule it using the Notification API.
+So as much as I would like to continue on Motivication stuff I have been pulled aside in prep for some work stuff.
+
+Prepping the local dev environment to
 
 ---
 
 ## Day 71 - 09/05/2021
 
-And some way to show it.
+Now let's actually schedule it using the Notification API.
 
 ---
 
-## Day 70 - 10/05/2021
+## Day 72 - 10/05/2021
 
 And let's give the user an option to "Save" it.
 
 ---
+
+## Day 73 - 11/05/2021
+
+And let's give the user an option to "Save" it.
+
+---
+
+## Day 74 - 12/05/2021
+
+And let's give the user an option to "Save" it.
+
+---
+
+## Day 75 - 13/05/2021
+
+And let's give the user an option to "Save" it.
+
+---
+
+## Day 76 - 14/05/2021
+
+And let's give the user an option to "Save" it.
+
+---
+
+## Day 77 - 15/05/2021
+
+And let's give the user an option to "Save" it.
