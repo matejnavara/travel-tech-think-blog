@@ -278,7 +278,15 @@ Tada 🎉
 
 So as much as I would like to continue on Motivication stuff I have been pulled aside in prep for some work stuff.
 
-Prepping the local dev environment to
+Prepping the local dev environment to handle two 2FA github accounts.
+
+Quite a good guide can be found [HERE](https://www.freecodecamp.org/news/manage-multiple-github-accounts-the-ssh-way-2dadc30ccaca/).
+
+Mostly SSH config stuff.
+
+Then some minor app alert improvements. Changing the title of the Alert from "Alert" to "Example".
+
+Light day but at least the dual SSH config is sorted for easier seperation of work/personal.
 
 ---
 
