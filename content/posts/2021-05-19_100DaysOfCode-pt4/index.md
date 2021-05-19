@@ -290,42 +290,169 @@ Light day but at least the dual SSH config is sorted for easier seperation of wo
 
 ---
 
-## Day 71 - 09/05/2021
+## Day 70 - 09/05/2021
 
-Now let's actually schedule it using the Notification API.
+Back to Motivication. Let's actually schedule alarms using the Notification API.
+
+```ts
+async function scheduleNotification(category: CategoryProps, time: string) {
+  await Notifications.scheduleNotificationAsync({
+    content: {
+      title: "Motivation Notification",
+      body: "Test Notification for: " + category.label
+    },
+    trigger: {
+      hour: moment(time).hour(),
+      minute: moment(time).minute(),
+      repeats: true
+    }
+  });
+}
+```
+
+Curretly repeating every day at the given time.
 
 ---
 
-## Day 72 - 10/05/2021
+## Day 71 - 10/05/2021
+
+Today was a struggle wrestling with the Notifications.
+
+I moved the registration and listeners to the App root for now and using (misusing) the `useNotification` hook to just access some key functions.
+
+```jsx
+export default function App() {
+  const {registerForPushNotificationsAsync} = useNotification();
+  const [expoPushToken, setExpoPushToken] = useState('');
+  const [notification, setNotification] = useState(false);
+  const notificationListener = useRef();
+  const responseListener = useRef();
+
+  useEffect(() => {
+    registerForPushNotificationsAsync().then((token) =>
+      setExpoPushToken(token)
+    );
+
+    // This listener is fired whenever a notification is received while the app is foregrounded
+    notificationListener.current = Notifications.addNotificationReceivedListener(
+      (notification) => {
+        setNotification(notification);
+      }
+    );
+
+    // This listener is fired whenever a user taps on or interacts with a notification (works when app is foregrounded, backgrounded, or killed)
+    responseListener.current = Notifications.addNotificationResponseReceivedListener(
+      (response) => {
+        console.log(response);
+      }
+    );
+
+    return () => {
+      Notifications.removeNotificationSubscription(
+        notificationListener.current
+      );
+      Notifications.removeNotificationSubscription(responseListener.current);
+    };
+  }, []);
+
+```
+
+Was nice to test the notifications firing from the handy [Expo Push Notifications Tool](https://expo.io/notifications).
+
+But alas testing on a physical Android device revealed some shocking bugs. Fixing for tomorrow.
+
+---
+
+## Day 72 - 11/05/2021
+
+Okay let's fix the Android bugs discovered yesterday.
+
+Namely this horrible pop-over timepicker which breaks functionality if dismissed and can't be reopened:
+
+![Ugly Android time picker](./images/day72-android-timepicker.jpeg)
+
+Since Android manages date/time in a pop-over I will add a clickable date just for Android to toggle this.
+
+The Android datepicker handles date changes and dismissal with the same onChange function so I extended to toggle the picker and to handle the `undefined` date passed in the case of dismissal.
+
+```ts
+const onChangeTime = (event: Event, date?: Date | undefined) => {
+  if (Platform.OS === "android") {
+    toggleAndroidPicker();
+    if (date === undefined) return;
+  }
+  const currentDate = date || newTime;
+  setNewTime(moment(currentDate).format("HH:mm"));
+};
+```
+
+Also looks nicer now as the Android clock:
+
+![Android better](./images/day72-android-picker-fixed.jpeg)
+
+---
+
+## Day 73 - 12/05/2021
+
+Added a nice/simple toggle hook to use across the project. Replaced the Android clock toggle created yesterday.
+
+```ts
+import { useState } from "react";
+
+const useToggle = (
+  initState?: boolean
+): [boolean, () => void, () => void, () => void] => {
+  const [state, setState] = useState(initState || false);
+  const toggle = () => setState(!state);
+  const setTrue = () => setState(true);
+  const setFalse = () => setState(false);
+
+  return [state, toggle, setTrue, setFalse];
+};
+
+export default useToggle;
+```
+
+Feel free to steal my hooks 🎣
+
+---
+
+## Day 74 - 13/05/2021
 
 And let's give the user an option to "Save" it.
 
 ---
 
-## Day 73 - 11/05/2021
+## Day 75 - 14/05/2021
 
 And let's give the user an option to "Save" it.
 
 ---
 
-## Day 74 - 12/05/2021
+## Day 76 - 15/05/2021
 
 And let's give the user an option to "Save" it.
 
 ---
 
-## Day 75 - 13/05/2021
+## Day 77 - 16/05/2021
 
 And let's give the user an option to "Save" it.
 
 ---
 
-## Day 76 - 14/05/2021
+## Day 78 - 17/05/2021
 
 And let's give the user an option to "Save" it.
 
 ---
 
-## Day 77 - 15/05/2021
+## Day 79 - 18/05/2021
+
+And let's give the user an option to "Save" it.
+
+---
+
+## Day 80 - 19/05/2021
 
 And let's give the user an option to "Save" it.
