@@ -419,25 +419,53 @@ Feel free to steal my hooks 🎣
 
 ## Day 74 - 13/05/2021
 
-And let's give the user an option to "Save" it.
+Small day. 5 year anniversary with madam, singing an opera duet later as promised 3 years ago "if/when we made it to 5 years".
+
+Promise made, promise kept.
+
+Anyway codewise I just want to fix the alarm ordering.
+
+Added a little helper to sort by time:
+
+```ts
+const numberTime = (time: string) => parseInt(time.replace(":", ""));
+
+export const sortAlarms = (
+  alarms: AlarmProps[],
+  order: "ASC" | "DEC" = "ASC"
+) =>
+  alarms.sort((a, b) =>
+    order === "ASC"
+      ? numberTime(a.time) - numberTime(b.time)
+      : numberTime(b.time) - numberTime(a.time)
+  );
+```
+
+Now it's ordered. Noice.
 
 ---
 
 ## Day 75 - 14/05/2021
 
-And let's give the user an option to "Save" it.
+Refactored the AlarmView as AlarmModal to include the Modal. Makes more sense. Also yes a slow lazy day.
+
+![AlarmView to AlarmModal](./images/day75-alarm-view-refactor.png)
 
 ---
 
 ## Day 76 - 15/05/2021
 
-And let's give the user an option to "Save" it.
+Did the same as the above for the Quote screen with the difference of being for the saved and for the new motivications with a `isNew` flag.
+
+The modal will display on any screen if a notification is selected.
+
+New Motivication will take precident over any selected quote but the modals will be very much the same.
 
 ---
 
 ## Day 77 - 16/05/2021
 
-And let's give the user an option to "Save" it.
+Playing around with triggering and managing the motivication modal.
 
 ---
 
