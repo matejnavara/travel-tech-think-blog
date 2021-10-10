@@ -2,7 +2,7 @@
 title: 100DaysOfCode Pt.4 (and fail)
 author: Tech
 date: 2021-05-19
-excerpt: More 100 Days Of Code challenge...until *combo breaker*.
+excerpt: More 100 Days Of Code challenge...until day 77...
 hero: ./images/cover.jpg
 ---
 
