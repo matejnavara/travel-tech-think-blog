@@ -5,6 +5,7 @@ category: Think
 date: 3021-06-01
 excerpt: What is fun for you may not be fun for others, and vice versa.
 hero: ./images/cover.jpg
+secret: true
 ---
 
 > “Fun?” - _Me?_
