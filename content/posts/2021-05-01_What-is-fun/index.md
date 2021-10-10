@@ -2,7 +2,7 @@
 title: What is Fun?
 author: Think
 category: Think
-date: 2021-06-01
+date: 3021-06-01
 excerpt: What is fun for you may not be fun for others, and vice versa.
 hero: ./images/cover.jpg
 ---

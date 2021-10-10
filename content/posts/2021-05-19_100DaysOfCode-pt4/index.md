@@ -1,8 +1,8 @@
 ---
-title: 100DaysOfCode Pt.4
+title: 100DaysOfCode Pt.4 (and fail)
 author: Tech
 date: 2021-05-19
-excerpt: More 100 Days Of Code challenge. Data data data!
+excerpt: More 100 Days Of Code challenge...until *combo breaker*.
 hero: ./images/cover.jpg
 ---
 
@@ -15,7 +15,7 @@ This is not a structured blog post but a raw ongoing log of progress during the 
 It is long. It isn't proof read or spellchecked. There will be bugs and typos.
 
 Don't judge. You have been warned. Now go forth;
-k
+
 ![Uncut/Unedited](https://media.giphy.com/media/xTiTnu831s1um2X9ug/giphy.gif)
 
 ---
@@ -461,26 +461,18 @@ The modal will display on any screen if a notification is selected.
 
 New Motivication will take precident over any selected quote but the modals will be very much the same.
 
----
-
-## Day 77 - 16/05/2021
-
 Playing around with triggering and managing the motivication modal.
 
 ---
 
-## Day 78 - 17/05/2021
+## Day 77 - 16/05/2021
 
-And let's give the user an option to "Save" it.
+And then...
 
----
+![combo-breaker](https://thumbs.gfycat.com/WeakBoringEidolonhelvum-size_restricted.gif)
 
-## Day 79 - 18/05/2021
+It was a Sunday in May and life got in the way. Truth be told there were a few slow and lackluster days leading up to this as you could see.
 
-And let's give the user an option to "Save" it.
+Coding continues on other fronts but the 100DaysOfCode challenge will not be the same. We'll do the postmortem in a proper write-up (TODO: future me please insert future link here) and crack on!
 
----
-
-## Day 80 - 19/05/2021
-
-And let's give the user an option to "Save" it.
+These things happen but that's okay. Have a lovely day. ✨
