@@ -155,7 +155,7 @@ You must add `@narative/gatsby-theme-novela` as a plugin in `gatsby-config.js`.
 // gatsby-config.js
 
 module.exports = {
-  plugins: ['@narative/gatsby-theme-novela'],
+  plugins: ["@narative/gatsby-theme-novela"]
 };
 ```
 
@@ -236,20 +236,20 @@ module.exports = {
     // important to set the main text that appears in the hero
     hero: {
       heading: `Perspectives on technology, design and business from the team at Narative.`,
-      maxWidth: 652,
+      maxWidth: 652
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/narative`
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
-      },
-    ],
+        url: `https://github.com/narative`
+      }
+    ]
   },
-  plugins: ['@narative/gatsby-theme-novela'],
+  plugins: ["@narative/gatsby-theme-novela"]
 };
 ```
 
@@ -299,24 +299,24 @@ CONTENTFUL_ACCESS_TOKEN=
 #### `gatsby-config.js`
 
 ```js
-require('dotenv').config();
+require("dotenv").config();
 
 plugins: [
   {
-    resolve: 'gatsby-source-contentful',
+    resolve: "gatsby-source-contentful",
     options: {
       spaceId: process.env.CONTENTFUL_SPACE_ID,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    },
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    }
   },
   {
-    resolve: '@narative/gatsby-theme-novela',
+    resolve: "@narative/gatsby-theme-novela",
     options: {
       sources: {
-        contentful: true,
-      },
-    },
-  },
+        contentful: true
+      }
+    }
+  }
 ];
 ```
 
@@ -342,12 +342,12 @@ By default Author pages are not enabled. They can be enabled through the plugin 
 module.exports = {
   plugins: [
     {
-      resolve: '@narative/gatsby-theme-novela',
+      resolve: "@narative/gatsby-theme-novela",
       options: {
-        authorsPage: true,
-      },
-    },
-  ],
+        authorsPage: true
+      }
+    }
+  ]
 };
 ```
 
@@ -361,19 +361,19 @@ First, you must create a theme file and then you can override `novelaTheme` valu
 ```js
 // src/gatsby-plugin-theme-ui/index.js
 
-import novelaTheme from '@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui';
+import novelaTheme from "@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui";
 
 export default {
   ...novelaTheme,
   initialColorMode: `dark`,
   colors: {
     ...novelaTheme.colors,
-    primary: '#000',
-    secondary: '#73737D',
-    accent: '#6166DC',
-    grey: '#73737D',
-    background: '#fff',
-  },
+    primary: "#000",
+    secondary: "#73737D",
+    accent: "#6166DC",
+    grey: "#73737D",
+    background: "#fff"
+  }
 };
 ```
 
@@ -434,7 +434,7 @@ Start by creating the component file at:
 It is important you create the exact folder structure so Gatsby knows to shadow this component. Once the file is created you can create your Logo component.
 
 ```jsx
-import React from 'react';
+import React from "react";
 
 /**
  * Paste in your SVG logo and return it from this component.
@@ -467,20 +467,20 @@ Then configure the plugins
 ```js
 plugins: [
   {
-    resolve: '@narative/gatsby-theme-novela',
+    resolve: "@narative/gatsby-theme-novela",
     options: {
-      contentPosts: 'content/posts',
-      contentAuthors: 'content/authors',
-      basePath: '/',
-      mailchimp: true, // make sure this is true!
-    },
+      contentPosts: "content/posts",
+      contentAuthors: "content/authors",
+      basePath: "/",
+      mailchimp: true // make sure this is true!
+    }
   },
   {
-    resolve: 'gatsby-plugin-mailchimp',
+    resolve: "gatsby-plugin-mailchimp",
     options: {
-      endpoint: '', // add your MC list endpoint here; see plugin repo for instructions
-    },
-  },
+      endpoint: "" // add your MC list endpoint here; see plugin repo for instructions
+    }
+  }
 ];
 ```
 
@@ -527,19 +527,19 @@ It is recommended to use the Default options, but if your project requires somet
 ```js
 plugins: [
   {
-    resolve: '@narative/gatsby-theme-novela',
+    resolve: "@narative/gatsby-theme-novela",
     options: {
-      contentPosts: 'content/posts',
-      contentAuthors: 'content/authors',
-      rootPath: '/',
-      basePath: '/',
+      contentPosts: "content/posts",
+      contentAuthors: "content/authors",
+      rootPath: "/",
+      basePath: "/",
       mailchimp: true,
       sources: {
         local: true,
-        contentful: true,
-      },
-    },
-  },
+        contentful: true
+      }
+    }
+  }
 ];
 ```
 
@@ -634,30 +634,30 @@ module.exports = {
     // A required key and will be displayed on the main page of Noveal
     hero: {
       heading: `Perspectives on technology, design and business from the team at Narative.`,
-      maxWidth: 652,
+      maxWidth: 652
     },
 
     // social
     // Add in the social links that will be displayed in the footer
     social: [
       {
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/narative`
       },
       {
-        url: `https://github.com/narative`,
+        url: `https://github.com/narative`
       },
       {
-        url: `https://www.instagram.com/narative.co/`,
+        url: `https://www.instagram.com/narative.co/`
       },
       {
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://dribbble.com/narativestudio`
       },
       {
-        name: 'stackoverflow',
-        url: `https://bit.ly/1x0885j`,
-      },
-    ],
-  },
+        name: "stackoverflow",
+        url: `https://bit.ly/1x0885j`
+      }
+    ]
+  }
 };
 ```
 

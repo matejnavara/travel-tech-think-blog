@@ -8,6 +8,20 @@ hero: ./images/cover.jpg
 secret: true
 ---
 
+---
+
+![Working in Progress](https://media.giphy.com/media/dWa2rUaiahx1FB3jor/giphy.gif)
+
+You shouldn't be here...
+
+But since you're here anyway, have a gander.
+
+I can't stop you anwyay. But remember, Jesus is watching.
+
+`To-Do: Restrict URL of future articles`
+
+---
+
 # What is Raja Ampat?
 
 Located in the far east of Indonesia, off the northwest tip of Bird's Head Peninsula in West Papua you will find this legendary archipelago. A collection of hundreds of jungle covered islands containing some of the highest biodiversity in the world. Both above and below the water you’ll find endemic species found nowhere else on the planet and quite uniquely biologists continue to find new species year after year.
@@ -62,7 +76,7 @@ Then it’s time to begin the Raja Ampat expedition!
 
 Plans can vary for different lengths, budgets and preferences.
 
-- **Landbased**, staying at one homestay and getting boats to/from different islands each day. This does limit how much you can see since the boats can only go so far on a day trip. The return journeys will also drive up the fuel costs, the biggest factor for cost.
+- **Land-based**, staying at one homestay and getting boats to/from different islands each day. This does limit how much you can see since the boats can only go so far on a day trip. The return journeys will also drive up the fuel costs, the biggest factor for cost.
 
 - **Island safari**, staying in multiple places across different islands as you sail around the park. This is definitely a nice middle-ground that still allows you to go further into Raja Ampat. However you have to stay on inhabited islands and will still be limited by the boat’s range from these.
 
@@ -130,6 +144,8 @@ The combination of some liquor and the rocking of the boat put us all right to s
 Good night.
 
 ## Day 3
+
+
 
 ## Day 4
 

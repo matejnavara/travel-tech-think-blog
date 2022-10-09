@@ -60,8 +60,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setFilter(null)}
             active={!filter}
             data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
+            title="Latest"
+            aria-label="Latest"
           >
             Latest
           </GridButton>
@@ -69,8 +69,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setFilter("Travel")}
             active={filter === "Travel"}
             data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
+            title="Travel"
+            aria-label="Travel"
           >
             Travel
           </GridButton>
@@ -78,8 +78,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setFilter("Tech")}
             active={filter === "Tech"}
             data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
+            title="Tech"
+            aria-label="Tech"
           >
             Tech
           </GridButton>
@@ -87,8 +87,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             onClick={() => setFilter("Think")}
             active={filter === "Think"}
             data-a11y="false"
-            title="Show articles in Tile grid"
-            aria-label="Show articles in Tile grid"
+            title="Think"
+            aria-label="Think"
           >
             Think
           </GridButton>
