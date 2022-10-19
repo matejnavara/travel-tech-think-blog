@@ -2,7 +2,7 @@
 title: Social? Media?
 author: Think
 category: Think
-date: 3021-06-01
+date: 2022-10-31
 excerpt: The great dual edged sword that is social media. Why do we use it, do the pros outweigh the cons and is there a healthy balance?
 hero: ./images/cover.jpg
 secret: true
@@ -107,6 +107,21 @@ Though they seem like omnipotent behemoths they are just the current establishme
 - Is there a healthy balance?
 
 ---
+
+
+
+# Notes
+
+Bat Hen - 
+- "Attention Economy"
+- Worrying about the immediate Urgent stuff, not the long the long term important (not urgent) stuff.
+- HIME - High Impact Minimum Effort - Find your subjective time for different activities
+- Article: "The Advantage of being a little UnderEmployed"
+- Procrastination - "Waiting for the right time"
+- Tech downside - "Being always available". France passed in 2017 "the Right to Disconnect"
+- 6 hour workday / 4 day work week. Quality vs Quantity
+- When hearing things seek Inspiration vs Imitation
+
 
 ## TL;DR
 
