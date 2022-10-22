@@ -26,19 +26,7 @@ Social media platforms have become a prevalent part of our daily lives, pulling 
 
 Often it's just second nature, a bizarre habit that formed and before you know it you're scrolling through random cat videos or memes.
 
-Now don't get me wrong I do love a good meme and there are plenty of positive elements of social media use:
-
-- Connecting with friends / family from afar
-- Learning something new
-- Getting some inspiration
-- Unwinding and laughing
-
-*BUT* there are plenty of negative elements that I'm sure we can all recognise:
-
-- Disconnecting from friends / family physically around you
-- Envy / depression / self-consciousness  
-- Doom-scrolling
-- Time wasting
+Now don't get me wrong I do love a good meme and there are plenty of positive elements of social media use *BUT* there are plenty of negative elements that I'm sure we can all recognise.
 
 So how do we weigh these up? Where do we draw the line? What separates healthy use and unhealthy use?
 
@@ -79,18 +67,53 @@ The reason I start with this is to get you in the frame of mind that these devic
 
 Though they seem like omnipotent behemoths they are just the current establishment. Bigger institutions have come and gone. What will be the status quo in 5 years? In 20 years? In 50 years? Well that will be for us to decide since we *choose* which platform to focus our attention on and these platforms constantly compete for that attention.
 
-**Make no mistake, in the digital age we are constantly voting with where we put our attention.**
+**Make no mistake, in the digital age we are constantly voting with where we put our attention. This is known as the "Attention Economy"**
 
 # The Good
 
+- Connecting with friends / family from afar
+- Learning something new
+- Getting some inspiration
+- Unwinding and laughing
+
 # The Bad
 
+- Disconnecting from friends / family physically around you
+- Envy / depression / self-consciousness  
+- Doom-scrolling
+- Time wasting
 # The Ugly
+ The ugly truth is that whether we use social media positively or negatively it often take up a lot of time and mental capacity. It's not even the quantity of time itself but the intermittent distractions throughout the day. It's the mental focus equivalent of a _COMBO BREAKER_ breaking your flow state for the simple desire of responding to a message or seeing who liked your new photo.
 
+ Whether we use these platforms for good or bad I think we can all agree that this is a major factor. In this age of "Attention Economy" these platforms are literally designed to pull your focus and keep you coming back. From the curated feed tailored to our tastes to the dopamine dosing feedback loops they carry all the hallmarks of an addictive habit.
+
+ From a brief anecdotal poll of my limited sample of social media friends (by no means representative sample) it was interesting to see the usage:
+
+ I too fell in the 1-2 hour/day bracket so let's use 1.5 hours a day as an example calculation.
+
+| Timeframe | Social Media Screen time |
+| --- | --- |
+| 1 day | 1.5 hrs|
+| 1 week | 10.5 hrs |
+| 1 month | 45 hrs |
+| 1 quarter | 136.5 hours |
+| 1 year | 547.5 hours |
+
+So in a year of 1.5 hour/day average social media usage you will have spent almost _23 FULL DAYS_ staring at your screen.
+
+That's a lot of time.
 
 # Why are we discussing this?
+
+To put into context the scale of our social media habits and also open the dialogue surrounding this.
+
+From my aforementioned anecdotal poll it seems the majority of users are unsatisfied with the sate of social media and it's use (myself included).
+
+The time component was the key point for me but everyone has their own personal reasons.
+
+
  - Time use
- - General unsatisfaction
+ - General dissatisfaction - use stats
 
 
 # How can we change the way things are?
