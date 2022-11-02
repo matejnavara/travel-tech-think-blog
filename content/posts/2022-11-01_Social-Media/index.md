@@ -2,7 +2,7 @@
 title: Social? Media?
 author: Think
 category: Think
-date: 2022-10-31
+date: 2023-11-01
 excerpt: The great dual edged sword that is social media. Why do we use it, do the pros outweigh the cons and is there a healthy balance?
 hero: ./images/cover.jpg
 secret: true
@@ -82,12 +82,15 @@ Though they seem like omnipotent behemoths they are just the current establishme
 - Envy / depression / self-consciousness  
 - Doom-scrolling
 - Time wasting
+
 # The Ugly
- The ugly truth is that whether we use social media positively or negatively it often take up a lot of time and mental capacity. It's not even the quantity of time itself but the intermittent distractions throughout the day. It's the mental focus equivalent of a _COMBO BREAKER_ breaking your flow state for the simple desire of responding to a message or seeing who liked your new photo.
+ The ugly truth is that whether we use social media positively or negatively it often take up a lot of time and mental capacity. It's not even the quantity of time itself but the intermittent distractions throughout the day. It's the mental focus equivalent of a _COMBO BREAKER_ interrupting your flow state for the simple desire of responding to a message or seeing who liked your new post.
 
  Whether we use these platforms for good or bad I think we can all agree that this is a major factor. In this age of "Attention Economy" these platforms are literally designed to pull your focus and keep you coming back. From the curated feed tailored to our tastes to the dopamine dosing feedback loops they carry all the hallmarks of an addictive habit.
 
  From a brief anecdotal poll of my limited sample of social media friends (by no means representative sample) it was interesting to see the usage:
+
+ `<INSERT STATS HERE>`
 
  I too fell in the 1-2 hour/day bracket so let's use 1.5 hours a day as an example calculation.
 
