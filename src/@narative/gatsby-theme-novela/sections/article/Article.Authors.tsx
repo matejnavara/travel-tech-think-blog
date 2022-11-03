@@ -27,7 +27,7 @@ function generateAuthorNames(authors: IAuthor[]) {
 }
 
 interface AuthorsProps {
-  authors: IAuthor[];
+  authors: IAuthor[]
 }
 
 const CoAuthors: React.FC<AuthorsProps> = ({ authors }) => {
