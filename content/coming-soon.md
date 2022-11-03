@@ -28,7 +28,6 @@ I can't stop you anwyay. But remember, Jesus is watching.
   - AI Generated Business
 
 ## TRAVEL
-- 
 - Raja Ampat
 - Free-diving
 - Scientific Diving

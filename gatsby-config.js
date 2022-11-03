@@ -42,6 +42,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `https-techabreak-blog`
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Novela by Narative`,

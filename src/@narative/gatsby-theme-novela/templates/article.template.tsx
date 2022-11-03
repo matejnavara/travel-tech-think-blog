@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import throttle from "lodash/throttle";
 import { graphql, useStaticQuery } from "gatsby";
+import { Disqus } from "gatsby-plugin-disqus";
 
 import Layout from "@components/Layout";
 import MDXRenderer from "@components/MDX";
@@ -18,7 +19,7 @@ import ArticleControls from "../sections/article/Article.Controls";
 import ArticlesNext from "../sections/article/Article.Next";
 import ArticleSEO from "../sections/article/Article.SEO";
 import ArticleShare from "../sections/article/Article.Share";
-import ArticleFooter from './article.footer.template';
+import ArticleFooter from "./article.footer.template";
 
 import { Template } from "@types";
 
@@ -95,6 +96,15 @@ const Article: Template = ({ pageContext, location }) => {
         <MDXRenderer content={article.body}>
           <ArticleShare />
         </MDXRenderer>
+        <CommentsSection>
+          <Disqus
+            config={{
+              url: location?.href,
+              identifier: article?.id,
+              title: article?.title
+            }}
+          />
+        </CommentsSection>
       </ArticleBody>
       <ArticleFooter pageContext={pageContext} />
       {next.length > 0 && (
@@ -137,6 +147,23 @@ const ArticleBody = styled.article`
 
   ${mediaqueries.phablet`
     padding: 60px 0;
+  `}
+`;
+
+const CommentsSection = styled.div`
+  width: 70%;
+  margin: auto;
+
+  #disqus_thread {
+    overflow: hidden;
+
+    iframe {
+      margin-bottom: -54px;
+    }
+  }
+
+  ${mediaqueries.phone`
+    width: 90%
   `}
 `;
 
