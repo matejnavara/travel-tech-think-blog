@@ -2,10 +2,9 @@
 title: RAJA AMPAT. Sailing/Diving/Exploring in "The Last Paradise".
 author: Travel
 category: Travel
-date: 3021-05-13
+date: 2023-03-01
 excerpt: Exploring the empty seas of Raja Ampat for 8 days.
 hero: ./images/cover.jpg
-secret: true
 ---
 
 ---
