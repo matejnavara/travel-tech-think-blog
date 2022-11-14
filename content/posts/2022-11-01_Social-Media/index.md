@@ -70,10 +70,32 @@ Though they seem like omnipotent behemoths they are just the current establishme
 
 # The Good
 
-- Connecting with friends / family from afar
+Now although you can see the tone of this article is fairly critical of social media it by no means discounts the multitude of benefits it brings.
+
+Once again the positives are very personal and subjective but polling my limited sample there seemed to be a few common themes we can all unilaterally appreciate:
+
+- Connecting with friends / family
 - Learning something new
-- Getting some inspiration
+- Finding inspiration
 - Unwinding and laughing
+
+Here were some of the raw responses:
+
+![Social media use poll](./images/Q2-responses.jpg)
+
+There is also another factor I didn't appreciate prior to diving into this investigation and that is the quantity of people who are employed within some social media related roles or use it within their business. (granted this limited poll was conducted via a social media platform so fairly bias)
+
+![Social media work poll](./images/Q1-responses.jpg)
+
+- Work opportunities
+
+Despite the bias and whether working with social media is willingly or out of necessity the application within business is clear. Almost every public facing business is expected to have some element of "social presence" within the current climate.
+
+For businesses; it opens up new markets, reaches wider audiences and gathers valuable market research data all much easier tha before.
+
+For individuals; it opens up new avenues of working, grants opportunities to try new ideas / businesses of their own and both of which often allowing remote or flexible working to live life in new ways.
+
+Whatever the state of social media may be, there will always be strong impact on both business and personal lives.
 
 # The Bad
 
@@ -90,7 +112,7 @@ Whether we use these platforms for good or bad I think we can all agree that thi
 
 From a brief anecdotal poll of my limited sample of social media friends (by no means representative sample) it was interesting to see the usage:
 
-`<INSERT STATS HERE>`
+![Social media time poll](./images/Q3-responses.jpg)
 
 I too fell in the 1-2 hour/day bracket so let's use 1.5 hours a day as an example calculation.
 
@@ -112,15 +134,31 @@ To put into context the scale of our social media habits and also open the dialo
 
 From my aforementioned anecdotal poll it seems the majority of users are unsatisfied with the state of social media and it's use (myself included).
 
+![Social media time poll](./images/Q4-responses.jpg)
+
 The time component was the key point for me but everyone has their own personal reasons.
 
-- Time use
-- General dissatisfaction - use stats
+One combination coined by XYZ is the "The Four Horsemen of the Digital Apocalypse" which quite effectively highlights the areas in which social media use can have the most negative impact.
+
+- Digital Deluge
+
+  - The quantity of information
+
+- Digital Distraction
+
+  - The persistent distraction of information
+
+- Digital Dementia
+
+  - The forgetting of information
+
+- Digital Deduction
+  - The reliance on information for critical / creative thinking
 
 # How can we change the way things are?
 
-- "But this is just how things are"
-- "What difference will my choice make?" - 7 billion people
+> "But this is just how things are. What difference will my choice make?"
+> -7-8 billion people
 
 - Social media breaks
 - Controlled use (evenings/weekends)
@@ -129,6 +167,7 @@ The time component was the key point for me but everyone has their own personal 
 # What does good / healthy use look like?
 
 - Now this is million dollar question. How to enjoy the positives without the negatives.
+- Having your cake and eating it too
 - Is there a healthy balance?
 
 ---
