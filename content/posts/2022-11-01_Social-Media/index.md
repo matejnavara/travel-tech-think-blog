@@ -1,5 +1,5 @@
 ---
-title: Social? Media?
+title: Healthy Social-media Use?
 author: Think
 category: Think
 date: 2023-11-01
@@ -50,7 +50,7 @@ Habits do not form out of nowhere, so a quick thought exercise for you:
 
 ## If you were born in the 2000s read here:
 
-As GenZ and beyond you are the first "Digital Natives"; surrounded by tech, mobile devices and social media from maybe before you could walk. That is an interesting dynamic and quite frankly an unprecedented one. On one side you've had access to mass connection / information from the get go (see the positives above), on the other side you've also experienced the pitfalls from the same point (see negatives above).
+As GenZ and beyond you are the first "Digital Natives"; surrounded by tech, mobile devices and social media from maybe before you could walk. That is an interesting dynamic and quite frankly an unprecedented one. On one side you've had access to mass connection / information from the get go (see the positives below), on the other side you've also experienced the pitfalls from the same point (see negatives below).
 
 I've already outed myself as an oldie but I still want to ask you similar three questions.
 
@@ -75,9 +75,11 @@ Now although you can see the tone of this article is fairly critical of social m
 Once again the positives are very personal and subjective but polling my limited sample there seemed to be a few common themes we can all unilaterally appreciate:
 
 - Connecting with friends / family
+- Safe space / like-minded communities
 - Learning something new
 - Finding inspiration
-- Unwinding and laughing
+- Unwinding and entertainment
+- Memes
 
 Here were some of the raw responses:
 
@@ -87,22 +89,35 @@ There is also another factor I didn't appreciate prior to diving into this inves
 
 ![Social media work poll](./images/Q1-responses.jpg)
 
+So +1 for team positive:
+
 - Work opportunities
 
 Despite the bias and whether working with social media is willingly or out of necessity the application within business is clear. Almost every public facing business is expected to have some element of "social presence" within the current climate.
 
-For businesses; it opens up new markets, reaches wider audiences and gathers valuable market research data all much easier tha before.
+For businesses; it opens up new markets, reaches wider audiences and gathers valuable market research data all much easier than before.
 
-For individuals; it opens up new avenues of working, grants opportunities to try new ideas / businesses of their own and both of which often allowing remote or flexible working to live life in new ways.
+For individuals; it opens up new avenues of working, grants opportunities to try new ideas / businesses of their own and both of which often allow newly remote or flexible working. This flexibility opening up opportunities to live life in new ways.
 
-Whatever the state of social media may be, there will always be strong impact on both business and personal lives.
+Whatever the state of social media may be, there will always be strong impact on both our business and personal lives.
 
 # The Bad
 
+Now following the positive points we have the other side of the coin, the negatives:
+
 - Disconnecting from friends / family physically around you
-- Envy / depression / self-consciousness
+- Increased anxiety / depression / envy / self-consciousness / loneliness
+- Heightened FOMO (Fear of Missing Out)
+- Unrealistic expectations
+- Unhealthy sleep patterns
+- General addiction
+- Cyberbullying
 - Doom-scrolling
 - Time wasting
+
+These are a few of the common themes widely discussed across various studies and observations. Perhaps you have experienced some of these or perhaps you haven't but I'm sure we can all appreciate that these are some negative ways in which people are affected.
+
+Whilst there can be deeper analysis of each of these points I do not wish to expand on the negatives much like the positives in this particular article. There are numerous research based write-ups available online for both the negatives and positives:
 
 # The Ugly
 
@@ -126,7 +141,7 @@ I too fell in the 1-2 hour/day bracket so let's use 1.5 hours a day as an exampl
 
 So in a year of 1.5 hour/day average social media usage you will have spent almost _23 FULL DAYS_ staring at your screen.
 
-That's a lot of time.
+That's a lot of time. And some of us have double these values...
 
 # Why are we discussing this?
 
@@ -136,33 +151,71 @@ From my aforementioned anecdotal poll it seems the majority of users are unsatis
 
 ![Social media time poll](./images/Q4-responses.jpg)
 
-The time component was the key point for me but everyone has their own personal reasons.
+Everyone has their own personal reasons but personally the time component was the key point for me. Another important point is the negative impact on our mental performance.
 
-One combination coined by XYZ is the "The Four Horsemen of the Digital Apocalypse" which quite effectively highlights the areas in which social media use can have the most negative impact.
+One combination of factors coined by Jim Kwik are the _"FOUR HORSEMEN OF THE DIGITAL AGE"_ affecting our mental capabilities. These apply quite effectively to social media use and how it impacts our brain's performance.
 
-- Digital Deluge
+### Digital Deluge
 
-  - The quantity of information
+_The quantity of information._ We now consume three times the amount of information as someone from the 1960s and as much information in a single day as an average person from the 1400s would have absorbed in a lifetime. Yet physiologically we are not very different to our distant relatives hundreds of years ago. No wonder our brains can feel frazzled from this information overload.
 
-- Digital Distraction
+### Digital Distraction
 
-  - The persistent distraction of information
+_The distraction of information._ Notifications hundreds times a day pulling your attention to the latest news story or a text message from mum or a like on your post or an app reminder to do yoga or whatever may make your phone buzz/chime. It's no wonder we can't focus on our tasks when we get interrupted every few minutes or feel the impulse to pick up our phones. Very distracting...
 
-- Digital Dementia
+### Digital Dementia
 
-  - The forgetting of information
+_The forgetting of information._ By having information stored in our devices our brain's short-term memory capabilities are quite literally deteriorating. When was the last time you remembered a phone number? Or directions to a location you have visited numerous times? When it's so easily accessible our brain sees no motivation to recall it, we opt to reach for our phone rather than our mind. The neural pathways are not reinforced and our brain forgets.
 
-- Digital Deduction
-  - The reliance on information for critical / creative thinking
+### Digital Deduction
+
+_The reliance on information._ Why have your own opinion when you can crowd-source the opinions of the digital masses. Metacritic, Rotten Tomatoes, IMDb, Goodreads or literally any news/social forum will happily provide you with opinions on any subject. No need for critical / creative thinking here, let's just think the same. What could possibly go wrong?
+
+![Four horsemen of the digital apocalypse](https://media.giphy.com/media/13ft0RqUNahjMs/giphy.gif)
+
+You can read a full breakdown of these horsemen much more eloquently written and with supporting research in Jim Kwik's book Limitless.
+
+Now enough doom & gloom, onwards 🐎
 
 # How can we change the way things are?
 
 > "But this is just how things are. What difference will my choice make?"
-> -7-8 billion people
+> said 8 billion people
 
-- Social media breaks
-- Controlled use (evenings/weekends)
-- Intentional use (self-reflection and analysis)
+There are always methods we can take even at a personal level and perhaps encourage / normalise in our communities.
+
+### Awareness
+
+It starts with awareness. Being conscious of how we use our devices and social media.
+
+Am I scrolling whilst sitting with friends/family? Am I scrolling before sleeping? Or perhaps immediately after waking up?
+
+No judgements here but it's a prompt to be introspective of your own actions. Stop and think for a moment or catch yourself in these moments when perhaps you'd rather not get sucked in. Maybe it's the quantity of use you wish to reduce.
+
+Whatever it is for you, once you are aware of it. You can action on it.
+
+### Social media breaks
+
+Something I am a great believer of are intentional breaks to reset the habits. Simply log-out / uninstall from your devices and carry on with your life. The world keeps on spinning and you won't miss as much as you'd think.
+
+I say this in the middle of my longest intentional break yet of 3 months. Using our time use chart above that equates to roughly 136 hours or 5.5 full days of time I have reclaimed. There is no doubt in my mind that this article would not be getting written without this intentional break.
+
+A break, however long, acts as a reminder of just how much it pulled your focus as well as weening your brain from the constant dopamine drip feeds.
+You brain will start searching for stimulation in new places and you can harness this to create new positive habits in the void of the previous ones.
+
+Much of our studies of habit science tell us that unlearning a habit usually requires a replacement.
+
+So choose what you would rather do; read? gym? call family? write a blog?
+
+You can decide how you use your newly gained time.
+
+### Controlled use (evenings/weekends)
+
+WIP - Isolate the time
+
+### Intentional use (self-reflection and analysis)
+
+WIP - Why and what do you want it for
 
 # What does good / healthy use look like?
 
