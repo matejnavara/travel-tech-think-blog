@@ -4,7 +4,7 @@ export const GridLayoutContext = createContext({
   filter: null,
   gridLayout: "tiles",
   hasSetGridLayout: false,
-  setFilter: (filter: string) => {},
+  setFilter: (filter: string | null) => {},
   setGridLayout: (tile: string) => {},
   getGridLayout: () => {}
 });
@@ -12,7 +12,7 @@ export const GridLayoutContext = createContext({
 const GridLayoutProvider: React.FC<{}> = ({ children }) => {
   const initialLayout = "tiles";
 
-  const [filter, setFilter] = useState<string>(null);
+  const [filter, setFilter] = useState<string | null>(null);
   const [gridLayout, setGridLayout] = useState<string>(initialLayout);
   const [hasSetGridLayout, setHasSetGridLayout] = useState<boolean>(false);
 

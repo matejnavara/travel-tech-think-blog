@@ -34,10 +34,10 @@ module.exports = {
         contentPosts: "content/posts",
         contentAuthors: "content/authors",
         basePath: "/",
+        pageLength: 10,
         authorsPage: false,
         sources: {
           local: true
-          // contentful: true,
         }
       }
     },

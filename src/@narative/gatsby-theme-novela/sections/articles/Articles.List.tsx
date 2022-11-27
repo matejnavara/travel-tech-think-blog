@@ -40,7 +40,7 @@ const ArticlesList: React.FC<ArticlesListProps> = ({
   } = useContext(GridLayoutContext);
 
   const { validArticles, futureArticles } = articles
-    .filter(article => !filter || article.author == filter)
+    .filter(article => !filter || article.author.toLowerCase() == filter)
     .reduce(
       (result, value) => {
         if (articleInFuture(value.date)) {

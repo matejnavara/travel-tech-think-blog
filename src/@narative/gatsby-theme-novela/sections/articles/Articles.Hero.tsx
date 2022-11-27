@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "@emotion/styled";
-
 import Section from "@components/Section";
 import Bio from "@components/Bio";
 import Icons from "@icons";
@@ -41,6 +40,11 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
   const tilesIsActive = hasSetGridLayout && gridLayout === "tiles";
   const featuredAuthor = authors.find(author => author.featured);
 
+  const setTypeFilter = (author: string | null) => {
+    // setType(author);
+    setFilter(author);
+  };
+
   if (!featuredAuthor) {
     throw new Error(`
       No featured Author found.
@@ -57,7 +61,7 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
         <Bio author={featuredAuthor} />
         <CategoryControlsContainer>
           <GridButton
-            onClick={() => setFilter(null)}
+            onClick={() => setTypeFilter(null)}
             active={!filter}
             data-a11y="false"
             title="Latest"
@@ -66,8 +70,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Latest
           </GridButton>
           <GridButton
-            onClick={() => setFilter("Travel")}
-            active={filter === "Travel"}
+            onClick={() => setTypeFilter("travel")}
+            active={filter === "travel"}
             data-a11y="false"
             title="Travel"
             aria-label="Travel"
@@ -75,8 +79,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Travel
           </GridButton>
           <GridButton
-            onClick={() => setFilter("Tech")}
-            active={filter === "Tech"}
+            onClick={() => setTypeFilter("tech")}
+            active={filter === "tech"}
             data-a11y="false"
             title="Tech"
             aria-label="Tech"
@@ -84,8 +88,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
             Tech
           </GridButton>
           <GridButton
-            onClick={() => setFilter("Think")}
-            active={filter === "Think"}
+            onClick={() => setTypeFilter("think")}
+            active={filter === "think"}
             data-a11y="false"
             title="Think"
             aria-label="Think"
