@@ -1,24 +1,10 @@
 ---
-title: Healthy Social-media Use?
+title: Healthy Social Media Use?
 author: Think
 category: Think
-date: 2022-11-01
+date: 2022-12-01
 excerpt: The great dual edged sword that is social media. Why do we use it, do the pros outweigh the cons and is there a healthy balance?
 hero: ./images/cover.jpg
----
-
----
-
-![Working in Progress](https://media.giphy.com/media/dWa2rUaiahx1FB3jor/giphy.gif)
-
-You shouldn't be here...
-
-But since you're here anyway, have a gander.
-
-I can't stop you anwyay. But remember, Jesus is watching.
-
-`To-Do: Restrict URL of future articles`
-
 ---
 
 Social media platforms have become a prevalent part of our daily lives, pulling our attention from UP THERE 🌇 to DOWN HERE 📲 whilst we're in bed, on the toilet or out with friends.
@@ -61,7 +47,7 @@ I've already outed myself as an oldie but I still want to ask you similar three 
 
 ## Now read on regardless of age:
 
-The reason I start with this is to get you in the frame of mind that these devices/platforms are not a defacto. They are adopted, by us, seemingly willingly. And likewise they can be un-adopted, by us, hopefully willingly.
+The reason I start with this is to remind you that these devices/platforms are not a defacto. They are adopted, by us, seemingly willingly. And likewise they can be un-adopted, by us, hopefully willingly.
 
 Though they seem like omnipotent behemoths they are just the current establishment. Bigger institutions have come and gone. What will be the status quo in 5 years? In 20 years? In 50 years? Well that will be for us to decide since we _choose_ which platform to focus our attention on and these platforms constantly compete for that attention.
 
@@ -253,7 +239,7 @@ It can be whatever you want but the important aspect is that it is _INTENTIONAL_
 
 Although these miscellaneous online mis-adventures can be fun and you gain all sorts of random pub quiz knowledge, mostly the information won't stick and the time spent is non-refundable.
 
-Instead if your intention that day is to go looking for new content or learning how to make a wooden bench, well then this rabbit hold is perfect for you 🐰
+Instead if your intention that day is to go looking for new content or learning how to make a wooden bench, well then this rabbit hole is perfect for you 🐰
 
 So if you set an intention and plan your social media use then you use the platform well, if you don't... then the platform uses you well.
 
@@ -263,11 +249,11 @@ Now this is the million dollar question. How to enjoy the positives without the 
 
 Ultimately good / healthy social media use is very individual. As long as it enriches your life more than detracts from it that is a good baseline valuation of it's impact.
 
-If it connects you to friends, family and opportunities around the world without making you anxious or giving you FOMO.
+- If it connects you to friends, family and opportunities around the world without making you anxious or giving you FOMO.
 
-If it inspires you and entertains you without sucking you in for hours a day.
+- If it inspires you and entertains you without sucking you in for hours a day.
 
-If you use the platform rather than the platform using you.
+- If you use the platform rather than the platform using you.
 
 These are all signs you're barking up the right tree of balance. Personally I say it is rarely so simple, the relationship with these platforms ebbs and flows like any other area of life.
 Sometimes it's more balanced, sometimes it's less.
@@ -275,7 +261,7 @@ Sometimes it's more balanced, sometimes it's less.
 Perhaps what is the most important is just having the honest awareness to regularly check in with yourself to see where you sit on this scale.
 See where perhaps you need to tip the scales in one direction, engaging more to leverage the benefits of these platforms or disconnecting to reconnect with the real world.
 
-Wherever you may be in your balance journey I hope we can all strive for a healthier happier balance.
+Wherever you may be in your balance journey I hope we can all strive for a happier and healthier balance.
 
 ---
 
@@ -283,11 +269,35 @@ Wherever you may be in your balance journey I hope we can all strive for a healt
 
 ###### (To Long; Didn't Read)
 
-## work in progress
+- Social media is a dual edged sword of pros and cons.
 
-I would love to hear any input of what is your thoughts surrounding social media or any feedback on something you may agree / disagree with.
+- Our current social media culture is not a de facto. It is recent adopted and subject to change.
+
+- **Big negative 1:** Time loss.
+
+  - 1.5hr / day
+  - 10.5hr / week
+  - 45hr / month
+  - 547.5hr / year. That's a lot of time.
+
+- **Big negative 2:** Cognitive impact from the four horsemen of the digital age;
+
+  - Digital deluge - _The quantity of information._
+  - Digital distraction - _The distraction of information._
+  - Digital dementia - _The forgetting of information._
+  - Digital deduction. - _The reliance on information._
+
+- **Ways to balance the scales:**
+  - Awareness
+  - Social media breaks
+  - Controlled use
+  - Intentional use
+
+---
 
 Thank you for taking the time today to hear my thoughts.
+
+I would love to hear any input of what is your thoughts surrounding social media or any feedback on something you may agree / disagree with.
 
 This blog will become a home of 3 types of content:
 
