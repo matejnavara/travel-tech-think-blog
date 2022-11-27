@@ -15,7 +15,9 @@ I can't stop you anwyay. But remember, Jesus is watching.
 ---
 
 # Concepts
+
 ## TECH
+
 - Drone O-Grammetry ?
 - Web 3 Project ?
 - 100 Days of Code (Take 2)
@@ -28,14 +30,17 @@ I can't stop you anwyay. But remember, Jesus is watching.
   - AI Generated Business
 
 ## TRAVEL
-- Raja Ampat
+
 - Free-diving
 - Scientific Diving
 - Brief Guide to Beautiful Bali
 - Best burgers in Bali (meaty)
 - Best burgers in Bali (veggie)
+
 ## THOUGHTS
+
 - Wish they Taught in School Series
+
   - Mindfulness / Breathwork
   - Yoga / Mobility
   - Financial skills
@@ -44,16 +49,31 @@ I can't stop you anwyay. But remember, Jesus is watching.
 - Winning through Failing
 - Goal Setting
 - Mental Check-in
-
+- The Power of Boredom
 
 ---
 
-# Schedule 
+# Schedule
 
-OCT 2022 - THINK - Social media use
+NOV 2022 - THINK - Social media use
 
-NOV 2022 - TRAVEL - 5 Years Fully Remote. How and Why?
+DEC 2022 - TRAVEL - 5 Years Fully Remote. How and Why?
 
-DEC 2022 - THINK - The Power of Boredom
+JAN 2022 - TECH - The State of Tech in 2023
 
-JAN 2023 - ??? - 
+FEB 2023 - ??? -
+
+MAR 2023 - TRAVEL - Raja Ampat
+
+# Notes
+
+Bat Hen -
+
+- "Attention Economy"
+- Worrying about the immediate Urgent stuff, not the long the long term important (not urgent) stuff.
+- HIME - High Impact Minimum Effort - Find your subjective time for different activities
+- Article: "The Advantage of being a little UnderEmployed"
+- Procrastination - "Waiting for the right time"
+- Tech downside - "Being always available". France passed in 2017 "the Right to Disconnect"
+- 6 hour workday / 4 day work week. Quality vs Quantity
+- When hearing things seek Inspiration vs Imitation

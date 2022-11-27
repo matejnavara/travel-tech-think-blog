@@ -2,10 +2,9 @@
 title: Healthy Social-media Use?
 author: Think
 category: Think
-date: 2023-11-01
+date: 2022-11-01
 excerpt: The great dual edged sword that is social media. Why do we use it, do the pros outweigh the cons and is there a healthy balance?
 hero: ./images/cover.jpg
-secret: true
 ---
 
 ---
@@ -42,11 +41,11 @@ Okay fellow old-timers we recall a time without portable devices let alone socia
 
 Habits do not form out of nowhere, so a quick thought exercise for you:
 
-> When / why did you first get a mobile device
+- **When / why did you first get a mobile device**
 
-> When / why did you first join a social media platform?
+- **When / why did you first join a social media platform?**
 
-> What kept you coming back?
+- **What kept you coming back?**
 
 ## If you were born in the 2000s read here:
 
@@ -54,11 +53,11 @@ As GenZ and beyond you are the first "Digital Natives"; surrounded by tech, mobi
 
 I've already outed myself as an oldie but I still want to ask you similar three questions.
 
-> Do you recall the first time you were given a mobile device? (Phone/Tablet/Laptop/etc)
+- **Do you recall the first time you were given a mobile device? (Phone/Tablet/Laptop/etc)**
 
-> Did / do you feel pressure in school based on what device you had or your social media presence?
+- **Did / do you feel pressure in school based on what device you had or your social media presence?**
 
-> What would your days look like without any devices?
+- **What would your days look like without any devices?**
 
 ## Now read on regardless of age:
 
@@ -67,6 +66,8 @@ The reason I start with this is to get you in the frame of mind that these devic
 Though they seem like omnipotent behemoths they are just the current establishment. Bigger institutions have come and gone. What will be the status quo in 5 years? In 20 years? In 50 years? Well that will be for us to decide since we _choose_ which platform to focus our attention on and these platforms constantly compete for that attention.
 
 **Make no mistake, in the digital age we are constantly voting with where we put our attention. This is known as the "Attention Economy"**
+
+---
 
 # The Good
 
@@ -143,6 +144,8 @@ So in a year of 1.5 hour/day average social media usage you will have spent almo
 
 That's a lot of time. And some of us have double these values...
 
+---
+
 # Why are we discussing this?
 
 To put into context the scale of our social media habits and also open the dialogue surrounding this.
@@ -171,7 +174,13 @@ _The forgetting of information._ By having information stored in our devices our
 
 _The reliance on information._ Why have your own opinion when you can crowd-source the opinions of the digital masses. Metacritic, Rotten Tomatoes, IMDb, Goodreads or literally any news/social forum will happily provide you with opinions on any subject. No need for critical / creative thinking here, let's just think the same. What could possibly go wrong?
 
-![Four horsemen of the digital apocalypse](https://media.giphy.com/media/13ft0RqUNahjMs/giphy.gif)
+<div className="Image__Small">
+  <img
+    src="https://media.giphy.com/media/13ft0RqUNahjMs/giphy.gif"
+    title="Logo Title Text 1"
+    alt="Alt text"
+  />
+</div>
 
 You can read a full breakdown of these horsemen much more eloquently written and with supporting research in Jim Kwik's book Limitless.
 
@@ -179,8 +188,7 @@ Now enough doom & gloom, onwards 🐎
 
 # How can we change the way things are?
 
-> "But this is just how things are. What difference will my choice make?"
-> said 8 billion people
+### "But this is just how things are. What difference will my choice make?" said 8 billion people
 
 There are always methods we can take even at a personal level and perhaps encourage / normalise in our communities.
 
@@ -190,7 +198,7 @@ It starts with awareness. Being conscious of how we use our devices and social m
 
 Am I scrolling whilst sitting with friends/family? Am I scrolling before sleeping? Or perhaps immediately after waking up?
 
-No judgements here but it's a prompt to be introspective of your own actions. Stop and think for a moment or catch yourself in these moments when perhaps you'd rather not get sucked in. Maybe it's the quantity of use you wish to reduce.
+No judgement here but it's a prompt to be introspective of your own actions. Stop and think for a moment or catch yourself in these moments when perhaps you'd rather not get sucked in. Maybe it's the quantity of use you wish to reduce.
 
 Whatever it is for you, once you are aware of it. You can action on it.
 
@@ -209,40 +217,73 @@ So choose what you would rather do; read? gym? call family? write a blog?
 
 You can decide how you use your newly gained time.
 
-### Controlled use (evenings/weekends)
+### Controlled use
 
-WIP - Isolate the time
+Maybe going cold turkey isn't for you because you need it for work/connection or you simply don't want to go to fully disconnect.
+That is fine and an alternative would be to restrict the usage. There are a number of modern mechanisms on phones to restrict usage to a certain amount of time or during certain times of the day.
+This prevents the default scrolling habit which is generally the most intrusive.
 
-### Intentional use (self-reflection and analysis)
+Having some restriction will also make you value and appreciate the limited time more.
+Your use may naturally become more intentional (more on this in a second).
 
-WIP - Why and what do you want it for
+With this method you can experiment in different ways, perhaps you will check your social media in the morning and in the evenings.
+Maybe you will only go on during the weekends to focus during the week.
+This balanced method is a best of both worlds approach where you don't get out of the loop by going offline for large portions of time yet you still address the persistent interruptions and habitual use.
+
+One other slightly more extreme method in this category, if you can't trust yourself to not override any app restrictions on your phone, is to use social media on another device.
+This can be your laptop or a backup phone which won't be as quickly accessible as your day-to-day phone. As mentioned there is a lot of room for personal experimentation to see what works for you.
+
+### Intentional use
+
+Finally we come to the intentional use where we ask why and what do you want it for.
+Really analyse and reflect on the purpose you wish to fulfill with using these platforms. It can be anything, often linked to the positives mentioned earlier.
+If you are just an avid meme queen then so be it, follow the best accounts and enjoy the finest doses of memes in an intentional way.
+
+Often these platforms will operate across many of our needs so we really need to refine what we want to focus on. An example routine could be:
+
+- Monday I will catch-up on recent tech news
+- Tuesday I will reach out to friends for their weekend plans
+- Wednesday I will post for my business
+- Thursday I will engage with the previous post
+- Friday I will check events for the coming week
+- Saturday I will use however I want (for X amount of time)
+- Sunday I will meme scroll to my hearts content, it is the day of rest after all.
+
+It can be whatever you want but the important aspect is that it is _INTENTIONAL_. You are not just getting sucked in and spun around from post to post until you end up deep in the rabbit hole reading about how to make a wooden bench.
+
+Although these miscellaneous online mis-adventures can be fun and you gain all sorts of random pub quiz knowledge, mostly the information won't stick and the time spent is non-refundable.
+
+Instead if your intention that day is to go looking for new content or learning how to make a wooden bench, well then this rabbit hold is perfect for you 🐰
+
+So if you set an intention and plan your social media use then you use the platform well, if you don't... then the platform uses you well.
 
 # What does good / healthy use look like?
 
-- Now this is million dollar question. How to enjoy the positives without the negatives.
-- Having your cake and eating it too
-- Is there a healthy balance?
+Now this is the million dollar question. How to enjoy the positives without the negatives. How to have your cake and eat it too. Is this balance even possible?
+
+Ultimately good / healthy social media use is very individual. As long as it enriches your life more than detracts from it that is a good baseline valuation of it's impact.
+
+If it connects you to friends, family and opportunities around the world without making you anxious or giving you FOMO.
+
+If it inspires you and entertains you without sucking you in for hours a day.
+
+If you use the platform rather than the platform using you.
+
+These are all signs you're barking up the right tree of balance. Personally I say it is rarely so simple, the relationship with these platforms ebbs and flows like any other area of life.
+Sometimes it's more balanced, sometimes it's less.
+
+Perhaps what is the most important is just having the honest awareness to regularly check in with yourself to see where you sit on this scale.
+See where perhaps you need to tip the scales in one direction, engaging more to leverage the benefits of these platforms or disconnecting to reconnect with the real world.
+
+Wherever you may be in your balance journey I hope we can all strive for a healthier happier balance.
 
 ---
-
-# Notes
-
-Bat Hen -
-
-- "Attention Economy"
-- Worrying about the immediate Urgent stuff, not the long the long term important (not urgent) stuff.
-- HIME - High Impact Minimum Effort - Find your subjective time for different activities
-- Article: "The Advantage of being a little UnderEmployed"
-- Procrastination - "Waiting for the right time"
-- Tech downside - "Being always available". France passed in 2017 "the Right to Disconnect"
-- 6 hour workday / 4 day work week. Quality vs Quantity
-- When hearing things seek Inspiration vs Imitation
 
 ## TL;DR
 
 ###### (To Long; Didn't Read)
 
----
+## work in progress
 
 I would love to hear any input of what is your thoughts surrounding social media or any feedback on something you may agree / disagree with.
 
