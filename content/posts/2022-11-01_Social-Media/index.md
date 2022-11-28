@@ -205,7 +205,7 @@ You can decide how you use your newly gained time.
 
 ### Controlled use
 
-Maybe going cold turkey isn't for you because you need it for work/connection or you simply don't want to go to fully disconnect.
+Maybe going cold turkey isn't for you because you need it for work/connection or you simply don't want to fully disconnect.
 That is fine and an alternative would be to restrict the usage. There are a number of modern mechanisms on phones to restrict usage to a certain amount of time or during certain times of the day.
 This prevents the default scrolling habit which is generally the most intrusive.
 
@@ -237,7 +237,7 @@ Often these platforms will operate across many of our needs so we really need to
 
 It can be whatever you want but the important aspect is that it is _INTENTIONAL_. You are not just getting sucked in and spun around from post to post until you end up deep in the rabbit hole reading about how to make a wooden bench.
 
-Although these miscellaneous online mis-adventures can be fun and you gain all sorts of random pub quiz knowledge, mostly the information won't stick and the time spent is non-refundable.
+Although these miscellaneous online mis-adventures can be fun gaining all sorts of random pub quiz knowledge, mostly the information won't stick and the time spent is non-refundable.
 
 Instead if your intention that day is to go looking for new content or learning how to make a wooden bench, well then this rabbit hole is perfect for you 🐰
 
@@ -275,12 +275,12 @@ Wherever you may be in your balance journey I hope we can all strive for a happi
 
 - **Big negative 1:** Time loss.
 
-  - 1.5hr / day
-  - 10.5hr / week
-  - 45hr / month
-  - 547.5hr / year. That's a lot of time.
+  - 1.5 hr / day
+  - 10.5 hr / week
+  - 45 hr / month
+  - 547.5 hr / year. _Almost 23 full days. That's a lot of time._
 
-- **Big negative 2:** Cognitive impact from the four horsemen of the digital age;
+- **Big negative 2:** Cognitive impact from "the four horsemen of the digital age";
 
   - Digital deluge - _The quantity of information._
   - Digital distraction - _The distraction of information._
@@ -288,10 +288,13 @@ Wherever you may be in your balance journey I hope we can all strive for a happi
   - Digital deduction. - _The reliance on information._
 
 - **Ways to balance the scales:**
-  - Awareness
-  - Social media breaks
-  - Controlled use
-  - Intentional use
+
+  - Awareness - _Become conscious of how / when / where / why you use the platforms_
+  - Social media breaks - _Take days / weeks / months off to reset the habit_
+  - Controlled use - _Restrict the usage to certain amount a day or certain times of the day_
+  - Intentional use - _Be clear about what you wish to gain / achieve from the platform_
+
+- Make sure it's you using the platforms and not the platforms using you...
 
 ---
 
