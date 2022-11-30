@@ -2,7 +2,7 @@
 title: Healthy Social Media Use?
 author: Think
 category: Think
-date: 2022-12-01
+date: 2022-12-13
 excerpt: The great dual edged sword that is social media. Why do we use it, do the pros outweigh the cons and is there a healthy balance?
 hero: ./images/cover.jpg
 ---
@@ -27,7 +27,7 @@ Okay fellow old-timers we recall a time without portable devices let alone socia
 
 Habits do not form out of nowhere, so a quick thought exercise for you:
 
-- **When / why did you first get a mobile device**
+- **When / why did you first get a mobile device?**
 
 - **When / why did you first join a social media platform?**
 
@@ -163,8 +163,7 @@ _The reliance on information._ Why have your own opinion when you can crowd-sour
 <div className="Image__Small">
   <img
     src="https://media.giphy.com/media/13ft0RqUNahjMs/giphy.gif"
-    title="Logo Title Text 1"
-    alt="Alt text"
+    title="Fours Horsemen of the Digital Age"
   />
 </div>
 
