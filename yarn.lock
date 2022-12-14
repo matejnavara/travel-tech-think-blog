@@ -8418,6 +8418,11 @@
     "@babel/runtime" "^7.12.5"
     "babel-plugin-remove-graphql-queries" "^2.16.1"
 
+"gatsby-plugin-use-query-params@^1.0.1":
+  "integrity" "sha512-k3xaKuf8VhLq6/arocYRZqiQMTQ84ZRY0JklsO4tuKsRqi64b94zGf6B8SZn6yo0fvtJ/zw684DpH77y/iKdbA=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-use-query-params/-/gatsby-plugin-use-query-params-1.0.1.tgz"
+  "version" "1.0.1"
+
 "gatsby-plugin-utils@^0.9.0":
   "integrity" "sha512-InM8PNHtx1kF87qQOlf4pVeNA8lSIsvSjImvN6dvpUjeQqOMRN1avY0W9Trh6LKTF/keWWj975Gk8Vcr+PYyDA=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-utils/-/gatsby-plugin-utils-0.9.0.tgz"
@@ -8689,7 +8694,7 @@
     "lodash" "^4.17.20"
     "unist-util-select" "^1.5.0"
 
-"gatsby@^2.0.0", "gatsby@^2.0.101", "gatsby@^2.0.15", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.13.1", "gatsby@^2.13.41", "gatsby@^2.15.7", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.25.0", "gatsby@^2.4.0", "gatsby@>2.0.15":
+"gatsby@^2.0.0", "gatsby@^2.0.101", "gatsby@^2.0.15", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.13.1", "gatsby@^2.13.41", "gatsby@^2.15.7", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.25.0", "gatsby@^2.4.0", "gatsby@>=2.0", "gatsby@>2.0.15":
   "integrity" "sha512-nMtdImSq5QSpRwhtL8VFhTfuvTCGWoeJtrB4+VJFn78NpbYFbcddErF2pp4QkG6jsqSw+kheOHUg46EH+AMO6A=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-2.32.8.tgz"
   "version" "2.32.8"
@@ -15520,7 +15525,7 @@
     "invariant" "^2.1.0"
     "shallowequal" "^1.1.0"
 
-"react-dom@*", "react-dom@^0.14 || >=15", "react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^0.14.0 || ^15.0.0 || ^16.0.0", "react-dom@^0.14.0 || ^15.0.0-0 || ^15.4.0-0 || ^16.0.0-0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 ", "react-dom@^15.3.0 || ^16.0.0", "react-dom@^15.3.0 || ^16.0.0-alpha", "react-dom@^15.5.x || ^16.x || ^17.x", "react-dom@^16.0.0", "react-dom@^16.0.0-0", "react-dom@^16.4.2 || ^17.0.0", "react-dom@^16.8.0", "react-dom@^16.8.4", "react-dom@^16.8.4 || ^17.0.0", "react-dom@^16.8.6", "react-dom@^17.0.1", "react-dom@>= 16.3", "react-dom@>= 16.8", "react-dom@>= 16.8.0", "react-dom@>=0.13", "react-dom@>=15.0.0", "react-dom@>=16.6.0", "react-dom@0.14.x || ^15.0.0 || ^16.0.0", "react-dom@0.14.x || 15.x || 16.x", "react-dom@15.x || 16.x || 16.4.0-alpha.0911da3":
+"react-dom@*", "react-dom@^0.14 || >=15", "react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^0.14.0 || ^15.0.0 || ^16.0.0", "react-dom@^0.14.0 || ^15.0.0-0 || ^15.4.0-0 || ^16.0.0-0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 ", "react-dom@^15.3.0 || ^16.0.0", "react-dom@^15.3.0 || ^16.0.0-alpha", "react-dom@^15.5.x || ^16.x || ^17.x", "react-dom@^16.0.0", "react-dom@^16.0.0-0", "react-dom@^16.4.2 || ^17.0.0", "react-dom@^16.8.0", "react-dom@^16.8.4", "react-dom@^16.8.4 || ^17.0.0", "react-dom@^16.8.6", "react-dom@^17.0.1", "react-dom@>= 16.3", "react-dom@>= 16.8", "react-dom@>= 16.8.0", "react-dom@>=0.13", "react-dom@>=15.0.0", "react-dom@>=16.6.0", "react-dom@>=16.8.0", "react-dom@0.14.x || ^15.0.0 || ^16.0.0", "react-dom@0.14.x || 15.x || 16.x", "react-dom@15.x || 16.x || 16.4.0-alpha.0911da3":
   "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
   "version" "16.14.0"
@@ -17143,6 +17148,11 @@
   "version" "5.0.1"
   dependencies:
     "randombytes" "^2.1.0"
+
+"serialize-query-params@^2.0.2":
+  "integrity" "sha512-1chMo1dST4pFA9RDXAtF0Rbjaut4is7bzFbI1Z26IuMub68pNCILku85aYmeFhvnY//BXUPUhoRMjYcsT93J/Q=="
+  "resolved" "https://registry.npmjs.org/serialize-query-params/-/serialize-query-params-2.0.2.tgz"
+  "version" "2.0.2"
 
 "serve-index@^1.9.1":
   "integrity" "sha1-03aNabHn2C5c4FD/9bRTvqEqkjk="
@@ -19547,6 +19557,13 @@
   "version" "1.2.0"
   dependencies:
     "use-isomorphic-layout-effect" "^1.0.0"
+
+"use-query-params@^2.1.2", "use-query-params@>=0.4.3":
+  "integrity" "sha512-evg64srKaILvKyRQ1zpXvekTC7rktAT7OAekU7x6naHrOMqLHtq0MHR/PtKIQAP4d7HrkYNVOS8exHhiWy7m3A=="
+  "resolved" "https://registry.npmjs.org/use-query-params/-/use-query-params-2.1.2.tgz"
+  "version" "2.1.2"
+  dependencies:
+    "serialize-query-params" "^2.0.2"
 
 "use@^3.1.0":
   "integrity" "sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ=="

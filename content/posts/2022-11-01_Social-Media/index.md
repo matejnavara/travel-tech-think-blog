@@ -7,6 +7,18 @@ excerpt: The great dual edged sword that is social media. Why do we use it, do t
 hero: ./images/cover.jpg
 ---
 
+[1. First things first](#but-first-things-first-lets-rewind-a-bit-and-get-some-context)
+
+[2. The Good, the Bad and the Ugly](#the-good)
+
+[3. Why are we discussing this?](#why-are-we-discussing-this)
+
+[4. How can we change the way things are?](#how-can-we-change-the-way-things-are)
+
+[5. What does good / healthy use look like?](#what-does-good--healthy-use-look-like)
+
+---
+
 Social media platforms have become a prevalent part of our daily lives, pulling our attention from UP THERE 🌇 to DOWN HERE 📲 whilst we're in bed, on the toilet or out with friends.
 
 Often it's just second nature, a bizarre habit that formed and before you know it you're scrolling through random cat videos or memes.
@@ -104,7 +116,7 @@ Now following the positive points we have the other side of the coin, the negati
 
 These are a few of the common themes widely discussed across various studies and observations. Perhaps you have experienced some of these or perhaps you haven't but I'm sure we can all appreciate that these are some negative ways in which people are affected.
 
-Whilst there can be deeper analysis of each of these points I do not wish to expand on the negatives much like the positives in this particular article. There are numerous research based write-ups available online for both the negatives and positives:
+Whilst there can be deeper analysis of each of these points I do not wish to expand on the negatives much like the positives in this particular article. There are numerous research based write-ups available online for both the negatives and positives.
 
 # The Ugly
 
@@ -118,13 +130,13 @@ From a brief anecdotal poll of my limited sample of social media friends (by no 
 
 I too fell in the 1-2 hour/day bracket so let's use 1.5 hours a day as an example calculation.
 
-| Timeframe | Social Media Screen time |
-| --------- | ------------------------ |
-| 1 day     | 1.5 hrs                  |
-| 1 week    | 10.5 hrs                 |
-| 1 month   | 45 hrs                   |
-| 1 quarter | 136.5 hours              |
-| 1 year    | 547.5 hours              |
+| Duration  | Hours of Screen time | Days of Screen time |
+| --------- | -------------------- | ------------------- |
+| 1 day     | 1.5 hrs              | 0.06 days           |
+| 1 week    | 10.5 hrs             | 0.4 days            |
+| 1 month   | 45 hrs               | 1.8 days            |
+| 1 quarter | 136.5 hrs            | 5.7 days            |
+| 1 year    | 547.5 hrs            | 22.8 days           |
 
 So in a year of 1.5 hour/day average social media usage you will have spent almost _23 FULL DAYS_ staring at your screen.
 

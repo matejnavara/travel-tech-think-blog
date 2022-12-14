@@ -3,7 +3,7 @@ module.exports = {
     title: `Tech A Break`,
     name: `Matej Navara`,
     siteUrl: `https://techabreak.blog`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    description: `Tech ~ Travel ~ Thoughts`,
     hero: {
       heading: `Travel ~ Tech ~ Think`,
       maxWidth: 652
@@ -50,13 +50,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
+        name: `Tech a Break Blog`,
+        short_name: `TechABreakBlog`,
+        description: `Tech ~ Travel ~ Thoughts`,
+        lang: `en`,
+        display: `standalone`,
+        icon: `src/assets/favicon.png`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#fff`,
-        display: `standalone`,
-        icon: `src/assets/favicon.png`
+        theme_color: `#fff`
       }
     },
     {
