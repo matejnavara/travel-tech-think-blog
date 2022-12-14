@@ -2,8 +2,8 @@
 title: Winning Through Failing
 author: Think
 category: Think
-date: 3021-10-10
-excerpt: 
+date: 2023-10-10
+excerpt:
 hero: ./images/cover.jpg
 secret: true
 ---
@@ -26,21 +26,19 @@ I can't stop you anwyay. But remember, Jesus is watching.
 
 Starting with a fairly over-used quote from an often misquoted philosopher. But regardless it continues to hold true and hold a deep message of perseverance that applies to every age/culture since the Tang Dynasty when Confucius shared his teachings some ~2500 years ago.
 
-
 ## Thoughts on Winning
 
 Winning is great, it feels good to win and we are encouraged/celebrated for winning. The endorphine rush, the social/financial validation and pride of victory. But this can not always be the case.
 
 Even the greatest and most talented among us experience the bitter sweet taste of defeat eventually in some form. And this is a defining moment, for it is not how we thrive in victory but rather how we overcome defeat that defines our character.
 
-Our strongest lessons come from the times we have failed. 
+Our strongest lessons come from the times we have failed.
 
 Have a think now about some of these moments.
 
 Learning to fail is a powerful trait, it doesn't mean you will always fail but rather that you've gained the ability to persevere through the adversity of loss when it does appear.
 
 Someone who has never tasted defeat can be destroyed by it when it finally hits. Whereas someone who is familiar will learn the lessons, brush it off and carry on.
-
 
 ## Not Learning the Lesson - by a recent simple but fitting example:
 
@@ -86,8 +84,7 @@ It doesn't matter if it's not perfect or if you've fallen out of a rhythm. The p
 
 I hope it will apply here too. As I write more, I will gain more feedback. Some may hit some may miss but I GAIN MORE FEEDBACK. And with more feedback I will iterate with emphasis on what works and what doesn't.And with that I will slowly discover my true writing style and perhaps some audience which it resonates with.
 
-This feedback loop exists in all areas of life and the more feedback we receive the more 
-
+This feedback loop exists in all areas of life and the more feedback we receive the more
 
 ## More powerful lessons
 
@@ -100,7 +97,6 @@ The higher the magnitude the more pressing the lesson. Sometimes it's a lesson w
 There are a multitude of individual experiences that each of us will learn in different ways but the core process is the same.
 
 > Turn the loss into learning and come back stronger.
-
 
 ## Winning through Failing
 
@@ -116,7 +112,6 @@ So next time something doesn't go to plan or you don't succeed as expected, take
 
 Let it drive you forward, not hold you back.
 
-
 Here's some related reading on this topic from far more talented and experienced writers than myself.
 
 [Failing by Design - Harvard Business Review](https://hbr.org/2011/04/failing-by-design)
@@ -126,8 +121,6 @@ Here's some related reading on this topic from far more talented and experienced
 ## TL;DR
 
 ###### (To Long; Didn't Read)
-
-
 
 ---
 
