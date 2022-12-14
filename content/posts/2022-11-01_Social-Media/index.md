@@ -7,18 +7,6 @@ excerpt: The great dual edged sword that is social media. Why do we use it, do t
 hero: ./images/cover.jpg
 ---
 
-[1. First things first](#but-first-things-first-lets-rewind-a-bit-and-get-some-context)
-
-[2. The Good, the Bad and the Ugly](#the-good)
-
-[3. Why are we discussing this?](#why-are-we-discussing-this)
-
-[4. How can we change the way things are?](#how-can-we-change-the-way-things-are)
-
-[5. What does good / healthy use look like?](#what-does-good--healthy-use-look-like)
-
----
-
 Social media platforms have become a prevalent part of our daily lives, pulling our attention from UP THERE 🌇 to DOWN HERE 📲 whilst we're in bed, on the toilet or out with friends.
 
 Often it's just second nature, a bizarre habit that formed and before you know it you're scrolling through random cat videos or memes.
@@ -138,6 +126,8 @@ I too fell in the 1-2 hour/day bracket so let's use 1.5 hours a day as an exampl
 | 1 quarter | 136.5 hrs            | 5.7 days            |
 | 1 year    | 547.5 hrs            | 22.8 days           |
 
+...
+
 So in a year of 1.5 hour/day average social media usage you will have spent almost _23 FULL DAYS_ staring at your screen.
 
 That's a lot of time. And some of us have double these values...
@@ -178,6 +168,8 @@ _The reliance on information._ Why have your own opinion when you can crowd-sour
     title="Fours Horsemen of the Digital Age"
   />
 </div>
+
+...
 
 You can read a full breakdown of these horsemen much more eloquently written and with supporting research in Jim Kwik's book Limitless.
 
