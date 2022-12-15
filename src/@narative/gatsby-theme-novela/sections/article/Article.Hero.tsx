@@ -66,8 +66,6 @@ const Hero = styled.div`
       position: absolute;
       left: 0;
       top: 10px;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
       transition: ${p.theme.colorModeTransition};
     }
   `}
@@ -91,7 +89,7 @@ const Header = styled.header`
   ${mediaqueries.desktop`
     padding-left: 53px;
     max-width: calc(507px + 53px);
-    margin: 100px auto 70px;
+    margin: 110px auto 70px;
   `}
 
   ${mediaqueries.tablet`
@@ -100,8 +98,8 @@ const Header = styled.header`
   `}
 
   ${mediaqueries.phablet`
-    margin: 30px auto;
-    padding: 0 40px;
+    margin: 0 auto 30px;
+    padding: 110px 40px 0;
   `}
 `;
 

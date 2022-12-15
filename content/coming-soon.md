@@ -18,9 +18,9 @@ I can't stop you anwyay. But remember, Jesus is watching.
 
 ## TECH
 
+- The State of Tech in 2023
 - Drone O-Grammetry ?
 - Web 3 Project ?
-- 100 Days of Code (Take 2)
 - React Standards
   - Localisation
   - Love letter to NextJS
@@ -55,15 +55,15 @@ I can't stop you anwyay. But remember, Jesus is watching.
 
 # Schedule
 
-NOV 2022 - THINK - Social media use
+DEC 2022 - THINK - Social media use
 
-DEC 2022 - TRAVEL - 5 Years Fully Remote. How and Why?
+JAN 2022 - TRAVEL - 5 Years Fully Remote. How and Why?
 
-JAN 2022 - TECH - The State of Tech in 2023
-
-FEB 2023 - ??? -
+FEB 2022 - XYZ -
 
 MAR 2023 - TRAVEL - Raja Ampat
+
+APR 2023 - TECH - 100 Days of Code Review & Restart
 
 # Notes
 
