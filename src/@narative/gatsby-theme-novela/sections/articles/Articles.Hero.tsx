@@ -57,8 +57,8 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
       <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.heading }} />
       </HeadingContainer>
+      <Bio author={featuredAuthor} />
       <SubheadingContainer>
-        <Bio author={featuredAuthor} />
         <CategoryControlsContainer>
           <GridButton
             onClick={() => setTypeFilter(null)}
@@ -154,7 +154,7 @@ const GridControlsContainer = styled.div`
 `;
 
 const HeadingContainer = styled.div`
-  margin: 100px 0;
+  margin: 110px 0 50px;
 
   ${mediaqueries.desktop`
     width: 80%;
@@ -162,7 +162,7 @@ const HeadingContainer = styled.div`
 
   ${mediaqueries.tablet`
     width: 100%;
-    margin: 30px 0;
+    margin: 110px 0 30px;
   `}
 `;
 

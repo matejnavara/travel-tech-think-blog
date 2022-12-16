@@ -13,7 +13,8 @@ const Bio: React.FC<IAuthor> = ({ author }) => {
         as={author.authorsPage ? Link : "div"}
         to={author.slug}
         data-a11y="false"
-        aria-label="Author's bio"
+        aria-label="Bio"
+        title="Hello, it's me 👋"
       >
         <BioAvatarInner>
           <RoundedImage src={author.avatar.medium} />
@@ -31,8 +32,9 @@ const BioContainer = styled.div`
   align-items: center;
   position: relative;
   left: -10px;
+  margin-bottom: 10px;
 
-  ${mediaqueries.phablet`
+  ${mediaqueries.phone`
     display: none;
   `};
 `;

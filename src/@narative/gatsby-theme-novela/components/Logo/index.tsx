@@ -14,6 +14,7 @@ const Logo: React.FC<{}> = () => (
 export default Logo;
 
 const LogoContainer = styled.div`
+  display: flex;
   font-size: 50px;
 
   span:nth-child(2) {

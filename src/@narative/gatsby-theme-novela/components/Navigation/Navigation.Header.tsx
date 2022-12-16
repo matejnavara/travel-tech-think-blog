@@ -101,10 +101,6 @@ const NavigationHeader: React.FC<{}> = () => {
       location.pathname === (rootPath || basePath) ||
       location.pathname.includes("/page/");
 
-    console.log(
-      "🚀 ~ file: Navigation.Header.tsx:106 ~ useEffect ~ !currentPathIsHomepage && width <= phablet",
-      !currentPathIsHomepage && width <= phablet
-    );
     setShowBackArrow(!currentPathIsHomepage && width <= phablet);
     setPreviousPath(prev);
   }, [width]);
@@ -169,7 +165,7 @@ const BackArrowIconContainer = styled.div`
 
 const StickySection = styled(Section)`
   width: 100%;
-  max-width: 100%;
+  max-width: 100% !important;
   background: ${p => p.theme.colors.background};
   transition: ${p => p.theme.colorModeTransition}, transform 0.45s ease;
   position: fixed;
