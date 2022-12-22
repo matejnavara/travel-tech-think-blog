@@ -117,7 +117,6 @@ export const Item = styled.div<{ gridLayout: string }>`
 
 export const Title = styled(Headings.h2)`
   font-size: 21px;
-  font-family: ${p => p.theme.fonts.serif};
   margin-bottom: ${p =>
     p.hasOverflow && p.gridLayout === "tiles" ? "35px" : "10px"};
   transition: color 0.3s ease-in-out;

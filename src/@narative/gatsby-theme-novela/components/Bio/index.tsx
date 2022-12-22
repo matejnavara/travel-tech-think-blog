@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 import Image from "@components/Image";
 import { IAuthor } from "@types";
-import mediaqueries from "@styles/media";
+import mediaqueries from "../../styles/media";
 
 const Bio: React.FC<IAuthor> = ({ author }) => {
   return (

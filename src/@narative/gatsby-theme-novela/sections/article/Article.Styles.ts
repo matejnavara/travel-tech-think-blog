@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 import Headings from "@components/Headings";
 
-import mediaqueries from "@styles/media";
+import mediaqueries from "../../styles/media";
 
 import { WIDE, NARROW, limitToTwoLines } from "../Sections.Styles";
 
@@ -55,7 +55,7 @@ export const Title = styled(Headings.h3)`
   margin-top: 10px;
   margin-bottom: ${p => (p.hasOverflow ? "45px" : "10px")};
   color: ${p => p.theme.colors.primary};
-  font-family: ${p => p.theme.fonts.serif};
+  font-family: "IBMono";
   transition: color 0.3s ease-in-out;
   ${limitToTwoLines};
 

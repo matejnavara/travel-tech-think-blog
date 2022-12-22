@@ -1,11 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "@emotion/styled";
 import throttle from "lodash/throttle";
-
-import HandleOverlap from "./Article.HandleOverlap";
-
-import mediaqueries from "@styles/media";
 import { clamp } from "@utils";
+
+import mediaqueries from "../../styles/media";
+import HandleOverlap from "./Article.HandleOverlap";
 
 interface AsideProps {
   contentHeight: number;
@@ -35,7 +34,7 @@ const Aside: React.FC<AsideProps> = ({ contentHeight, children }) => {
 
   const show = imageOffset && progress < 100;
   const childrenWithProps = React.Children.map(children, child =>
-    React.cloneElement(child, { show }),
+    React.cloneElement(child, { show })
   );
 
   useEffect(() => {
@@ -88,7 +87,7 @@ const Aside: React.FC<AsideProps> = ({ contentHeight, children }) => {
       </Align>
     </AsideContainer>
   );
-}
+};
 
 export default Aside;
 
